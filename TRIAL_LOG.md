@@ -93,3 +93,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T115 | 24.10.2026 | Inside Bar (34) | 33-35-tagesausbruch | T-INSIDE, IS | nicht bestanden: +0,13 bp/Tag, t 0,15, 3 von 9 Jahren |
 | T116 | 24.10.2026 | Volatility Breakout (35) | 33-35-tagesausbruch | T-LW, IS | nicht bestanden: −4,23 bp/Tag, t −2,07 (vor Kosten +4,5) |
 | T117–T122 | – | Tages-Ausbruch (33–35) | 33-35-tagesausbruch | Hold-out, FTMO | entfallen |
+| T123 | | Bollinger Squeeze (36) | 36-38-h4-kanalausbruch | K-BBSQ, IS | |
+| T124 | | Keltner-Ausbruch (38) | 36-38-h4-kanalausbruch | K-KELT, IS | |
+| T125–T128 | | H4-Kanal-Ausbruch (36, 38) | 36-38-h4-kanalausbruch | Hold-out, FTMO (nur bei Bestehen) | |
