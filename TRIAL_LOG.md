@@ -62,3 +62,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T72 | 24.10.2026 | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | P-AUDNZD, IS | nicht bestanden: Sharpe 0,13, t 0,40 |
 | T73 | 24.10.2026 | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | P-EURCHF, IS | nicht bestanden: Sharpe −0,20, t −0,77 |
 | T74, T75 | – | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | Hold-out, FTMO | entfallen |
+| T76 | | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | G-60, IS | |
+| T77 | | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | G-250, IS | |
+| T78 | | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | Hold-out (nur falls T76/T77 besteht) | |
+| T79 | | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | FTMO-Bootstrap (nur falls T78 besteht) | |
