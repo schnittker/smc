@@ -47,3 +47,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T52 | 24.10.2026 | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-RSI2, IS | nicht bestanden: Sharpe 0,31, t 0,78 |
 | T53 | 24.10.2026 | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-7S, IS | nicht bestanden: Sharpe 0,28, t 0,83 |
 | T54, T55 | – | Kurzfrist-Reversal (15) | 15-short-term-reversal | Hold-out, FTMO | entfallen |
+| T56 | | Opening Range Breakout (16) | 16-opening-range-breakout | O-NDX, IS | |
+| T57 | | Opening Range Breakout (16) | 16-opening-range-breakout | O-SPX, IS | |
+| T58 | | Opening Range Breakout (16) | 16-opening-range-breakout | Hold-out (nur falls T56/T57 besteht) | |
+| T59 | | Opening Range Breakout (16) | 16-opening-range-breakout | FTMO-Bootstrap (nur falls T58 besteht) | |
