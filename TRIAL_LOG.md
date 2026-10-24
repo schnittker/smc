@@ -53,3 +53,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T60 | 24.10.2026 | COT-Extreme (18) | 18-cot-positionierung | C-KONTRA, IS | nicht bestanden: Sharpe 0,22, t 0,62 |
 | T61 | 24.10.2026 | COT-Extreme (18) | 18-cot-positionierung | C-FOLGE, IS | nicht bestanden: Sharpe −0,50, t −1,57 |
 | T62, T63 | – | COT-Extreme (18) | 18-cot-positionierung | Hold-out, FTMO | entfallen |
+| T64 | | VIX-Regime (19) | 19-vix-regime | X-HAVEN, IS | |
+| T65 | | VIX-Regime (19) | 19-vix-regime | X-FEAR, IS | |
+| T66 | | VIX-Regime (19) | 19-vix-regime | Hold-out (nur falls T64/T65 besteht) | |
+| T67 | | VIX-Regime (19) | 19-vix-regime | FTMO-Bootstrap (nur falls T66 besteht) | |
