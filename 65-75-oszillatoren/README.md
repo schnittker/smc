@@ -7,12 +7,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 - **H4:** CCI-±100-Momentum, RSI-Divergenzen an Swing-Punkten
 - **H1:** Renko-Trend (Ziegel 2 ATR)
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle sechs Regeln sind gescheitert** (netto −1,6 bis −50 bp je Tag). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/os_in_sample.md](research/results/os_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`), `../50-51-sr-trendlinien` (`chart`), `../61-76-trendindikatoren` (`tind`); venv aus dem SMC-Projekt.
 

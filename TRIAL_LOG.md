@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 110 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 116 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -149,10 +149,10 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T227 | 24.10.2026 | Heikin-Ashi (73) | 61-76-trendindikatoren | TI-HA, IS | nicht bestanden: −6,72 bp/Tag, t −3,23 |
 | T228 | 24.10.2026 | Kalman-Trend (76) | 61-76-trendindikatoren | TI-KALMAN, IS | nicht bestanden: −3,12 bp/Tag, t −1,72 |
 | T229–T248 | – | Trendindikatoren | 61-76-trendindikatoren | Hold-out, FTMO | entfallen |
-| T249 | | RSI 14 (65) | 65-75-oszillatoren | OS-RSI, IS | |
-| T250 | | Stochastik (66) | 65-75-oszillatoren | OS-STOCH, IS | |
-| T251 | | Williams %R (67) | 65-75-oszillatoren | OS-WPR, IS | |
-| T252 | | CCI (68) | 65-75-oszillatoren | OS-CCI, IS | |
-| T253 | | Renko (74) | 65-75-oszillatoren | OS-RENKO, IS | |
-| T254 | | RSI-Divergenzen (75) | 65-75-oszillatoren | OS-DIV, IS | |
-| T255–T266 | | Oszillatoren, Renko | 65-75-oszillatoren | Hold-out, FTMO (nur bei Bestehen) | |
+| T249 | 24.10.2026 | RSI 14 (65) | 65-75-oszillatoren | OS-RSI, IS | nicht bestanden: −15,8 bp/Tag, t −7,78 |
+| T250 | 24.10.2026 | Stochastik (66) | 65-75-oszillatoren | OS-STOCH, IS | nicht bestanden: −29,8 bp/Tag, t −10,60 |
+| T251 | 24.10.2026 | Williams %R (67) | 65-75-oszillatoren | OS-WPR, IS | nicht bestanden: −50,3 bp/Tag, t −16,77 |
+| T252 | 24.10.2026 | CCI (68) | 65-75-oszillatoren | OS-CCI, IS | nicht bestanden: −2,92 bp/Tag, t −1,34 |
+| T253 | 24.10.2026 | Renko (74) | 65-75-oszillatoren | OS-RENKO, IS | nicht bestanden: −4,71 bp/Tag, t −1,94 |
+| T254 | 24.10.2026 | RSI-Divergenzen (75) | 65-75-oszillatoren | OS-DIV, IS | nicht bestanden: −1,59 bp/Tag, t −2,59 |
+| T255–T266 | – | Oszillatoren, Renko | 65-75-oszillatoren | Hold-out, FTMO | entfallen |
