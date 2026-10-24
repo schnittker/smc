@@ -23,5 +23,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | — | Lead-Lag US → Asien (17) | strukturell nicht handelbar (CFDs handeln während der US-Sitzung), kein eigener Test |
 | [18-cot-positionierung/](18-cot-positionierung/) | COT-Extreme (18) | gescheitert |
 | [19-vix-regime/](19-vix-regime/) | VIX-Regime (19) | gescheitert |
+| [20-zins-momentum/](20-zins-momentum/) | Zins-Momentum G8 (20) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

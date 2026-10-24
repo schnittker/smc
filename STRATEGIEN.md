@@ -61,7 +61,7 @@ Folgen für die Auswahl:
 | 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | ⊘ strukturell nicht handelbar: FTMO-Asien-Indizes sind Futures-CFDs mit ≈ 19 h Handel, die US-Bewegung ist eingepreist; kein eigener Trial |
 | 18 | COT-Positionierung | Contrarian bei extremer Netto-Position der Spekulanten | Majors, Gold / W1 | CFTC nachladen ⚠ live per WebRequest | ✗ Tag 12 (T60/T61): konträr Sharpe 0,22, folgend −0,50 |
 | 19 | VIX-Regime | Bei Risk-off (VIX-Sprung) Long JPY, CHF, Gold | FX, Gold / D1 | VIX von FRED ⚠ live per WebRequest | ✗ Tag 13 (T64/T65): Sharpe −0,14 / 0,04 |
-| 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | |
+| 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | ✗ Tag 14 (T68/T69): Sharpe −0,22 / −0,29 |
 | 21 | Pairs Trading / Kointegration | Spread AUDUSD–NZDUSD (bzw. AUDNZD) handeln bei z-Score-Extremen | AUD/NZD, EUR/CHF / H4 | vorhanden | |
 | 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | |
 | 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | |
@@ -190,4 +190,5 @@ Folgen für die Auswahl:
 | 11 | 24.10.2026 | 16 | Opening Range Breakout 5 min | ✗ | O-NDX t −0,54, O-SPX t −0,16; Range ≈ 10 bp, Kosten 0,14–0,24 R |
 | 12 | 24.10.2026 | 18 | COT-Extreme | ✗ | C-KONTRA Sharpe 0,22 (t 0,62), C-FOLGE −0,50 |
 | 13 | 24.10.2026 | 19 | VIX-Regime | ✗ | X-HAVEN Sharpe −0,14, X-FEAR 0,04 |
-| 14 | | | | | |
+| 14 | 24.10.2026 | 20 | Zins-Momentum G8 | ✗ | Z-12 Sharpe −0,22, Z-3 −0,29 |
+| 15 | | | | | |
