@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 88 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 90 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -122,6 +122,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T175 | 24.10.2026 | S/R-Zonen (50) | 50-51-sr-trendlinien | SR-BREAK, IS | nicht bestanden: −6,97 bp/Tag, t −3,74 |
 | T176 | 24.10.2026 | Trendlinien-Ausbruch (51) | 50-51-sr-trendlinien | SR-TLINE, IS | nicht bestanden: −3,48 bp/Tag, t −2,81 |
 | T177–T182 | – | S/R und Trendlinien (50, 51) | 50-51-sr-trendlinien | Hold-out, FTMO | entfallen |
-| T183 | | Fibonacci-Pullback (52) | 52-53-fib-chandelier | FC-FIB, IS | |
-| T184 | | Chandelier-Trend (53) | 52-53-fib-chandelier | FC-CHAND, IS | |
-| T185–T188 | | Fibonacci, Chandelier (52, 53) | 52-53-fib-chandelier | Hold-out, FTMO (nur bei Bestehen) | |
+| T183 | 24.10.2026 | Fibonacci-Pullback (52) | 52-53-fib-chandelier | FC-FIB, IS | nicht bestanden: −1,76 bp/Tag, t −2,69 |
+| T184 | 24.10.2026 | Chandelier-Trend (53) | 52-53-fib-chandelier | FC-CHAND, IS | nicht bestanden: −0,14 bp/Tag, t −0,38 |
+| T185–T188 | – | Fibonacci, Chandelier (52, 53) | 52-53-fib-chandelier | Hold-out, FTMO | entfallen |
