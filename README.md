@@ -6,6 +6,13 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 
 **Vorgehen je Strategie:** Recherche → Vorregistrierung (Commit vor Code und Daten) → Code und Tests (Commit vor dem ersten Lauf) → In-Sample 2015–2023 → Hold-out 2024–2026 einmalig und nur, wenn In-Sample besteht → FTMO-Bootstrap.
 
+**Zwischenfazit (24.10.2026, Tag 46):** 131 vorregistrierte Versuche, **0 bestanden**. Nr. 42 (Wochenend-Gap FX) bestand formal, wurde aber als HistData-Artefakt verworfen. Der Hold-out 2024–2026 ist nie angefasst worden. Die Placebo-Kontrollen (Nr. 98/99) bestätigen eine unverzerrte Pipeline.
+- **Kern-Befund:** Fast alle Regeln haben vor Kosten +0,00 bis +0,03 R je Trade. Das liegt im Zufallsintervall von Nr. 98 (+0,017 R [−0,019; +0,053]). FTMO-Kosten und -Swaps betragen 0,03–0,2 R je Trade.
+- **Am nächsten an der Schwelle:** FOMC-Fenster (Nr. 9 Pre-FOMC US500 t 2,4; Nr. 24 USD an FOMC-Tagen t 2,1).
+- **Offen:**
+  - Nr. 100 (Ensemble, z. B. der FOMC-Kandidaten): Ein Test ginge nur noch im unberührten Hold-out.
+  - Nr. 25, 89, 91, 92 brauchen Daten, die HistData/FRED nicht liefern: Konsensprognosen, Retail-Sentiment, echtes Volumen.
+
 | Ordner | Strategie (Nr.) | Status |
 |---|---|---|
 | [smart-money-concept/](smart-money-concept/) | SMC (1), Fix-Reversal (2), Trendfolge FX/Gold (3), Trendfolge Indizes/Rohstoffe (4); enthält die gemeinsame Pipeline (Daten, Zeitmodell, Kosten, Statistik) | gescheitert |
