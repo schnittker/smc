@@ -94,9 +94,9 @@ def _flat(day):
     return (day, 0, NONE, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
 
 
-def blocks(m5, t_open: int, t_close: int):
-    """(start time, high, low, close) of the 30-minute blocks of a session (blocks without bars are skipped)."""
-    t5 = m5["t"]
+def blocks(m5, t5: np.ndarray, t_open: int, t_close: int):
+    """(start time, high, low, close) of the 30-minute blocks of a session (blocks without bars are skipped).
+    t5 = contiguous copy of m5["t"] (searchsorted on the strided field copies it on every call)."""
     out = []
     for s in range(t_open, t_close, BLOCK):
         a, b = np.searchsorted(t5, [s, min(s + BLOCK, t_close)])
@@ -106,13 +106,13 @@ def blocks(m5, t_open: int, t_close: int):
 
 
 def run_va80(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: date) -> np.ndarray:
-    t5 = m5["t"]
+    t5 = np.ascontiguousarray(m5["t"])
     rows = []
     for day, prev, early, prev_early in index_days(symbol, m5, first, last):
         if holiday(day):
             continue
         p_open, p_close = session(symbol, prev, prev_early)
-        prev_blocks = blocks(m5, p_open, p_close)
+        prev_blocks = blocks(m5, t5, p_open, p_close)
         t_open, t_close = session(symbol, day, early)
         a, e = bar_exact(t5, t_open), bar_exact(t5, t_close)
         if len(prev_blocks) < 4 or a < 0 or e < 0:
@@ -125,7 +125,7 @@ def run_va80(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: date) 
             rows.append(_flat(day))
             continue
         d = -1 if po > vah else 1
-        bl = blocks(m5, t_open, t_close)
+        bl = blocks(m5, t5, t_open, t_close)
         sig = None
         for j in range(1, len(bl)):
             if bl[j][0] + BLOCK > t_close - LAST_SIGNAL:
