@@ -165,3 +165,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T278 | 24.10.2026 | k-NN-Analogien (85) | 81-90-statistik | ST-KNN, IS | nicht bestanden: Sharpe −2,02, t −6,27 |
 | T279 | 24.10.2026 | Gold-Saisonalität (90) | 81-90-statistik | ST-GOLD, IS | nicht bestanden: Sharpe −0,10, t −0,31 |
 | T280–T287 | – | Statistische Modelle (81, 82, 85, 90) | 81-90-statistik | Hold-out, FTMO | entfallen |
+| T288 | | Gradient Boosting (83) | 83-87-machine-learning | ML-GBM, IS | |
+| T289 | | Meta-Labeling (84) | 83-87-machine-learning | ML-META, IS | |
+| T290 | | Sequenzmodell (86) | 83-87-machine-learning | ML-MLP, IS | |
+| T291–T296 | | Machine Learning (83, 84, 86) | 83-87-machine-learning | Hold-out, FTMO (nur bei Bestehen) | |
