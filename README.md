@@ -53,5 +53,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [65-75-oszillatoren/](65-75-oszillatoren/) | Oszillatoren, Renko, Divergenzen (65–68, 74, 75) | gescheitert |
 | [77-80-muster-scalping/](77-80-muster-scalping/) | Harmonische Muster, Wyckoff-Spring, Scalping (77, 79, 80; 78 ⊘) | gescheitert |
 | [81-90-statistik/](81-90-statistik/) | HMM, GARCH, k-NN, Gold-Saison (81, 82, 85, 90) | gescheitert |
+| [83-87-machine-learning/](83-87-machine-learning/) | Gradient Boosting, Meta-Labeling, MLP (83, 84, 86; 87 ⊘, 88 ⛔) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

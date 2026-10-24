@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 123 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 126 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -165,7 +165,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T278 | 24.10.2026 | k-NN-Analogien (85) | 81-90-statistik | ST-KNN, IS | nicht bestanden: Sharpe −2,02, t −6,27 |
 | T279 | 24.10.2026 | Gold-Saisonalität (90) | 81-90-statistik | ST-GOLD, IS | nicht bestanden: Sharpe −0,10, t −0,31 |
 | T280–T287 | – | Statistische Modelle (81, 82, 85, 90) | 81-90-statistik | Hold-out, FTMO | entfallen |
-| T288 | | Gradient Boosting (83) | 83-87-machine-learning | ML-GBM, IS | |
-| T289 | | Meta-Labeling (84) | 83-87-machine-learning | ML-META, IS | |
-| T290 | | Sequenzmodell (86) | 83-87-machine-learning | ML-MLP, IS | |
-| T291–T296 | | Machine Learning (83, 84, 86) | 83-87-machine-learning | Hold-out, FTMO (nur bei Bestehen) | |
+| T288 | 24.10.2026 | Gradient Boosting (83) | 83-87-machine-learning | ML-GBM, IS | nicht bestanden: −9,10 bp/Tag, t −4,64 (vor Kosten +9,3; AUC ≈ 0,52) |
+| T289 | 24.10.2026 | Meta-Labeling (84) | 83-87-machine-learning | ML-META, IS | nicht bestanden: −0,24 bp/Tag, t −0,99 |
+| T290 | 24.10.2026 | Sequenzmodell (86) | 83-87-machine-learning | ML-MLP, IS | nicht bestanden: −39,7 bp/Tag, t −13,4 (AUC ≈ 0,505) |
+| T291–T296 | – | Machine Learning (83, 84, 86) | 83-87-machine-learning | Hold-out, FTMO | entfallen |

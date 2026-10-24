@@ -139,12 +139,12 @@ Folgen für die Auswahl:
 |---|---|---|---|---|
 | 81 | Hidden-Markov-Regime | Regime erkennen, je Regime eigenes Modell | alle / D1 | ✗ Tag 42 (T276): Sharpe −0,55, t −1,69 |
 | 82 | GARCH-Volatilitätsprognose | Ausbruch/Positionsgröße aus Vol-Prognose | alle / D1 | ✗ Tag 42 (T277): Sharpe −0,50, t −1,74 |
-| 83 | Gradient Boosting Richtung | Features → Richtung nächste n Bars | alle / H1 | |
-| 84 | Meta-Labeling (López de Prado) | ML filtert Signale einer Basisstrategie, Triple Barrier | Basis aus A/B | |
+| 83 | Gradient Boosting Richtung | Features → Richtung nächste n Bars | alle / H1 | ✗ Tag 43 (T288): −9,1 bp/Tag; AUC 0,52 stabil, vor Kosten +0,03 R |
+| 84 | Meta-Labeling (López de Prado) | ML filtert Signale einer Basisstrategie, Triple Barrier | Basis aus A/B | ✗ Tag 43 (T289): Supertrend-Meta −0,24 bp/Tag |
 | 85 | k-NN-Analogien | Ähnliche historische Muster suchen | alle / D1 | ✗ Tag 42 (T278): Sharpe −2,02, t −6,27 |
-| 86 | LSTM / Transformer | Sequenzmodell auf Renditen, als ONNX in MT5 | alle / H1 | |
-| 87 | Reinforcement Learning | Agent lernt Positionierung, als ONNX in MT5 | alle / H1 | |
-| 88 | Genetic Programming | Automatische Regelsuche – extremes Data Mining | alle | ⚠ |
+| 86 | LSTM / Transformer | Sequenzmodell auf Renditen, als ONNX in MT5 | alle / H1 | ✗ Tag 43 (T290): MLP auf Renditefenstern (statt LSTM) −39,7 bp/Tag; AUC 0,505 |
+| 87 | Reinforcement Learning | Agent lernt Positionierung, als ONNX in MT5 | alle / H1 | ⊘ Tag 43: abgedeckt durch Nr. 83/86 (gleiche Merkmale, AUC ≤ 0,52) |
+| 88 | Genetic Programming | Automatische Regelsuche – extremes Data Mining | alle | ⛔ verletzt das Trial-Log-Prinzip (Tag 43) |
 | 89 | Retail-Sentiment contrarian | Gegen Mehrheit der Retail-Positionen (IG/Myfxbook) | Majors / D1 | ⚠ Historie knapp |
 | 90 | Gold-Saisonalität | Monats-/Jahreszeiteffekte bei Gold | XAUUSD / D1 | ✗ Tag 42 (T279): Sharpe −0,10 (Sep./Nov. long) |
 
@@ -220,4 +220,5 @@ Folgen für die Auswahl:
 | 40 | 24.10.2026 | 65–68, 74, 75 | Oszillatoren, Renko, Divergenzen | ✗ | Umkehr vor Kosten ≤ 0 |
 | 41 | 24.10.2026 | 77, 79, 80 (78 ⊘) | Harmonische Muster, Wyckoff-Spring, Scalping | ✗ | Abschnitt C ohne Treffer |
 | 42 | 24.10.2026 | 81, 82, 85, 90 | HMM, GARCH, k-NN, Gold-Saison | ✗ | keine Vorhersagekraft nach Kosten |
-| 43 | | | | | |
+| 43 | 24.10.2026 | 83, 84, 86 (87 ⊘, 88 ⛔) | Gradient Boosting, Meta-Labeling, MLP | ✗ | AUC 0,52 – zu wenig für die Kosten |
+| 44 | | | | | |

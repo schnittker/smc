@@ -7,12 +7,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 - MLP auf 24 H1-Renditen (Ersatz für LSTM)
 - Meta-Labeling der Supertrend-Signale auf H4
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle drei Modelle sind gescheitert** (netto −9,1 / −0,24 / −39,7 bp je Tag). GBM mit stabiler, aber kleiner Prognosegüte (AUC ≈ 0,52). Nr. 87 ⊘, Nr. 88 ⛔. Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Leckage-Schutz, Quellen, Nr. 87/88 |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis, Prognosegüte, Nr. 87/88 |
+| [research/results/ml_in_sample.md](research/results/ml_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`; venv mit scikit-learn), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`), `../50-51-sr-trendlinien` (`chart`), `../61-76-trendindikatoren` (`tind`), `../65-75-oszillatoren` (`osc`).
 
