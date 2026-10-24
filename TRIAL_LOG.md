@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 73 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 75 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -101,6 +101,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T131–T134 | – | H1-Mean-Reversion (37, 39) | 37-39-h1-mean-reversion | Hold-out, FTMO | entfallen |
 | T135 | 24.10.2026 | Hurst-Regime-Switch (40) | 40-hurst-regime | W-HURST, IS | nicht bestanden: −2,27 bp/Tag, t −4,70 |
 | T136, T137 | – | Hurst-Regime-Switch (40) | 40-hurst-regime | Hold-out, FTMO | entfallen |
-| T138 | | Gap-Fill Indizes (41) | 41-42-gap-fade | Q-IDX, IS | |
-| T139 | | Wochenend-Gap FX (42) | 41-42-gap-fade | Q-FXW, IS | |
-| T140–T143 | | Gap-Fade (41, 42) | 41-42-gap-fade | Hold-out, FTMO (nur bei Bestehen) | |
+| T138 | 24.10.2026 | Gap-Fill Indizes (41) | 41-42-gap-fade | Q-IDX, IS | nicht bestanden: −3,15 bp/Tag, t −3,61 |
+| T139 | 24.10.2026 | Wochenend-Gap FX (42) | 41-42-gap-fade | Q-FXW, IS | formal bestanden (+11,9 bp/Montag, t 5,08); verworfen: Ertrag nur aus der ersten Wochenkerze des HistData-Feeds (Sommer), Winter −5,1 bp |
+| T140–T143 | – | Gap-Fade (41, 42) | 41-42-gap-fade | Hold-out, FTMO | entfallen (Hold-out auf derselben Quelle nicht aussagekräftig) |

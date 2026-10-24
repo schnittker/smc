@@ -143,7 +143,9 @@ def run_index(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: date)
     return np.array(rows, dtype=ROW_DTYPE)
 
 
-def run_weekend(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: date) -> np.ndarray:
+def run_weekend(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: date, entry_sec: int = 3600,
+                spread_mult: float = FXW_SPREAD_MULT) -> np.ndarray:
+    """entry_sec / spread_mult other than the defaults are used only by the descriptive robustness checks."""
     ts = m5["ts"]
     sday = ts // DAY
     rows = []
@@ -153,7 +155,7 @@ def run_weekend(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: dat
         lo, hi = np.searchsorted(sday, [monday - 3, monday - 2])
         if hi == lo:
             continue
-        a = bar_exact(ts, monday * DAY + 3600)
+        a = bar_exact(ts, monday * DAY + entry_sec)
         m_lo, m_hi = np.searchsorted(sday, [monday, monday + 1])
         if a < 0 or m_hi - m_lo < 12:
             continue
@@ -162,5 +164,5 @@ def run_weekend(symbol: str, m5: np.ndarray, cost: Costs, first: date, last: dat
         if abs(g) < FXW_MIN:
             rows.append(_flat(monday, g))
             continue
-        rows.append(_row(monday, g, fade(m5, a, m_hi, m5["c"][m_hi - 1], p, cost, FXW_SPREAD_MULT)))
+        rows.append(_row(monday, g, fade(m5, a, m_hi, m5["c"][m_hi - 1], p, cost, spread_mult)))
     return np.array(rows, dtype=ROW_DTYPE)

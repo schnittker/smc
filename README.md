@@ -39,5 +39,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [36-38-h4-kanalausbruch/](36-38-h4-kanalausbruch/) | Bollinger Squeeze, Keltner-Ausbruch (36, 38) | gescheitert |
 | [37-39-h1-mean-reversion/](37-39-h1-mean-reversion/) | Bollinger- und z-Score-Mean-Reversion (37, 39) | gescheitert |
 | [40-hurst-regime/](40-hurst-regime/) | Hurst-Regime-Switch (40) | gescheitert |
+| [41-42-gap-fade/](41-42-gap-fade/) | Gap-Fill Indizes, Wochenend-Gap FX (41, 42) | gescheitert (42: Feed-Artefakt) |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

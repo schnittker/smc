@@ -87,8 +87,8 @@ Folgen für die Auswahl:
 | 38 | Keltner-Channel-Ausbruch | ATR-Kanal-Ausbruch mit Trendfilter | alle / H4 | vorhanden | ✗ Tag 26 (T124): −0,76 bp/Tag, t −0,51 |
 | 39 | z-Score Mean Reversion (OU) | Abstand zum gleitenden Mittel in Std.-Abw., Halbwertszeit schätzen | FX-Crosses / H1 | vorhanden | ✗ Tag 27 (T130): −1,8 bp/Tag, t −2,84; vor Kosten negativ |
 | 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | ✗ Tag 28 (T135): −2,3 bp/Tag, t −4,70; Filter verschlechtert |
-| 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | |
-| 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | |
+| 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | ✗ Tag 29 (T138): −3,2 bp/Tag, t −3,61 |
+| 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | ✗ Tag 29 (T139): formal bestanden, aber Feed-Artefakt (erste Wochenkerze HistData); auf FTMO-Zeit −5 bp |
 | 43 | Große Tagesbewegung | Nach Tag > 2 ATR: Reversal oder Fortsetzung | alle / D1 | vorhanden | |
 | 44 | Wochentags-Effekt | Wochentags-Saisonalität | alle / D1 | vorhanden | |
 | 45 | Multi-Timeframe-Pullback | Trend auf D1/H4, Einstieg auf H1-Rücksetzer | alle / H1 | vorhanden | |
@@ -172,6 +172,7 @@ Folgen für die Auswahl:
 3. **Vorregistrieren vor dem ersten Lauf**, wie in `smart-money-concept/docs/`. Nachträgliche Parameteränderung = neuer Versuch.
 4. **Kosten realistisch:** FTMO-Spreads, Kommission, Swaps inkl. Aufschlag; Test bei doppelten Kosten.
 5. **Pipeline wiederverwenden** (Daten, Zeitmodell, Kostenmodelle, FTMO-Monte-Carlo) statt sie pro Strategie neu zu bauen.
+6. **Artefakt-Prüfung vor dem Hold-out:** Hängt ein bestandenes Ergebnis an einer Uhrzeit oder an Sitzungsgrenzen, wird es vorher gegen benachbarte Zeiten und Sommer/Winter geprüft. HistData stempelt in fester EST: Im Sommer fehlt die erste Handelsstunde der Woche (Lehre aus Nr. 42).
 
 ## Tageslog
 
@@ -205,4 +206,5 @@ Folgen für die Auswahl:
 | 26 | 24.10.2026 | 36, 38 | Bollinger Squeeze, Keltner-Ausbruch | ✗ | vor Kosten +0,03 R, Kosten 0,045 R |
 | 27 | 24.10.2026 | 37, 39 | Bollinger-MR, z-Score/OU-MR | ✗ | Umkehr auf H1 nach Kosten negativ |
 | 28 | 24.10.2026 | 40 | Hurst-Regime-Switch | ✗ | H ≈ 0,5, kein Regime-Signal |
-| 29 | | | | | |
+| 29 | 24.10.2026 | 41, 42 | Gap-Fill Indizes, Wochenend-Gap FX | ✗ | Nr. 42 formal bestanden, als Feed-Artefakt verworfen |
+| 30 | | | | | |
