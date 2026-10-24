@@ -10,11 +10,13 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 - XAUUSD
 
 **Status (24.10.2026):**
-- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, 42 Tests.
-- **Gate P2 (Ereignisstudie):** Kein SMC-Baustein ist allein nach Kosten profitabel. Das ICT-Kernmodell (Sweep → MSS) zeigt keinen Effekt. Details: `docs/03_Ergebnisse_P2_Ereignisstudie.md`.
-- **P3 (vorregistrierter Test von Modell C) ist gescheitert:** Markteinstieg +0,015 R, Limit-Einstieg −0,016 R netto pro Trade. Der Hold-out 2024–2026 bleibt unberührt. Diagnose und Optionen: `docs/05_Ergebnisse_P3_ModellC.md`.
-- **Nächster Schritt:** Entscheidung über Option A (Trendfolge mit Struktur-Exit, letzter SMC-Test) oder einen Wechsel der Strategieklasse. Keine bezahlte Challenge, bevor ein Modell In-Sample und Hold-out besteht.
-- **MQL5-Code:** noch keiner.
+- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, Kosten- und Swap-Modell, 50 Tests.
+- **Gate P2 (Ereignisstudie):** Kein SMC-Baustein ist allein nach Kosten profitabel. Das ICT-Kernmodell (Sweep → MSS) zeigt keinen Effekt (`docs/03`).
+- **P3, Modell C (Trend-Fortsetzung): gescheitert** mit +0,015 R bzw. −0,016 R netto pro Trade (`docs/05`).
+- **P4, Modell D (Trendfolge mit Struktur-Exit): gescheitert** mit −0,040 R netto pro Trade (`docs/07`).
+- **Damit ist der SMC-Ansatz laut Vorregistrierung beendet.** Der Hold-out 2024–2026 ist unberührt.
+- **Nächster Schritt:** Entscheidung zwischen einer anderen Strategieklasse (z. B. Fixing-Effekt) und Pausieren. Keine bezahlte Challenge ohne bestandenen Test.
+- **MQL5-Code:** keiner.
 
 | Dokument | Inhalt |
 |---|---|
@@ -24,8 +26,10 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 | [docs/03_Ergebnisse_P2_Ereignisstudie.md](docs/03_Ergebnisse_P2_Ereignisstudie.md) | Ergebnisse der Ereignisstudie (Gate P2) und Vorschlag für P3 |
 | [docs/04_P3_Vorregistrierung_ModellC.md](docs/04_P3_Vorregistrierung_ModellC.md) | Vorregistrierung P3: Regeln, Varianten und Akzeptanzkriterien von Modell C |
 | [docs/05_Ergebnisse_P3_ModellC.md](docs/05_Ergebnisse_P3_ModellC.md) | Ergebnis P3 (gescheitert), Diagnose, Optionen für den nächsten Schritt |
+| [docs/06_P4_Vorregistrierung_ModellD.md](docs/06_P4_Vorregistrierung_ModellD.md) | Vorregistrierung P4: Modell D, Kostenmodell mit Swaps, Portfolio- und FTMO-Simulation |
+| [docs/07_Ergebnisse_P4_ModellD.md](docs/07_Ergebnisse_P4_ModellD.md) | Ergebnis P4 (gescheitert), Gesamtbild P2–P4, Optionen |
 | [docs/research/](docs/research/) | 8 ausführliche Research-Kapitel mit Pseudocode und Quellen |
-| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie, Modell C |
+| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie, Modelle C und D, Swaps |
 | [research/ftmo_mc.py](research/ftmo_mc.py) | Monte-Carlo-Simulation der Challenge; Ergebnisse in `research/results/ftmo_mc_results.md` |
 
 Einrichtung und Abläufe:
@@ -36,6 +40,8 @@ research/.venv/bin/python -I research/scripts/download_histdata.py      # M1-Dat
 research/.venv/bin/python -I research/scripts/build_data.py             # Bars M5..D1 in FTMO-Serverzeit (≈ 2 min)
 research/.venv/bin/python -I research/scripts/run_event_study.py        # Ereignisstudie P2 (≈ 15 min)
 research/.venv/bin/python -I research/scripts/run_p3.py                  # Modell C In-Sample, P3 (≈ 1 min, nach der Ereignisstudie)
+research/.venv/bin/python -I research/scripts/download_rates.py          # Zinsreihen für Swaps (FRED)
+research/.venv/bin/python -I research/scripts/run_p4.py                  # Modell D In-Sample, P4 (≈ 1 min)
 research/.venv/bin/python -I research/ftmo_mc.py                        # FTMO-Monte-Carlo (≈ 4 min)
 cd research && .venv/bin/python -I -m pytest -q tests/                  # Tests
 ```
