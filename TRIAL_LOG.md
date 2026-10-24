@@ -22,3 +22,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T19 | 24.10.2026 | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | M-1H, IS | nicht bestanden: −4,41 bp/Ereignis, t −1,01 |
 | T20 | 24.10.2026 | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | M-DAY, IS | nicht bestanden: −7,10 bp/Ereignis, t −1,04 |
 | T21, T22 | – | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | Hold-out, FTMO | entfallen |
+| T23 | | FX Carry (6) | 06-fx-carry | K-3, IS | |
+| T24 | | FX Carry (6) | 06-fx-carry | K-1, IS | |
+| T25 | | FX Carry (6) | 06-fx-carry | Hold-out (nur falls T23/T24 besteht) | |
+| T26 | | FX Carry (6) | 06-fx-carry | FTMO-Bootstrap (nur falls T25 besteht) | |
