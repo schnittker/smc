@@ -10,14 +10,15 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 - XAUUSD
 
 **Status (24.10.2026):**
-- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, Kosten- und Swap-Modell, 59 Tests.
-- **Vier vorregistrierte Tests, keiner bestanden:**
+- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, Kosten- und Swap-Modell, 63 Tests.
+- **Fünf vorregistrierte Tests, keiner bestanden:**
   - Gate P2, Ereignisstudie (`docs/03`): Kein SMC-Baustein ist allein nach Kosten profitabel.
-  - P3, Modell C, Trend-Fortsetzung (`docs/05`): gescheitert.
+  - P3, Modell C, SMC-Trend-Fortsetzung (`docs/05`): gescheitert.
   - P4, Modell D, Trendfolge mit Struktur-Exit (`docs/07`): gescheitert; damit ist der SMC-Ansatz beendet.
-  - P5, Modell F, Fix-Reversal nach Krohn/Mueller/Whelan 2024 (`docs/09`): Der Effekt ist vorhanden, aber nur so groß wie die FTMO-Kosten; gescheitert.
+  - P5, Modell F, Fix-Reversal (`docs/09`): Effekt vorhanden, aber nur so groß wie die FTMO-Kosten; gescheitert.
+  - P6, Modell G, Trendfolge D1 (`docs/11`): schon vor Kosten negativ; gescheitert.
 - **Der Hold-out 2024–2026 ist unberührt.**
-- **Empfehlung:** pausieren und keine Challenge kaufen, solange kein Modell alle Tests besteht.
+- **Empfehlung:** pausieren und keine Challenge kaufen. Für G10-FX und Gold hat sich kein Vorteil gezeigt, der nach FTMO-Kosten trägt.
 - **MQL5-Code:** keiner.
 
 | Dokument | Inhalt |
@@ -32,8 +33,10 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 | [docs/07_Ergebnisse_P4_ModellD.md](docs/07_Ergebnisse_P4_ModellD.md) | Ergebnis P4 (gescheitert), Gesamtbild P2–P4, Optionen |
 | [docs/08_P5_Vorregistrierung_ModellF.md](docs/08_P5_Vorregistrierung_ModellF.md) | Vorregistrierung P5: Fix-Reversal (Fenster, Kosten, Varianten, FTMO-Regeln) |
 | [docs/09_Ergebnisse_P5_ModellF.md](docs/09_Ergebnisse_P5_ModellF.md) | Ergebnis P5 (gescheitert), Gesamtbild P2–P5, Optionen |
+| [docs/10_P6_Vorregistrierung_ModellG.md](docs/10_P6_Vorregistrierung_ModellG.md) | Vorregistrierung P6: Trendfolge D1 (Signale, Skalierung, Kosten, FTMO-Regeln) |
+| [docs/11_Ergebnisse_P6_ModellG.md](docs/11_Ergebnisse_P6_ModellG.md) | Ergebnis P6 (gescheitert), Gesamtbild P2–P6, Empfehlung |
 | [docs/research/](docs/research/) | 8 ausführliche Research-Kapitel mit Pseudocode und Quellen |
-| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie, Modelle C, D und F, Swaps |
+| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie, Modelle C, D, F und G, Swaps |
 | [research/ftmo_mc.py](research/ftmo_mc.py) | Monte-Carlo-Simulation der Challenge; Ergebnisse in `research/results/ftmo_mc_results.md` |
 
 Einrichtung und Abläufe:
@@ -47,6 +50,7 @@ research/.venv/bin/python -I research/scripts/run_p3.py                  # Model
 research/.venv/bin/python -I research/scripts/download_rates.py          # Zinsreihen für Swaps (FRED)
 research/.venv/bin/python -I research/scripts/run_p4.py                  # Modell D In-Sample, P4 (≈ 1 min)
 research/.venv/bin/python -I research/scripts/run_p5.py                  # Modell F In-Sample, P5 (≈ 10 s)
+research/.venv/bin/python -I research/scripts/run_p6.py                  # Modell G In-Sample, P6 (≈ 10 s)
 research/.venv/bin/python -I research/ftmo_mc.py                        # FTMO-Monte-Carlo (≈ 4 min)
 cd research && .venv/bin/python -I -m pytest -q tests/                  # Tests
 ```
