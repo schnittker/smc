@@ -25,5 +25,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [19-vix-regime/](19-vix-regime/) | VIX-Regime (19) | gescheitert |
 | [20-zins-momentum/](20-zins-momentum/) | Zins-Momentum G8 (20) | gescheitert |
 | [21-pairs-mean-reversion/](21-pairs-mean-reversion/) | z-Score Mean Reversion AUDNZD / EURCHF (21) | gescheitert |
+| [22-gold-silber-ratio/](22-gold-silber-ratio/) | Gold/Silber-Ratio (22) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

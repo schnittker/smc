@@ -63,7 +63,7 @@ Folgen für die Auswahl:
 | 19 | VIX-Regime | Bei Risk-off (VIX-Sprung) Long JPY, CHF, Gold | FX, Gold / D1 | VIX von FRED ⚠ live per WebRequest | ✗ Tag 13 (T64/T65): Sharpe −0,14 / 0,04 |
 | 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | ✗ Tag 14 (T68/T69): Sharpe −0,22 / −0,29 |
 | 21 | Pairs Trading / Kointegration | Spread AUDUSD–NZDUSD (bzw. AUDNZD) handeln bei z-Score-Extremen | AUD/NZD, EUR/CHF / H4 | vorhanden | ✗ Tag 15 (T72/T73): Sharpe 0,13 / −0,20 (SNB-Schock) |
-| 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | |
+| 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | ✗ Tag 16 (T76/T77): Sharpe −0,07 / 0,09 |
 | 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | |
 | 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | |
 | 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | |
@@ -192,4 +192,5 @@ Folgen für die Auswahl:
 | 13 | 24.10.2026 | 19 | VIX-Regime | ✗ | X-HAVEN Sharpe −0,14, X-FEAR 0,04 |
 | 14 | 24.10.2026 | 20 | Zins-Momentum G8 | ✗ | Z-12 Sharpe −0,22, Z-3 −0,29 |
 | 15 | 24.10.2026 | 21 | z-Score Mean Reversion AUDNZD / EURCHF | ✗ | Sharpe 0,13 / −0,20 |
-| 16 | | | | | |
+| 16 | 24.10.2026 | 22 | Gold/Silber-Ratio | ✗ | G-60 Sharpe −0,07, G-250 0,09 |
+| 17 | | | | | |
