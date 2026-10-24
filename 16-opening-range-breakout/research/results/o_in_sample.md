@@ -13,7 +13,7 @@ Lauf vom 24.10.2026. Regeln laut `docs/01_Vorregistrierung.md`, Code `research/o
 | Sharpe Ratio p. a. (netto) | -0.17 |
 | t-Wert iid / Woche / Monat | -0.52 / -0.54 / -0.51 |
 | Trefferquote | 15% |
-| Notfall-Stops | 1812 |
+| Stops | 1812 |
 | bei doppelten Kosten | -4.87 bp/Tag |
 
 | Kriterium | Ergebnis | erfüllt |
@@ -56,7 +56,7 @@ Lauf vom 24.10.2026. Regeln laut `docs/01_Vorregistrierung.md`, Code `research/o
 | Sharpe Ratio p. a. (netto) | -0.05 |
 | t-Wert iid / Woche / Monat | -0.15 / -0.16 / -0.16 |
 | Trefferquote | 14% |
-| Notfall-Stops | 1763 |
+| Stops | 1763 |
 | bei doppelten Kosten | -4.56 bp/Tag |
 
 | Kriterium | Ergebnis | erfüllt |

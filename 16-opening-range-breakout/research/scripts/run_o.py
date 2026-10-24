@@ -80,7 +80,7 @@ def variant_lines(name: str, m: dict, checks: list) -> list[str]:
            f"| Sharpe Ratio p. a. (netto) | {m['sharpe']:.2f} |",
            f"| t-Wert iid / Woche / Monat | {m['t_iid']:.2f} / {m['t_week']:.2f} / {m['t_month']:.2f} |",
            f"| Trefferquote | {m['hit']:.0%} |",
-           f"| Notfall-Stops | {m['stops']} |",
+           f"| Stops | {m['stops']} |",
            f"| bei doppelten Kosten | {m['E_2x']:+.2f} bp/Tag |", "",
            "| Kriterium | Ergebnis | erfüllt |", "|---|---|---|"]
     out += [f"| {c} | {v} | {'ja' if ok else '**nein**'} |" for c, v, ok in checks]

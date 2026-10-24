@@ -58,7 +58,7 @@ Folgen für die Auswahl:
 | 14 | Volatilitätsgesteuertes Index-Long | Long Index, Größe ∝ 1/Volatilität (Moreira & Muir 2017) | US500, US100 / D1 | vorhanden | ✗ Tag 9 (T48/T49): Sharpe 0,56 / 0,32 (Halten 0,51) |
 | 15 | Kurzfrist-Reversal / RSI(2) | Kaufen nach kurzen Rücksetzern im Aufwärtstrend (Connors) | US500, US100 / D1 | vorhanden | ✗ Tag 10 (T52/T53): Sharpe 0,31 / 0,28 (Halten 0,51) |
 | 16 | Opening Range Breakout | Ausbruch aus der ersten 5–30-min-Range nach Kassaeröffnung (Zarattini & Aziz 2023) | US100, US500 / M5 | vorhanden | ✗ Tag 11 (T56/T57): −1,6 / −0,4 bp/Tag; 85 % Stops |
-| 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | |
+| 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | ⊘ strukturell nicht handelbar: FTMO-Asien-Indizes sind Futures-CFDs mit ≈ 19 h Handel, die US-Bewegung ist eingepreist; kein eigener Trial |
 | 18 | COT-Positionierung | Contrarian bei extremer Netto-Position der Spekulanten | Majors, Gold / W1 | CFTC nachladen ⚠ live per WebRequest | |
 | 19 | VIX-Regime | Bei Risk-off (VIX-Sprung) Long JPY, CHF, Gold | FX, Gold / D1 | VIX von FRED ⚠ live per WebRequest | |
 | 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | |
