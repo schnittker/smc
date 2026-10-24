@@ -31,3 +31,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T31 | 24.10.2026 | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-SPX, IS | nicht bestanden: +19,2 bp/Termin, t 2,38 |
 | T32 | 24.10.2026 | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-NDX, IS | nicht bestanden: +28,3 bp/Termin, t 2,26 |
 | T33, T34 | – | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | Hold-out, FTMO | entfallen |
+| T35 | | Turn-of-the-Month (10) | 10-turn-of-the-month | T-KLASSIK, IS | |
+| T36 | | Turn-of-the-Month (10) | 10-turn-of-the-month | T-FRÜH, IS | |
+| T37 | | Turn-of-the-Month (10) | 10-turn-of-the-month | Hold-out (nur falls T35/T36 besteht) | |
+| T38 | | Turn-of-the-Month (10) | 10-turn-of-the-month | FTMO-Bootstrap (nur falls T37 besteht) | |
