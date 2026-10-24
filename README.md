@@ -51,5 +51,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [58-59-lead-lag/](58-59-lead-lag/) | US500 → AUDJPY, US-Renditen → USDJPY (58, 59) | gescheitert |
 | [61-76-trendindikatoren/](61-76-trendindikatoren/) | 10 Trendindikatoren (61–64, 69–73, 76) | gescheitert |
 | [65-75-oszillatoren/](65-75-oszillatoren/) | Oszillatoren, Renko, Divergenzen (65–68, 74, 75) | gescheitert |
+| [77-80-muster-scalping/](77-80-muster-scalping/) | Harmonische Muster, Wyckoff-Spring, Scalping (77, 79, 80; 78 ⊘) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

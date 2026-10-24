@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 116 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 119 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -156,7 +156,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T253 | 24.10.2026 | Renko (74) | 65-75-oszillatoren | OS-RENKO, IS | nicht bestanden: −4,71 bp/Tag, t −1,94 |
 | T254 | 24.10.2026 | RSI-Divergenzen (75) | 65-75-oszillatoren | OS-DIV, IS | nicht bestanden: −1,59 bp/Tag, t −2,59 |
 | T255–T266 | – | Oszillatoren, Renko | 65-75-oszillatoren | Hold-out, FTMO | entfallen |
-| T267 | | Harmonische Muster (77) | 77-80-muster-scalping | HP-HARM, IS | |
-| T268 | | Wyckoff ohne Volumen (79) | 77-80-muster-scalping | HP-SPRING, IS | |
-| T269 | | Scalping M5 (80) | 77-80-muster-scalping | HP-SCALP, IS | |
-| T270–T275 | | Muster, Scalping (77, 79, 80) | 77-80-muster-scalping | Hold-out, FTMO (nur bei Bestehen) | |
+| T267 | 24.10.2026 | Harmonische Muster (77) | 77-80-muster-scalping | HP-HARM, IS | nicht bestanden: −0,12 bp/Tag, t −1,27 (107 Trades) |
+| T268 | 24.10.2026 | Wyckoff ohne Volumen (79) | 77-80-muster-scalping | HP-SPRING, IS | nicht bestanden: −1,27 bp/Tag, t −0,99 |
+| T269 | 24.10.2026 | Scalping M5 (80) | 77-80-muster-scalping | HP-SCALP, IS | nicht bestanden: −164,7 bp/Tag, t −28,3 |
+| T270–T275 | – | Muster, Scalping (77, 79, 80) | 77-80-muster-scalping | Hold-out, FTMO | entfallen |

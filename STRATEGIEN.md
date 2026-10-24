@@ -128,10 +128,10 @@ Folgen für die Auswahl:
 | 74 | Renko | Box-Wechsel als Signal (Backtest-Fallen beachten) | alle / M1-basiert | ✗ Tag 40 (T253): −4,7 bp/Tag, t −1,94 (H1-Schlusskurse) |
 | 75 | RSI/MACD-Divergenzen | Reversal bei Divergenz | alle / H4 | ✗ Tag 40 (T254): −1,6 bp/Tag, t −2,59 |
 | 76 | Kalman-Filter-Trend | Adaptive Trendschätzung statt MA | alle / H4 | ✗ Tag 39 (T228): −3,1 bp/Tag, t −1,72 |
-| 77 | Harmonische Muster | Gartley, Bat, Butterfly | alle / H4 | ⚠ |
-| 78 | Elliott-Wellen | Wellenzählung | alle / D1 | ⚠ kaum formalisierbar |
-| 79 | Wyckoff | Akkumulation/Distribution | alle / H4 | ⚠ ohne Volumen |
-| 80 | Scalping M1/M5 | EMA-/Momentum-Scalps | Majors / M1 | ⚠ Kosten fressen den Edge |
+| 77 | Harmonische Muster | Gartley, Bat, Butterfly | alle / H4 | ✗ Tag 41 (T267): Gartley/Bat −0,1 bp/Tag, 107 Trades |
+| 78 | Elliott-Wellen | Wellenzählung | alle / D1 | ⊘ nicht vorab formalisierbar, kein Test (Tag 41) |
+| 79 | Wyckoff | Akkumulation/Distribution | alle / H4 | ✗ Tag 41 (T268): Spring/Upthrust ohne Volumen −1,3 bp/Tag, t −0,99 |
+| 80 | Scalping M1/M5 | EMA-/Momentum-Scalps | Majors / M1 | ✗ Tag 41 (T269): M5 EMA 9/21 −165 bp/Tag; vor Kosten 0 |
 
 ## D – Statistik und Machine Learning (hohes Overfitting-Risiko)
 
@@ -218,4 +218,5 @@ Folgen für die Auswahl:
 | 38 | 24.10.2026 | 58, 59 | US500 → AUDJPY, US-Renditen → USDJPY | ✗ | kein verzögerter Zusammenhang |
 | 39 | 24.10.2026 | 61–64, 69–73, 76 | 10 Trendindikatoren | ✗ | vor Kosten +0,003–0,021 R |
 | 40 | 24.10.2026 | 65–68, 74, 75 | Oszillatoren, Renko, Divergenzen | ✗ | Umkehr vor Kosten ≤ 0 |
-| 41 | | | | | |
+| 41 | 24.10.2026 | 77, 79, 80 (78 ⊘) | Harmonische Muster, Wyckoff-Spring, Scalping | ✗ | Abschnitt C ohne Treffer |
+| 42 | | | | | |
