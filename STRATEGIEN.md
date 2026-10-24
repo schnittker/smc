@@ -100,13 +100,13 @@ Folgen für die Auswahl:
 | 51 | Trendlinien-Ausbruch | Algorithmische Trendlinien aus Swing-Punkten | alle / H4 | vorhanden | ✗ Tag 34 (T176): −3,5 bp/Tag, t −2,81; vor Kosten 0 |
 | 52 | Fibonacci-Pullback | Einstieg am 50–61,8-%-Retracement im Trend | alle / H4 | vorhanden | ✗ Tag 35 (T183): −1,8 bp/Tag, t −2,69 |
 | 53 | ATR-Trailing-Trend (Chandelier) | Trend halten bis ATR-Trailing-Stop | alle / D1 | vorhanden | ✗ Tag 35 (T184): −0,1 bp/Tag, t −0,38 (55-Tage-Ausbruch) |
-| 54 | Candlestick an Levels | Pin Bar / Engulfing an S/R | alle / H4–D1 | vorhanden | |
-| 55 | Chartformationen | SKS, Doppeltop/-boden, Dreiecke algorithmisch | alle / H4–D1 | vorhanden ⚠ (Erkennung subjektiv) | |
+| 54 | Candlestick an Levels | Pin Bar / Engulfing an S/R | alle / H4–D1 | vorhanden | ✗ Tag 36 (T189/T190): −0,45 / −5,80 bp/Tag |
+| 55 | Chartformationen | SKS, Doppeltop/-boden, Dreiecke algorithmisch | alle / H4–D1 | vorhanden ⚠ (Erkennung subjektiv) | ✗ Tag 36 (T191): Doppeltop/-boden −0,55 bp/Tag, t −1,73; SKS/Dreiecke nicht formalisiert |
 | 56 | Verfallstage (OPEX / Triple Witching) | Index-Verhalten rund um Optionsverfall | US500, US100 / H1 | Termine berechenbar | |
 | 57 | Jahresende / Santa Rally | Long Indizes letzte Dezemberwoche | Indizes / D1 | vorhanden (wenige Datenpunkte) | |
 | 58 | Aktien → AUDJPY | AUDJPY folgt US500 mit Verzögerung (Risk-Proxy) | AUDJPY / H1 | vorhanden | |
 | 59 | US-Renditen → USDJPY | USDJPY folgt 10-jähriger US-Rendite | USDJPY / D1 | FRED vorhanden ⚠ live per WebRequest | |
-| 60 | Supply/Demand-Zonen (Seiden) | Basis-Zonen vor starkem Impuls – nah an SMC, Prior gering | alle / H4 | vorhanden | |
+| 60 | Supply/Demand-Zonen (Seiden) | Basis-Zonen vor starkem Impuls – nah an SMC, Prior gering | alle / H4 | vorhanden | ✗ Tag 36 (T192): +0,15 bp/Tag, t 0,40 (473 Trades) |
 
 ## C – Klassische Indikatoren (geringer Prior, meist an Kosten gescheitert)
 
@@ -213,4 +213,5 @@ Folgen für die Auswahl:
 | 33 | 24.10.2026 | 48, 49 | Market Profile 80 %, Pivot Points | ✗ | Level ohne Wirkung |
 | 34 | 24.10.2026 | 50, 51 | S/R-Zonen, Trendlinien | ✗ | Swing-Level ohne Wirkung |
 | 35 | 24.10.2026 | 52, 53 | Fibonacci-Pullback, Chandelier-Trend | ✗ | Fib-Zone ohne Wirkung; Trend neutral |
-| 36 | | | | | |
+| 36 | 24.10.2026 | 54, 55, 60 | Candlesticks an Levels, Doppeltop/-boden, Supply/Demand | ✗ | Muster ohne Vorhersagekraft |
+| 37 | | | | | |

@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 90 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 94 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -125,8 +125,8 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T183 | 24.10.2026 | Fibonacci-Pullback (52) | 52-53-fib-chandelier | FC-FIB, IS | nicht bestanden: −1,76 bp/Tag, t −2,69 |
 | T184 | 24.10.2026 | Chandelier-Trend (53) | 52-53-fib-chandelier | FC-CHAND, IS | nicht bestanden: −0,14 bp/Tag, t −0,38 |
 | T185–T188 | – | Fibonacci, Chandelier (52, 53) | 52-53-fib-chandelier | Hold-out, FTMO | entfallen |
-| T189 | | Candlestick an Levels (54) | 54-55-60-price-action | PA-PIN, IS | |
-| T190 | | Candlestick an Levels (54) | 54-55-60-price-action | PA-ENG, IS | |
-| T191 | | Chartformationen (55) | 54-55-60-price-action | PA-DT, IS | |
-| T192 | | Supply/Demand-Zonen (60) | 54-55-60-price-action | PA-SD, IS | |
-| T193–T200 | | Price Action (54, 55, 60) | 54-55-60-price-action | Hold-out, FTMO (nur bei Bestehen) | |
+| T189 | 24.10.2026 | Candlestick an Levels (54) | 54-55-60-price-action | PA-PIN, IS | nicht bestanden: −0,45 bp/Tag, t −0,68 |
+| T190 | 24.10.2026 | Candlestick an Levels (54) | 54-55-60-price-action | PA-ENG, IS | nicht bestanden: −5,80 bp/Tag, t −4,64 |
+| T191 | 24.10.2026 | Chartformationen (55) | 54-55-60-price-action | PA-DT, IS | nicht bestanden: −0,55 bp/Tag, t −1,73 |
+| T192 | 24.10.2026 | Supply/Demand-Zonen (60) | 54-55-60-price-action | PA-SD, IS | nicht bestanden: +0,15 bp/Tag, t 0,40 |
+| T193–T200 | – | Price Action (54, 55, 60) | 54-55-60-price-action | Hold-out, FTMO | entfallen |
