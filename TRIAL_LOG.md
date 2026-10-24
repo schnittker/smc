@@ -71,3 +71,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T84 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-USD, IS | nicht bestanden: +107,7 bp/Termin, t 2,10 |
 | T85 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-CARRY, IS | nicht bestanden: +54,6 bp/Termin, t 2,11 |
 | T86, T87 | – | USD an FOMC-Tagen (24) | 24-fomc-fx | Hold-out, FTMO | entfallen |
+| T88 | | Pre-Holiday (26) | 26-pre-holiday | H-SPX, IS | |
+| T89 | | Pre-Holiday (26) | 26-pre-holiday | H-NDX, IS | |
+| T90 | | Pre-Holiday (26) | 26-pre-holiday | Hold-out (nur falls T88/T89 besteht) | |
+| T91 | | Pre-Holiday (26) | 26-pre-holiday | FTMO-Bootstrap (nur falls T90 besteht) | |
