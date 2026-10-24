@@ -89,8 +89,8 @@ Folgen für die Auswahl:
 | 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | ✗ Tag 28 (T135): −2,3 bp/Tag, t −4,70; Filter verschlechtert |
 | 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | ✗ Tag 29 (T138): −3,2 bp/Tag, t −3,61 |
 | 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | ✗ Tag 29 (T139): formal bestanden, aber Feed-Artefakt (erste Wochenkerze HistData); auf FTMO-Zeit −5 bp |
-| 43 | Große Tagesbewegung | Nach Tag > 2 ATR: Reversal oder Fortsetzung | alle / D1 | vorhanden | |
-| 44 | Wochentags-Effekt | Wochentags-Saisonalität | alle / D1 | vorhanden | |
+| 43 | Große Tagesbewegung | Nach Tag > 2 ATR: Reversal oder Fortsetzung | alle / D1 | vorhanden | ✗ Tag 30 (T144/T145): −0,30 / −0,06 bp/Tag, t −0,5 / −0,1 |
+| 44 | Wochentags-Effekt | Wochentags-Saisonalität | alle / D1 | vorhanden | ✗ Tag 30 (T146): +0,5 bp/Tag, t 0,50 (rollierende Wahl) |
 | 45 | Multi-Timeframe-Pullback | Trend auf D1/H4, Einstieg auf H1-Rücksetzer | alle / H1 | vorhanden | |
 | 46 | Währungsstärke-Ranking intraday | Stärkste vs. schwächste Währung der Session handeln | 28 Paare / H1 | vorhanden | |
 | 47 | USD-Basket Mean Reversion | Einzelpaar weicht vom USD-Index (synthetisch) ab → Rückkehr | USD-Majors / H1 | vorhanden | |
@@ -207,4 +207,5 @@ Folgen für die Auswahl:
 | 27 | 24.10.2026 | 37, 39 | Bollinger-MR, z-Score/OU-MR | ✗ | Umkehr auf H1 nach Kosten negativ |
 | 28 | 24.10.2026 | 40 | Hurst-Regime-Switch | ✗ | H ≈ 0,5, kein Regime-Signal |
 | 29 | 24.10.2026 | 41, 42 | Gap-Fill Indizes, Wochenend-Gap FX | ✗ | Nr. 42 formal bestanden, als Feed-Artefakt verworfen |
-| 30 | | | | | |
+| 30 | 24.10.2026 | 43, 44 | Große Tagesbewegung, Wochentags-Effekt | ✗ | Folgetage nach 2-ATR-Tagen = Rauschen |
+| 31 | | | | | |

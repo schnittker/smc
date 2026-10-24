@@ -40,5 +40,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [37-39-h1-mean-reversion/](37-39-h1-mean-reversion/) | Bollinger- und z-Score-Mean-Reversion (37, 39) | gescheitert |
 | [40-hurst-regime/](40-hurst-regime/) | Hurst-Regime-Switch (40) | gescheitert |
 | [41-42-gap-fade/](41-42-gap-fade/) | Gap-Fill Indizes, Wochenend-Gap FX (41, 42) | gescheitert (42: Feed-Artefakt) |
+| [43-44-tagesmuster/](43-44-tagesmuster/) | Große Tagesbewegung, Wochentags-Effekt (43, 44) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

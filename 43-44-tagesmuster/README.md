@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Nach einem Tag mit mehr als 2 ATR wird am Folgetag gegen bzw. mit der Bewegung gehandelt (Nr. 43). Alternativ wird an einem rollierend gewählten Wochentag gehandelt (Nr. 44). Die Position läuft jeweils von der Eröffnung bis zum Schluss des Servertags, die Größe ist ATR-skaliert, 17 Instrumente.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle drei Varianten sind gescheitert** (netto −0,30 / −0,06 / +0,52 bp je Tag, t −0,54 / −0,11 / 0,50). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/e_in_sample.md](research/results/e_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`); venv aus dem SMC-Projekt.
 
