@@ -37,3 +37,8 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T39 | 24.10.2026 | Intraday-Momentum (11) | 11-intraday-momentum | I-ONFH, IS | nicht bestanden: +0,44 bp/Tag, t 0,52 |
 | T40 | 24.10.2026 | Intraday-Momentum (11) | 11-intraday-momentum | I-ROD, IS | nicht bestanden: +1,00 bp/Tag, t 1,31 |
 | T41, T42 | – | Intraday-Momentum (11) | 11-intraday-momentum | Hold-out, FTMO | entfallen |
+| T43 | | Overnight-Drift (12) | 12-overnight-drift | N-NACHT, IS | |
+| T44 | | Overnight-Drift (12) | 12-overnight-drift | N-EU, IS | |
+| T45 | | Overnight-Drift (12) | 12-overnight-drift | N-EU-DOWN, IS | |
+| T46 | | Overnight-Drift (12) | 12-overnight-drift | Hold-out (nur falls eine besteht) | |
+| T47 | | Overnight-Drift (12) | 12-overnight-drift | FTMO-Bootstrap (nur falls T46 besteht) | |
