@@ -22,5 +22,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [16-opening-range-breakout/](16-opening-range-breakout/) | Opening Range Breakout 5 min (16) | gescheitert |
 | — | Lead-Lag US → Asien (17) | strukturell nicht handelbar (CFDs handeln während der US-Sitzung), kein eigener Test |
 | [18-cot-positionierung/](18-cot-positionierung/) | COT-Extreme (18) | gescheitert |
+| [19-vix-regime/](19-vix-regime/) | VIX-Regime (19) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

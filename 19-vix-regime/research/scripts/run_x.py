@@ -53,7 +53,9 @@ def market(symbol: str, day_to: int | None):
 
 
 def stats(rows: np.ndarray, years) -> dict:
-    net, cost, days = rows["net"], rows["cost"], rows["day"]
+    days, inv = np.unique(rows["day"], return_inverse=True)          # portfolio: sum over instruments per day
+    net, cost = np.bincount(inv, rows["net"]), np.bincount(inv, rows["cost"])
+    w_day = np.bincount(inv, rows["w"])
     n, sd = len(net), net.std(ddof=1)
     scale = 0.10 / (sd * np.sqrt(ANNUAL))
     equity = np.cumsum(net * scale)
@@ -65,8 +67,8 @@ def stats(rows: np.ndarray, years) -> dict:
          "ret10": float(net.mean() * scale * ANNUAL), "maxdd10": float((np.maximum.accumulate(equity) - equity).max()),
          "worst10": float((net * scale).min()),
          "pnl": float(rows["pnl"].sum() / per_year), "swap": float(rows["swap"].sum() / per_year),
-         "trade": float(rows["trade_cost"].sum() / per_year), "w_mean": float(rows["w"].mean()),
-         "w_max": float(rows["w"].max()), "scale": scale, "days_arr": days, "net_arr": net}
+         "trade": float(rows["trade_cost"].sum() / per_year), "w_mean": float(w_day.mean()),
+         "w_max": float(w_day.max()), "scale": scale, "days_arr": days, "net_arr": net}
     m["t"] = min(m["t_iid"], m["t_week"], m["t_month"])
     yr = year_of(days)
     m["by_year"] = {y: float(net[yr == y].sum()) for y in years}

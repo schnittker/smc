@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 41 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 43 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -53,7 +53,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T60 | 24.10.2026 | COT-Extreme (18) | 18-cot-positionierung | C-KONTRA, IS | nicht bestanden: Sharpe 0,22, t 0,62 |
 | T61 | 24.10.2026 | COT-Extreme (18) | 18-cot-positionierung | C-FOLGE, IS | nicht bestanden: Sharpe −0,50, t −1,57 |
 | T62, T63 | – | COT-Extreme (18) | 18-cot-positionierung | Hold-out, FTMO | entfallen |
-| T64 | | VIX-Regime (19) | 19-vix-regime | X-HAVEN, IS | |
-| T65 | | VIX-Regime (19) | 19-vix-regime | X-FEAR, IS | |
-| T66 | | VIX-Regime (19) | 19-vix-regime | Hold-out (nur falls T64/T65 besteht) | |
-| T67 | | VIX-Regime (19) | 19-vix-regime | FTMO-Bootstrap (nur falls T66 besteht) | |
+| T64 | 24.10.2026 | VIX-Regime (19) | 19-vix-regime | X-HAVEN, IS | nicht bestanden: Sharpe −0,14, t −0,65 |
+| T65 | 24.10.2026 | VIX-Regime (19) | 19-vix-regime | X-FEAR, IS | nicht bestanden: Sharpe 0,04, t 0,13 |
+| T66, T67 | – | VIX-Regime (19) | 19-vix-regime | Hold-out, FTMO | entfallen |
