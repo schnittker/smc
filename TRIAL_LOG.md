@@ -83,3 +83,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T102 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP1, IS | nicht bestanden: Sharpe 0,17, t 0,48 |
 | T103 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP2, IS | nicht bestanden: Sharpe 0,14, t 0,38 |
 | T104, T105 | – | Dual Momentum (29) | 29-dual-momentum | Hold-out, FTMO | entfallen |
+| T106 | | London Breakout (31) | 31-london-breakout | L-GBP, IS | |
+| T107 | | London Breakout (31) | 31-london-breakout | L-EUR, IS | |
+| T108 | | London Breakout (31) | 31-london-breakout | Hold-out (nur falls T106/T107 besteht) | |
+| T109 | | London Breakout (31) | 31-london-breakout | FTMO-Bootstrap (nur falls T108 besteht) | |
