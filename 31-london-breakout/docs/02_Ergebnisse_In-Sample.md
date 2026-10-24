@@ -17,7 +17,7 @@ Grundlagen:
 | Netto je Tag (bp des Kapitals, Risiko 0,5 %) | > 0 | +0,75 | **−1,46** |
 | t-Wert (kleinster aus iid, Woche, Monat) | ≥ 3,0 | **0,47** | **−1,01** |
 | Sharpe Ratio p. a. | (≈ 1,0) | 0,16 | −0,34 |
-| Jahre positiv | ≥ 6 von 9 | 5 von 9 | **4 von 9** |
+| Jahre positiv | ≥ 6 von 9 | **5 von 9** | **4 von 9** |
 | bei doppelten Kosten | > 0 | **−1,39** | **−3,98** |
 | Ø R je Trade netto / vor Kosten | – | +0,015 / +0,059 | −0,030 / +0,022 |
 | Trefferquote / Stop / Tagesende | – | 37 % / 53 % / 47 % | 39 % / 51 % / 49 % |

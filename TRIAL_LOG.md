@@ -86,3 +86,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T106 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-GBP, IS | nicht bestanden: +0,75 bp/Tag, t 0,47 |
 | T107 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-EUR, IS | nicht bestanden: −1,46 bp/Tag, t −1,01 |
 | T108, T109 | – | London Breakout (31) | 31-london-breakout | Hold-out, FTMO | entfallen |
+| T110 | | Asien-Range-Fade (32) | 32-asien-range-fade | A-EURCHF, IS | |
+| T111 | | Asien-Range-Fade (32) | 32-asien-range-fade | A-AUDCAD, IS | |
+| T112 | | Asien-Range-Fade (32) | 32-asien-range-fade | Hold-out (nur falls T110/T111 besteht) | |
+| T113 | | Asien-Range-Fade (32) | 32-asien-range-fade | FTMO-Bootstrap (nur falls T112 besteht) | |
