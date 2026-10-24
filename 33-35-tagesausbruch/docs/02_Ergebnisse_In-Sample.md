@@ -29,7 +29,7 @@ Grundlagen:
 
 - **Vor Kosten ist ein Hauch von Ausbruchs-Momentum da**, nämlich +0,01 bis +0,04 R je Trade. Das ist zu wenig für die Kosten von 0,03–0,04 R je Trade, und es ist instabil: Die Jahresergebnisse schwanken ohne Muster.
 - **Kein Instrument und keine Anlageklasse sticht stabil heraus.** Selbst die Zielmärkte der Originalregeln sind uneinheitlich: Beim Volatility Breakout auf Indizes und Gold (Nr. 35) sind HK50 +2,0, US100 +1,1 und JP225 +0,8 % p. a., aber UK100 −2,1, FRA40 −1,7 und AUS200 −2,3 % p. a.
-- **Abweichung von der Listenbeschreibung:** Nr. 34 („in Trendrichtung“) und Nr. 35 („Indizes, Gold“) wurden wie vorregistriert in beide Richtungen und auf allen 17 Instrumenten getestet. Die Ergebnisse je Instrument (`research/results/t_in_sample.md`) zeigen keine Teilmenge, der eine eigene Vorregistrierung rechtfertigen würde.
+- **Abweichung von der Listenbeschreibung:** Nr. 34 („in Trendrichtung“) und Nr. 35 („Indizes, Gold“) wurden wie vorregistriert in beide Richtungen und auf allen 17 Instrumenten getestet. Die Ergebnisse je Instrument (`research/results/t_in_sample.md`) zeigen keine Teilmenge, die eine eigene Vorregistrierung rechtfertigen würde.
 - **Zusammen mit Nr. 16 (ORB) und Nr. 31 (London Breakout)** sind jetzt fünf Ausbruchsregeln auf Intraday- und Tagesbasis gescheitert. Einfache Preis-Ausbrüche haben bei FTMO-Kosten 2015–2023 keinen Vorteil.
 
 **Korrektur nach dem ersten Lauf:** Eine einstündige HistData-Restkerze am Server-Samstag wurde fälschlich als D1-Kerze gezählt. Sie wird jetzt ausgeschlossen (siehe `research/results/t_in_sample.md`). Das Ergebnis bleibt dasselbe: Auch der fehlerhafte Lauf war negativ.
