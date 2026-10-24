@@ -68,3 +68,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T80 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-OEL, IS | nicht bestanden: Sharpe −0,41, t −1,23 |
 | T81 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-GOLD, IS | nicht bestanden: Sharpe 0,21, t 0,63 |
 | T82, T83 | – | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | Hold-out, FTMO | entfallen |
+| T84 | | USD an FOMC-Tagen (24) | 24-fomc-fx | F-USD, IS | |
+| T85 | | USD an FOMC-Tagen (24) | 24-fomc-fx | F-CARRY, IS | |
+| T86 | | USD an FOMC-Tagen (24) | 24-fomc-fx | Hold-out (nur falls T84/T85 besteht) | |
+| T87 | | USD an FOMC-Tagen (24) | 24-fomc-fx | FTMO-Bootstrap (nur falls T86 besteht) | |
