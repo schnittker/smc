@@ -174,3 +174,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T299 | 24.10.2026 | FX Value (8) | 08-fx-value | V-5Y, IS | nicht bestanden: Sharpe −0,06, t −0,18 |
 | T300 | 24.10.2026 | FX Value (8) | 08-fx-value | V-PPP, IS | nicht bestanden: Sharpe −0,07, t −0,29 |
 | T301, T302 | – | FX Value (8) | 08-fx-value | Hold-out, FTMO | entfallen |
+| T303 | | News-Straddle NFP (94) | 94-news-straddle | N-NFP, IS | |
+| T304, T305 | | News-Straddle NFP (94) | 94-news-straddle | Hold-out, FTMO (nur bei Bestehen) | |
