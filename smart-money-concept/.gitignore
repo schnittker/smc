@@ -1,0 +1,11 @@
+# market data (large, re-downloadable)
+/data/
+
+# python
+research/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store

@@ -1,0 +1,182 @@
+# 100 Trading-Strategien – Testplan
+
+Ziel: jeden Tag eine Strategie mit Claude testen, bis eine die FTMO-2-Step-Challenge (Swing, 100.000 USD) realistisch besteht.
+Gleiche Pipeline wie in `smart-money-concept/`: Vorregistrierung → In-Sample 2015–2023 → Hold-out 2024–2026 nur einmal und nur, wenn IS besteht.
+
+## Feste Rahmenbedingungen (für jede Strategie identisch)
+
+| Punkt | Vorgabe |
+|---|---|
+| Umsetzung | Expert Advisor für **MetaTrader 5**, handelt **vollständig autonom** (kein manueller Eingriff) |
+| Max. Drawdown gesamt | **10 %** vom Startkapital (harte Grenze, FtmoGuard im EA) |
+| Max. Tagesverlust | **5 %** (inkl. offener Positionen, Tagesgrenze nach Serverzeit) |
+| Ziel Phase 1 | **+10 %** |
+| Ziel Phase 2 | **+5 %** |
+| News-Trading | erlaubt |
+| Weekend-Holding | erlaubt |
+| Konto | FTMO 2-Step, Swing, 100.000 USD |
+
+Folgen für die Auswahl:
+- Jede Regel muss sich **in MQL5 umsetzen** lassen. ML-Modelle nur, wenn sie als ONNX in MT5 laufen.
+- Externe Daten müssen **live im EA** verfügbar sein: Wirtschaftskalender (FOMC, EZB, NFP, CPI) liefert MT5 selbst (`CalendarValueHistory`); COT, FRED, VIX bräuchten `WebRequest` oder eine regelmäßig importierte Datei → ⚠.
+- Bewertet wird nicht nur Sharpe, sondern die **Bestehenswahrscheinlichkeit** in der FTMO-Monte-Carlo (Ziel erreicht, bevor 5 % Tages- oder 10 % Gesamtverlust greifen).
+
+**Reihenfolge = Priorität.** Oben stehen Strategien mit Evidenz aus der Forschung, unten Indikator-Setups mit geringem Prior und Strategien, die mit unseren Daten oder den FTMO-Regeln nicht sinnvoll testbar sind.
+
+**Datenlage (wichtig für die Auswahl):**
+- Vorhanden: HistData M1 (Bid) für 24 FX-Paare, Gold, Silber, Brent, US500, US100, FRA40, UK100, JP225, HK50, AUS200; Zinsen von FRED
+- Kaputt/unvollständig: DAX, Euro Stoxx 50, WTI (siehe `docs/13`)
+- **Kein echtes Volumen**, kein Orderbuch, kein Tickvolumen
+- Frei nachladbar: CFTC-COT-Daten, FRED (VIX, Renditen, CPI), FOMC-/EZB-Termine, Wirtschaftskalender (mit Aufwand)
+
+**Status:** ✗ gescheitert · ✓ bestanden · ⏳ in Arbeit · ⚠ nur eingeschränkt testbar · ⛔ nicht empfohlen / FTMO-Regeln
+
+---
+
+## Bereits getestet (Tag 1)
+
+| # | Strategie | Idee | Markt / TF | Status |
+|---|---|---|---|---|
+| 1 | Smart Money Concept (SMC/ICT) | Order Blocks, FVG, Liquidity Sweeps, MSS; Ereignisstudie + Modelle C/D | FX, Gold / M5–H4 | ✗ Tag 1 (P2–P4) |
+| 2 | USD-Fix-Reversal | USD steigt vor den Fixings, fällt danach (Krohn et al. 2024) | EURUSD, GBPUSD, USDJPY / M5 | ✗ Tag 1 (P5) – Effekt ≈ Kosten |
+| 3 | Zeitreihen-Momentum FX + Gold | Vorzeichen der 1/3/12-Monats-Rendite, vol-skaliert | 25 FX + Gold / D1 | ✗ Tag 1 (P6) |
+| 4 | Zeitreihen-Momentum Indizes + Rohstoffe | wie #3 | 10 CFDs / D1 | ✗ Tag 1 (P7) |
+
+## A – Evidenzbasiert (zuerst testen)
+
+| # | Strategie | Idee | Markt / TF | Daten | Status |
+|---|---|---|---|---|---|
+| 5 | Monatsend-Rebalancing-Flows | Fonds sichern Währungsrisiko zum Monatsende ab: USD-Richtung aus Aktienperformance des Monats ableiten (Melvin & Prins 2015) | USD-Majors / H1 | vorhanden | ✗ Tag 2 (T19/T20): Effekt seit 2015 weg |
+| 6 | FX Carry | Long hochverzinste, Short niedrigverzinste Währungen (Lustig & Verdelhan) – FTMO-Swap-Aufschläge prüfen | G10-FX / D1–W1 | FRED vorhanden ⚠ live per WebRequest | |
+| 7 | FX Querschnitts-Momentum | Monatlich Long die 3 stärksten, Short die 3 schwächsten Währungen (Menkhoff et al. 2012) | G10-FX / D1 | vorhanden | |
+| 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | |
+| 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | |
+| 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | |
+| 11 | Intraday-Momentum | Rendite der ersten 30 min sagt die letzte 30 min voraus (Gao et al. 2018) | US500, US100 / M5 | vorhanden | |
+| 12 | Overnight- vs. Intraday-Rendite | Indexrendite entsteht überwiegend über Nacht – nur Overnight halten | Indizes / H1 | vorhanden | |
+| 13 | Tageszeit-Effekt FX | Währungen werten während der eigenen Handelszeit ab (Breedon & Ranaldo 2013) | Majors / H1 | vorhanden | |
+| 14 | Volatilitätsgesteuertes Index-Long | Long Index, Größe ∝ 1/Volatilität (Moreira & Muir 2017) | US500, US100 / D1 | vorhanden | |
+| 15 | Kurzfrist-Reversal / RSI(2) | Kaufen nach kurzen Rücksetzern im Aufwärtstrend (Connors) | US500, US100 / D1 | vorhanden | |
+| 16 | Opening Range Breakout | Ausbruch aus der ersten 5–30-min-Range nach Kassaeröffnung (Zarattini & Aziz 2023) | US100, US500 / M5 | vorhanden | |
+| 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | |
+| 18 | COT-Positionierung | Contrarian bei extremer Netto-Position der Spekulanten | Majors, Gold / W1 | CFTC nachladen ⚠ live per WebRequest | |
+| 19 | VIX-Regime | Bei Risk-off (VIX-Sprung) Long JPY, CHF, Gold | FX, Gold / D1 | VIX von FRED ⚠ live per WebRequest | |
+| 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | |
+| 21 | Pairs Trading / Kointegration | Spread AUDUSD–NZDUSD (bzw. AUDNZD) handeln bei z-Score-Extremen | AUD/NZD, EUR/CHF / H4 | vorhanden | |
+| 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | |
+| 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | |
+| 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | |
+| 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | |
+| 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | |
+| 27 | Halloween / Sell in May | Nur November–April long | Indizes / D1 | vorhanden (wenige Datenpunkte) | |
+| 28 | 52-Wochen-Hoch | Nähe zum 52-Wochen-Hoch → Fortsetzung (George & Hwang) – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
+| 29 | Dual Momentum | Relativ + absolut: bestes Asset aus Indizes/Gold, sonst Cash (Antonacci) | Indizes, Gold / MN | vorhanden | |
+| 30 | Donchian / Turtle | Ausbruch über 20/55-Tage-Hoch – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
+
+## B – Praktiker-Setups: Sessions, Ausbrüche, Mean Reversion
+
+| # | Strategie | Idee | Markt / TF | Daten | Status |
+|---|---|---|---|---|---|
+| 31 | London Breakout | Ausbruch aus der Asien-Range zur London-Eröffnung | GBPUSD, EURUSD / M15 | vorhanden | |
+| 32 | Asien-Range-Fade (Nachtscalper) | Range-Extreme in der ruhigen Asien-Session faden | EURCHF, AUDCAD, EURGBP-Ersatz / M5 | vorhanden – Rollover-Spreads beachten | |
+| 33 | NR4 / NR7 (Crabel) | Ausbruch nach der engsten Range der letzten 4/7 Tage | alle / D1 | vorhanden | |
+| 34 | Inside Bar Breakout | Ausbruch aus Inside Bar in Trendrichtung | alle / D1, H4 | vorhanden | |
+| 35 | Volatility Breakout (L. Williams) | Einstieg bei Open ± k · Vortagesrange | Indizes, Gold / D1 | vorhanden | |
+| 36 | Bollinger Squeeze | Ausbruch nach Bandbreiten-Tief | alle / H4 | vorhanden | |
+| 37 | Bollinger Mean Reversion | Rückkehr zur Mitte nach Bandberührung in Seitwärtsphasen | FX-Crosses / H1 | vorhanden | |
+| 38 | Keltner-Channel-Ausbruch | ATR-Kanal-Ausbruch mit Trendfilter | alle / H4 | vorhanden | |
+| 39 | z-Score Mean Reversion (OU) | Abstand zum gleitenden Mittel in Std.-Abw., Halbwertszeit schätzen | FX-Crosses / H1 | vorhanden | |
+| 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | |
+| 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | |
+| 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | |
+| 43 | Große Tagesbewegung | Nach Tag > 2 ATR: Reversal oder Fortsetzung | alle / D1 | vorhanden | |
+| 44 | Wochentags-Effekt | Wochentags-Saisonalität | alle / D1 | vorhanden | |
+| 45 | Multi-Timeframe-Pullback | Trend auf D1/H4, Einstieg auf H1-Rücksetzer | alle / H1 | vorhanden | |
+| 46 | Währungsstärke-Ranking intraday | Stärkste vs. schwächste Währung der Session handeln | 28 Paare / H1 | vorhanden | |
+| 47 | USD-Basket Mean Reversion | Einzelpaar weicht vom USD-Index (synthetisch) ab → Rückkehr | USD-Majors / H1 | vorhanden | |
+| 48 | Market Profile / TPO | Rückkehr in die Value Area (80-%-Regel), zeitbasiert, ohne Volumen | Indizes / M30 | vorhanden | |
+| 49 | Pivot Points (Classic/Camarilla) | Abpraller an S1/R1, Ausbruch über S3/R3 | Indizes, Majors / M15 | vorhanden | |
+| 50 | Horizontale S/R-Zonen | Algorithmisch ermittelte Swing-Level, Abpraller oder Ausbruch | alle / H1–H4 | vorhanden | |
+| 51 | Trendlinien-Ausbruch | Algorithmische Trendlinien aus Swing-Punkten | alle / H4 | vorhanden | |
+| 52 | Fibonacci-Pullback | Einstieg am 50–61,8-%-Retracement im Trend | alle / H4 | vorhanden | |
+| 53 | ATR-Trailing-Trend (Chandelier) | Trend halten bis ATR-Trailing-Stop | alle / D1 | vorhanden | |
+| 54 | Candlestick an Levels | Pin Bar / Engulfing an S/R | alle / H4–D1 | vorhanden | |
+| 55 | Chartformationen | SKS, Doppeltop/-boden, Dreiecke algorithmisch | alle / H4–D1 | vorhanden ⚠ (Erkennung subjektiv) | |
+| 56 | Verfallstage (OPEX / Triple Witching) | Index-Verhalten rund um Optionsverfall | US500, US100 / H1 | Termine berechenbar | |
+| 57 | Jahresende / Santa Rally | Long Indizes letzte Dezemberwoche | Indizes / D1 | vorhanden (wenige Datenpunkte) | |
+| 58 | Aktien → AUDJPY | AUDJPY folgt US500 mit Verzögerung (Risk-Proxy) | AUDJPY / H1 | vorhanden | |
+| 59 | US-Renditen → USDJPY | USDJPY folgt 10-jähriger US-Rendite | USDJPY / D1 | FRED vorhanden ⚠ live per WebRequest | |
+| 60 | Supply/Demand-Zonen (Seiden) | Basis-Zonen vor starkem Impuls – nah an SMC, Prior gering | alle / H4 | vorhanden | |
+
+## C – Klassische Indikatoren (geringer Prior, meist an Kosten gescheitert)
+
+| # | Strategie | Idee | Markt / TF | Status |
+|---|---|---|---|---|
+| 61 | MA-Crossover 50/200 | Golden/Death Cross | alle / D1 | |
+| 62 | EMA 9/21 | schneller Crossover | alle / H1 | |
+| 63 | Triple MA | 3 MAs in Reihenfolge als Trendfilter | alle / H4 | |
+| 64 | MACD | Signal-Crossover / Nulllinie | alle / H4 | |
+| 65 | RSI 14 Überkauft/Überverkauft | Fade bei 30/70 | alle / H1 | |
+| 66 | Stochastik | %K/%D-Kreuzung in Extremzonen | alle / H1 | |
+| 67 | Williams %R | Extremzonen-Fade | alle / H1 | |
+| 68 | CCI | ±100-Durchbruch | alle / H4 | |
+| 69 | ADX / DMI | DI-Kreuzung bei ADX > 25 | alle / H4 | |
+| 70 | Parabolic SAR | Stop-and-Reverse | alle / H4 | |
+| 71 | Supertrend | ATR-basierter Trendwechsel | alle / H4 | |
+| 72 | Ichimoku | Kumo-Ausbruch, Tenkan/Kijun | alle / H4–D1 | |
+| 73 | Heikin-Ashi | Farbwechsel als Trendsignal | alle / H4 | |
+| 74 | Renko | Box-Wechsel als Signal (Backtest-Fallen beachten) | alle / M1-basiert | |
+| 75 | RSI/MACD-Divergenzen | Reversal bei Divergenz | alle / H4 | |
+| 76 | Kalman-Filter-Trend | Adaptive Trendschätzung statt MA | alle / H4 | |
+| 77 | Harmonische Muster | Gartley, Bat, Butterfly | alle / H4 | ⚠ |
+| 78 | Elliott-Wellen | Wellenzählung | alle / D1 | ⚠ kaum formalisierbar |
+| 79 | Wyckoff | Akkumulation/Distribution | alle / H4 | ⚠ ohne Volumen |
+| 80 | Scalping M1/M5 | EMA-/Momentum-Scalps | Majors / M1 | ⚠ Kosten fressen den Edge |
+
+## D – Statistik und Machine Learning (hohes Overfitting-Risiko)
+
+| # | Strategie | Idee | Markt / TF | Status |
+|---|---|---|---|---|
+| 81 | Hidden-Markov-Regime | Regime erkennen, je Regime eigenes Modell | alle / D1 | |
+| 82 | GARCH-Volatilitätsprognose | Ausbruch/Positionsgröße aus Vol-Prognose | alle / D1 | |
+| 83 | Gradient Boosting Richtung | Features → Richtung nächste n Bars | alle / H1 | |
+| 84 | Meta-Labeling (López de Prado) | ML filtert Signale einer Basisstrategie, Triple Barrier | Basis aus A/B | |
+| 85 | k-NN-Analogien | Ähnliche historische Muster suchen | alle / D1 | |
+| 86 | LSTM / Transformer | Sequenzmodell auf Renditen, als ONNX in MT5 | alle / H1 | |
+| 87 | Reinforcement Learning | Agent lernt Positionierung, als ONNX in MT5 | alle / H1 | |
+| 88 | Genetic Programming | Automatische Regelsuche – extremes Data Mining | alle | ⚠ |
+| 89 | Retail-Sentiment contrarian | Gegen Mehrheit der Retail-Positionen (IG/Myfxbook) | Majors / D1 | ⚠ Historie knapp |
+| 90 | Gold-Saisonalität | Monats-/Jahreszeiteffekte bei Gold | XAUUSD / D1 | |
+
+## E – Datenlücken, FTMO-Regeln, Kontrollen
+
+| # | Strategie | Problem | Status |
+|---|---|---|---|
+| 91 | VWAP-Reversion | kein echtes Volumen in HistData | ⚠ |
+| 92 | Volume Profile | kein echtes Volumen | ⚠ |
+| 93 | Order Flow / Footprint / DOM | keine Orderbuchdaten | ⛔ |
+| 94 | News-Straddle | erlaubt, aber Slippage und Spread-Ausweitung im Backtest kaum abbildbar | ⚠ |
+| 95 | Grid Trading | Ruinrisiko vs. 5 %/10 %-Verlustgrenze | ⛔ |
+| 96 | Martingale | Ruinrisiko vs. Verlustgrenze | ⛔ |
+| 97 | Latenz- / Tick-Arbitrage | bei FTMO verboten | ⛔ |
+| 98 | Zufalls-Einstiege (Placebo) | Kalibriert die Pipeline: wie oft „besteht“ reiner Zufall? Am besten früh nebenbei laufen lassen | Kontrolle |
+| 99 | Mondphasen (Placebo) | Zweite Kontrolle ohne ökonomische Begründung | Kontrolle |
+| 100 | Ensemble der besten Kandidaten | Mehrere schwache, unkorrelierte Edges kombinieren – erst am Ende, mit Trial-Korrektur | |
+
+---
+
+## Spielregeln gegen Selbsttäuschung
+
+1. **Trial-Log über alle Strategien führen.** Bei 100 Versuchen findet man auch ohne echten Edge Gewinner. Bei t ≥ 3 erwartet man über 100 unabhängige Tests rund 0,3 Zufallstreffer – plus jede Variante, die man nachträglich ausprobiert.
+2. **Hold-out 2024–2026 bleibt gemeinsam für alle.** Er wird pro Strategie höchstens einmal angefasst, und jedes Anfassen wird geloggt.
+3. **Vorregistrieren vor dem ersten Lauf**, wie in `smart-money-concept/docs/`. Nachträgliche Parameteränderung = neuer Versuch.
+4. **Kosten realistisch:** FTMO-Spreads, Kommission, Swaps inkl. Aufschlag; Test bei doppelten Kosten.
+5. **Pipeline wiederverwenden** (Daten, Zeitmodell, Kostenmodelle, FTMO-Monte-Carlo) statt sie pro Strategie neu zu bauen.
+
+## Tageslog
+
+| Tag | Datum | # | Strategie | Ergebnis | Kernzahl |
+|---|---|---|---|---|---|
+| 1 | 24.10.2026 | 1–4 | SMC + Fix-Reversal + Trendfolge FX/Gold + Trendfolge Indizes/Rohstoffe | ✗ | P7: Sharpe −0,37 netto |
+| 2 | 24.10.2026 | 5 | Monatsend-Rebalancing am London-Fix | ✗ | M-1H −4,4 bp/Ereignis, t −1,0; Paper-Effekt auf 1/10 geschrumpft |
+| 3 | | 6 | | | |
