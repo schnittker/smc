@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Extreme der Spekulanten-Netto-Position (CFTC Commitments of Traders, COT-Index über 3 Jahre) in 7 Währungs- und dem Goldfuture handeln, konträr (C-KONTRA) oder mit den Spekulanten (C-FOLGE, Tornell & Yuan 2012).
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** C-KONTRA Sharpe 0,22 (t 0,62), C-FOLGE −0,50 (t −1,57). Eher Umkehr als Fortsetzung, aber nicht signifikant. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz (Fortsetzung statt Umkehr), Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/c_in_sample.md](research/results/c_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`) und `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt. Die CFTC-Dateien liegen unter `data/raw/` (nicht im Repo):
 

@@ -59,7 +59,7 @@ Folgen für die Auswahl:
 | 15 | Kurzfrist-Reversal / RSI(2) | Kaufen nach kurzen Rücksetzern im Aufwärtstrend (Connors) | US500, US100 / D1 | vorhanden | ✗ Tag 10 (T52/T53): Sharpe 0,31 / 0,28 (Halten 0,51) |
 | 16 | Opening Range Breakout | Ausbruch aus der ersten 5–30-min-Range nach Kassaeröffnung (Zarattini & Aziz 2023) | US100, US500 / M5 | vorhanden | ✗ Tag 11 (T56/T57): −1,6 / −0,4 bp/Tag; 85 % Stops |
 | 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | ⊘ strukturell nicht handelbar: FTMO-Asien-Indizes sind Futures-CFDs mit ≈ 19 h Handel, die US-Bewegung ist eingepreist; kein eigener Trial |
-| 18 | COT-Positionierung | Contrarian bei extremer Netto-Position der Spekulanten | Majors, Gold / W1 | CFTC nachladen ⚠ live per WebRequest | |
+| 18 | COT-Positionierung | Contrarian bei extremer Netto-Position der Spekulanten | Majors, Gold / W1 | CFTC nachladen ⚠ live per WebRequest | ✗ Tag 12 (T60/T61): konträr Sharpe 0,22, folgend −0,50 |
 | 19 | VIX-Regime | Bei Risk-off (VIX-Sprung) Long JPY, CHF, Gold | FX, Gold / D1 | VIX von FRED ⚠ live per WebRequest | |
 | 20 | Zinsdifferenz-Momentum | FX folgt Änderungen der 2-jährigen Renditedifferenz | USD-Majors / D1 | FRED (teils lückenhaft) ⚠ live per WebRequest | |
 | 21 | Pairs Trading / Kointegration | Spread AUDUSD–NZDUSD (bzw. AUDNZD) handeln bei z-Score-Extremen | AUD/NZD, EUR/CHF / H4 | vorhanden | |
@@ -188,4 +188,5 @@ Folgen für die Auswahl:
 | 9 | 24.10.2026 | 14 | Vol-gesteuertes US500-Long | ✗ | V-VOL Sharpe 0,56 (t 1,68), V-MM 0,32; Halten 0,51 |
 | 10 | 24.10.2026 | 15 | Kurzfrist-Reversal US500 (Connors) | ✗ | R-RSI2 Sharpe 0,31, R-7S 0,28; Trefferquote 70–77 % |
 | 11 | 24.10.2026 | 16 | Opening Range Breakout 5 min | ✗ | O-NDX t −0,54, O-SPX t −0,16; Range ≈ 10 bp, Kosten 0,14–0,24 R |
-| 12 | | | | | |
+| 12 | 24.10.2026 | 18 | COT-Extreme | ✗ | C-KONTRA Sharpe 0,22 (t 0,62), C-FOLGE −0,50 |
+| 13 | | | | | |
