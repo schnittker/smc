@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 63 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 65 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -86,7 +86,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T106 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-GBP, IS | nicht bestanden: +0,75 bp/Tag, t 0,47 |
 | T107 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-EUR, IS | nicht bestanden: −1,46 bp/Tag, t −1,01 |
 | T108, T109 | – | London Breakout (31) | 31-london-breakout | Hold-out, FTMO | entfallen |
-| T110 | | Asien-Range-Fade (32) | 32-asien-range-fade | A-EURCHF, IS | |
-| T111 | | Asien-Range-Fade (32) | 32-asien-range-fade | A-AUDCAD, IS | |
-| T112 | | Asien-Range-Fade (32) | 32-asien-range-fade | Hold-out (nur falls T110/T111 besteht) | |
-| T113 | | Asien-Range-Fade (32) | 32-asien-range-fade | FTMO-Bootstrap (nur falls T112 besteht) | |
+| T110 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-EURCHF, IS | nicht bestanden: −14,1 bp/Nacht (vor Kosten +9,1) |
+| T111 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-AUDCAD, IS | nicht bestanden: −11,8 bp/Nacht (vor Kosten +4,0) |
+| T112, T113 | – | Asien-Range-Fade (32) | 32-asien-range-fade | Hold-out, FTMO | entfallen |

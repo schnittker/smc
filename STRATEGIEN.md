@@ -78,7 +78,7 @@ Folgen für die Auswahl:
 | # | Strategie | Idee | Markt / TF | Daten | Status |
 |---|---|---|---|---|---|
 | 31 | London Breakout | Ausbruch aus der Asien-Range zur London-Eröffnung | GBPUSD, EURUSD / M15 | vorhanden | ✗ Tag 23 (T106/T107): t 0,47 / −1,01 |
-| 32 | Asien-Range-Fade (Nachtscalper) | Range-Extreme in der ruhigen Asien-Session faden | EURCHF, AUDCAD, EURGBP-Ersatz / M5 | vorhanden – Rollover-Spreads beachten | |
+| 32 | Asien-Range-Fade (Nachtscalper) | Range-Extreme in der ruhigen Asien-Session faden | EURCHF, AUDCAD, EURGBP-Ersatz / M5 | vorhanden – Rollover-Spreads beachten | ✗ Tag 24 (T110/T111): vor Kosten +, netto −12 bis −14 bp/Nacht |
 | 33 | NR4 / NR7 (Crabel) | Ausbruch nach der engsten Range der letzten 4/7 Tage | alle / D1 | vorhanden | |
 | 34 | Inside Bar Breakout | Ausbruch aus Inside Bar in Trendrichtung | alle / D1, H4 | vorhanden | |
 | 35 | Volatility Breakout (L. Williams) | Einstieg bei Open ± k · Vortagesrange | Indizes, Gold / D1 | vorhanden | |
@@ -200,4 +200,5 @@ Folgen für die Auswahl:
 | 21 | 24.10.2026 | 28, 30 | Kanal-Ausbruch (52 Wochen, Turtle) | ✗ | beide Sharpe −0,54; FX −35 bis −39 % |
 | 22 | 24.10.2026 | 29 | Dual Momentum | ✗ | D-TOP1 Sharpe 0,17, D-TOP2 0,14 |
 | 23 | 24.10.2026 | 31 | London Breakout | ✗ | L-GBP t 0,47, L-EUR t −1,01 |
-| 24 | | | | | |
+| 24 | 24.10.2026 | 32 | Asien-Range-Fade | ✗ | Kosten 2–7× der Vorteil |
+| 25 | | | | | |

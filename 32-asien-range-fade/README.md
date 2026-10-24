@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** In der Asien-Session (00:00–06:00 London) Ausschläge über die M5-Bollinger-Bänder (20, 2) faden, Ausstieg an der Mittellinie; EURCHF und AUDCAD.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** Vor Kosten +0,12 / +0,05 R je Trade, Kosten 0,33 / 0,19 R: netto −14,1 bzw. −11,8 bp je Nacht. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/a_in_sample.md](research/results/a_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../05-monatsend-rebalancing` (`mer`), `../31-london-breakout` (Auswertung); venv aus dem SMC-Projekt.
 
