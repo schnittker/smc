@@ -80,3 +80,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T96 | 24.10.2026 | 52-Wochen-Hoch (28) | 28-30-kanal-ausbruch | B-52W, IS | nicht bestanden: Sharpe −0,54, t −1,75 |
 | T97 | 24.10.2026 | Donchian/Turtle (30) | 28-30-kanal-ausbruch | B-TURTLE, IS | nicht bestanden: Sharpe −0,54, t −2,01 |
 | T98–T101 | – | Kanal-Ausbruch (28, 30) | 28-30-kanal-ausbruch | Hold-out, FTMO | entfallen |
+| T102 | | Dual Momentum (29) | 29-dual-momentum | D-TOP1, IS | |
+| T103 | | Dual Momentum (29) | 29-dual-momentum | D-TOP2, IS | |
+| T104 | | Dual Momentum (29) | 29-dual-momentum | Hold-out (nur falls T102/T103 besteht) | |
+| T105 | | Dual Momentum (29) | 29-dual-momentum | FTMO-Bootstrap (nur falls T104 besteht) | |
