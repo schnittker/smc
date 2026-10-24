@@ -28,3 +28,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T27 | 24.10.2026 | FX Momentum (7) | 07-fx-momentum | X-1, IS | nicht bestanden: Sharpe −0,28, t −0,87 |
 | T28 | 24.10.2026 | FX Momentum (7) | 07-fx-momentum | X-12, IS | nicht bestanden: Sharpe −0,81, t −2,49 |
 | T29, T30 | – | FX Momentum (7) | 07-fx-momentum | Hold-out, FTMO | entfallen |
+| T31 | | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-SPX, IS | |
+| T32 | | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-NDX, IS | |
+| T33 | | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | Hold-out (nur falls T31/T32 besteht) | |
+| T34 | | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | FTMO-Bootstrap (nur falls T33 besteht) | |
