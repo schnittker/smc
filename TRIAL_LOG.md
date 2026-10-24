@@ -89,3 +89,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T110 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-EURCHF, IS | nicht bestanden: −14,1 bp/Nacht (vor Kosten +9,1) |
 | T111 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-AUDCAD, IS | nicht bestanden: −11,8 bp/Nacht (vor Kosten +4,0) |
 | T112, T113 | – | Asien-Range-Fade (32) | 32-asien-range-fade | Hold-out, FTMO | entfallen |
+| T114 | | NR7 (33) | 33-35-tagesausbruch | T-NR7, IS | |
+| T115 | | Inside Bar (34) | 33-35-tagesausbruch | T-INSIDE, IS | |
+| T116 | | Volatility Breakout (35) | 33-35-tagesausbruch | T-LW, IS | |
+| T117–T122 | | Tages-Ausbruch (33–35) | 33-35-tagesausbruch | Hold-out, FTMO (nur bei Bestehen) | |
