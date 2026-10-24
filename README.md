@@ -30,5 +30,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [24-fomc-fx/](24-fomc-fx/) | USD an FOMC-Tagen (24) | knapp gescheitert (t 2,1), Ensemble-Kandidat |
 | — | Makro-News-Drift (25) | zurückgestellt: Konsensprognosen fehlen (MT5-Kalenderexport nötig) |
 | [26-pre-holiday/](26-pre-holiday/) | Pre-Holiday US-Indizes (26) | gescheitert |
+| [27-halloween/](27-halloween/) | Halloween US-Indizes (27) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 55 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 57 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -74,7 +74,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T88 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-SPX, IS | nicht bestanden: +13,9 bp/Ereignis, t 1,68 |
 | T89 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-NDX, IS | nicht bestanden: +10,6 bp/Ereignis, t 0,88 |
 | T90, T91 | – | Pre-Holiday (26) | 26-pre-holiday | Hold-out, FTMO | entfallen |
-| T92 | | Halloween (27) | 27-halloween | S-SPX, IS | |
-| T93 | | Halloween (27) | 27-halloween | S-NDX, IS | |
-| T94 | | Halloween (27) | 27-halloween | Hold-out (nur falls T92/T93 besteht) | |
-| T95 | | Halloween (27) | 27-halloween | FTMO-Bootstrap (nur falls T94 besteht) | |
+| T92 | 24.10.2026 | Halloween (27) | 27-halloween | S-SPX, IS | nicht bestanden: Sharpe 0,37, t 1,08 |
+| T93 | 24.10.2026 | Halloween (27) | 27-halloween | S-NDX, IS | nicht bestanden: Sharpe 0,47, t 1,39 |
+| T94, T95 | – | Halloween (27) | 27-halloween | Hold-out, FTMO | entfallen |
