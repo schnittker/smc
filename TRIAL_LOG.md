@@ -118,3 +118,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T166 | 24.10.2026 | Pivot Points (49) | 48-49-intraday-level | LV-PFADE, IS | nicht bestanden: −12,6 bp/Tag, t −7,30 |
 | T167 | 24.10.2026 | Pivot Points (49) | 48-49-intraday-level | LV-PBRK, IS | nicht bestanden: −4,25 bp/Tag, t −3,26 |
 | T168–T173 | – | Intraday-Level (48, 49) | 48-49-intraday-level | Hold-out, FTMO | entfallen |
+| T174 | | S/R-Zonen (50) | 50-51-sr-trendlinien | SR-BOUNCE, IS | |
+| T175 | | S/R-Zonen (50) | 50-51-sr-trendlinien | SR-BREAK, IS | |
+| T176 | | Trendlinien-Ausbruch (51) | 50-51-sr-trendlinien | SR-TLINE, IS | |
+| T177–T182 | | S/R und Trendlinien (50, 51) | 50-51-sr-trendlinien | Hold-out, FTMO (nur bei Bestehen) | |
