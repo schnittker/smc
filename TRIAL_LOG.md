@@ -44,3 +44,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T48 | 24.10.2026 | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | V-VOL, IS | nicht bestanden: Sharpe 0,56, t 1,68 |
 | T49 | 24.10.2026 | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | V-MM, IS | nicht bestanden: Sharpe 0,32, t 0,96 |
 | T50, T51 | – | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | Hold-out, FTMO | entfallen |
+| T52 | | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-RSI2, IS | |
+| T53 | | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-7S, IS | |
+| T54 | | Kurzfrist-Reversal (15) | 15-short-term-reversal | Hold-out (nur falls T52/T53 besteht) | |
+| T55 | | Kurzfrist-Reversal (15) | 15-short-term-reversal | FTMO-Bootstrap (nur falls T54 besteht) | |
