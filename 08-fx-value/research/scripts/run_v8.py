@@ -199,7 +199,7 @@ def load(phase: str, name: str) -> np.ndarray:
 def holdout(variant: str):
     marker = OUT_DIR / "ho" / "DONE"
     if marker.exists():
-        sys.exit("Hold-out wurde bereits ausgewertet (data/z/ho/DONE) – kein zweiter Lauf.")
+        sys.exit("Hold-out wurde bereits ausgewertet (data/v/ho/DONE) – kein zweiter Lauf.")
     m_is = stats(window(load("is", variant), IS_FROM, IS_TO), IS_YEARS)
     if not all(ok for _, _, ok in checks_is(m_is, IS_YEARS)):
         sys.exit(f"{variant} hat die In-Sample-Kriterien nicht erfüllt – kein Hold-out.")

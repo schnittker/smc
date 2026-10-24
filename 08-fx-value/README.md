@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Die G8-Währungen werden monatlich nach dem realen Wechselkurs gerankt (CPI und Wechselkurse von FRED). Gekauft werden die billigsten, verkauft die teuersten. Das Ranking basiert entweder auf der 5-Jahres-Änderung oder auf der Abweichung vom Mittel seit 1999; Positionen wie Carry K-3. Nachgeholt, weil die CPI-Daten jetzt verfügbar sind.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Beide Varianten sind gescheitert** (Sharpe −0,06 / −0,07; vor Kosten +1,8 bis +2,2 % p. a. bei 10 % Vol., von Swaps aufgezehrt). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Daten und Lücken |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/v_in_sample.md](research/results/v_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt. Daten: `research/scripts/download_fred.sh`.
 

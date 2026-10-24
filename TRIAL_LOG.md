@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 128 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 130 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -171,6 +171,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T291–T296 | – | Machine Learning (83, 84, 86) | 83-87-machine-learning | Hold-out, FTMO | entfallen |
 | T297 | 24.10.2026 | Zufalls-Einstiege (98, Kontrolle) | 98-99-placebo | PL-RANDOM, IS | nicht bestanden (Kontrolle ok): −1,46 bp/Tag, vor Kosten +0,017 R [−0,019; +0,053] |
 | T298 | 24.10.2026 | Mondphasen (99, Kontrolle) | 98-99-placebo | PL-MOON, IS | nicht bestanden (Kontrolle ok): Sharpe −0,50 |
-| T299 | | FX Value (8) | 08-fx-value | V-5Y, IS | |
-| T300 | | FX Value (8) | 08-fx-value | V-PPP, IS | |
-| T301, T302 | | FX Value (8) | 08-fx-value | Hold-out, FTMO (nur bei Bestehen) | |
+| T299 | 24.10.2026 | FX Value (8) | 08-fx-value | V-5Y, IS | nicht bestanden: Sharpe −0,06, t −0,18 |
+| T300 | 24.10.2026 | FX Value (8) | 08-fx-value | V-PPP, IS | nicht bestanden: Sharpe −0,07, t −0,29 |
+| T301, T302 | – | FX Value (8) | 08-fx-value | Hold-out, FTMO | entfallen |
