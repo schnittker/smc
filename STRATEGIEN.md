@@ -67,7 +67,7 @@ Folgen für die Auswahl:
 | 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | ✗ Tag 17 (T80/T81): Sharpe −0,41 / 0,21; nur gleichzeitiger Zusammenhang |
 | 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | ✗ knapp, Tag 18 (T84/T85): FOMC-Tage +108 / +55 bp, t 2,1; Ensemble-Kandidat |
 | 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | ⚠ zurückgestellt: Konsensprognosen-Historie fehlt (FRED nur Ist-Werte); testbar nach Export aus dem MT5-Kalender (CalendarValueHistory) |
-| 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | |
+| 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | ✗ Tag 19 (T88/T89): +14 / +11 bp je Ereignis, t 1,7 / 0,9 |
 | 27 | Halloween / Sell in May | Nur November–April long | Indizes / D1 | vorhanden (wenige Datenpunkte) | |
 | 28 | 52-Wochen-Hoch | Nähe zum 52-Wochen-Hoch → Fortsetzung (George & Hwang) – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
 | 29 | Dual Momentum | Relativ + absolut: bestes Asset aus Indizes/Gold, sonst Cash (Antonacci) | Indizes, Gold / MN | vorhanden | |
@@ -195,4 +195,5 @@ Folgen für die Auswahl:
 | 16 | 24.10.2026 | 22 | Gold/Silber-Ratio | ✗ | G-60 Sharpe −0,07, G-250 0,09 |
 | 17 | 24.10.2026 | 23 | Rohstoff-Lead-Lag | ✗ | R-OEL Sharpe −0,41, R-GOLD 0,21 |
 | 18 | 24.10.2026 | 24 | USD an FOMC-Tagen | ✗ knapp | F-USD +108 bp/Termin (t 2,10), F-CARRY +55 bp (t 2,11, 9/9 Jahre) – Ensemble-Kandidat |
-| 19 | | | | | |
+| 19 | 24.10.2026 | 26 | Pre-Holiday US-Indizes | ✗ | H-SPX +13,9 bp (t 1,68), H-NDX +10,6 bp |
+| 20 | | | | | |

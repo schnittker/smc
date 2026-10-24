@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 53 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 55 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -71,7 +71,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T84 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-USD, IS | nicht bestanden: +107,7 bp/Termin, t 2,10 |
 | T85 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-CARRY, IS | nicht bestanden: +54,6 bp/Termin, t 2,11 |
 | T86, T87 | – | USD an FOMC-Tagen (24) | 24-fomc-fx | Hold-out, FTMO | entfallen |
-| T88 | | Pre-Holiday (26) | 26-pre-holiday | H-SPX, IS | |
-| T89 | | Pre-Holiday (26) | 26-pre-holiday | H-NDX, IS | |
-| T90 | | Pre-Holiday (26) | 26-pre-holiday | Hold-out (nur falls T88/T89 besteht) | |
-| T91 | | Pre-Holiday (26) | 26-pre-holiday | FTMO-Bootstrap (nur falls T90 besteht) | |
+| T88 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-SPX, IS | nicht bestanden: +13,9 bp/Ereignis, t 1,68 |
+| T89 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-NDX, IS | nicht bestanden: +10,6 bp/Ereignis, t 0,88 |
+| T90, T91 | – | Pre-Holiday (26) | 26-pre-holiday | Hold-out, FTMO | entfallen |
