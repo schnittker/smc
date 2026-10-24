@@ -149,3 +149,10 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T227 | 24.10.2026 | Heikin-Ashi (73) | 61-76-trendindikatoren | TI-HA, IS | nicht bestanden: −6,72 bp/Tag, t −3,23 |
 | T228 | 24.10.2026 | Kalman-Trend (76) | 61-76-trendindikatoren | TI-KALMAN, IS | nicht bestanden: −3,12 bp/Tag, t −1,72 |
 | T229–T248 | – | Trendindikatoren | 61-76-trendindikatoren | Hold-out, FTMO | entfallen |
+| T249 | | RSI 14 (65) | 65-75-oszillatoren | OS-RSI, IS | |
+| T250 | | Stochastik (66) | 65-75-oszillatoren | OS-STOCH, IS | |
+| T251 | | Williams %R (67) | 65-75-oszillatoren | OS-WPR, IS | |
+| T252 | | CCI (68) | 65-75-oszillatoren | OS-CCI, IS | |
+| T253 | | Renko (74) | 65-75-oszillatoren | OS-RENKO, IS | |
+| T254 | | RSI-Divergenzen (75) | 65-75-oszillatoren | OS-DIV, IS | |
+| T255–T266 | | Oszillatoren, Renko | 65-75-oszillatoren | Hold-out, FTMO (nur bei Bestehen) | |
