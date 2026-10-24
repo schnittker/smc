@@ -45,6 +45,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--symbols", default=",".join(SYMBOLS))
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--report", default="data_quality.md", help="file name in research/results")
     args = ap.parse_args()
     symbols = args.symbols.split(",")
     with ProcessPoolExecutor(args.workers) as ex:
@@ -55,7 +56,7 @@ def main():
     for r in rows:
         lines.append(f"| {r['symbol']} | {r['first']} | {r['last']} | {r['rows']:,} | {r['duplicates']} | "
                      f"{r['repaired_ohlc']} | {r['gaps_over_1h']} | {r['max_gap_h']} | {r['spikes_50x']} |")
-    out = PROJECT_ROOT / "research" / "results" / "data_quality.md"
+    out = PROJECT_ROOT / "research" / "results" / args.report
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

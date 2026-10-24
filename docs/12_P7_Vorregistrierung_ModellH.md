@@ -100,3 +100,11 @@ Besteht Modell H nicht, ist **P7 gescheitert**, und der Hold-out bleibt unberüh
 | T16 | Modell H, In-Sample |
 | T17 | Hold-out (nur falls T16 besteht) |
 | T18 | FTMO-Bootstrap (nur falls T17 besteht) |
+
+## 7. Nachtrag vor dem ersten Lauf (24.10.2026)
+
+- **ETXEUR (Euro Stoxx 50) wird ausgeschlossen.**
+  - Grund: HistData liefert nur Daten bis Anfang 2019. Die Datei für 2019 hat nur 0,2 MB, ab 2020 ist der Download-Token leer.
+  - Festgestellt beim Download, vor jeder Auswertung.
+  - Damit bleiben 12 Instrumente. Kriterium 3 lautet entsprechend ≥ 60 %, also ≥ 8 von 12.
+  - Der Index ist eng mit DAX und CAC 40 verbunden, die enthalten bleiben.
