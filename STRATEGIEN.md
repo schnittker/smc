@@ -137,16 +137,16 @@ Folgen für die Auswahl:
 
 | # | Strategie | Idee | Markt / TF | Status |
 |---|---|---|---|---|
-| 81 | Hidden-Markov-Regime | Regime erkennen, je Regime eigenes Modell | alle / D1 | |
-| 82 | GARCH-Volatilitätsprognose | Ausbruch/Positionsgröße aus Vol-Prognose | alle / D1 | |
+| 81 | Hidden-Markov-Regime | Regime erkennen, je Regime eigenes Modell | alle / D1 | ✗ Tag 42 (T276): Sharpe −0,55, t −1,69 |
+| 82 | GARCH-Volatilitätsprognose | Ausbruch/Positionsgröße aus Vol-Prognose | alle / D1 | ✗ Tag 42 (T277): Sharpe −0,50, t −1,74 |
 | 83 | Gradient Boosting Richtung | Features → Richtung nächste n Bars | alle / H1 | |
 | 84 | Meta-Labeling (López de Prado) | ML filtert Signale einer Basisstrategie, Triple Barrier | Basis aus A/B | |
-| 85 | k-NN-Analogien | Ähnliche historische Muster suchen | alle / D1 | |
+| 85 | k-NN-Analogien | Ähnliche historische Muster suchen | alle / D1 | ✗ Tag 42 (T278): Sharpe −2,02, t −6,27 |
 | 86 | LSTM / Transformer | Sequenzmodell auf Renditen, als ONNX in MT5 | alle / H1 | |
 | 87 | Reinforcement Learning | Agent lernt Positionierung, als ONNX in MT5 | alle / H1 | |
 | 88 | Genetic Programming | Automatische Regelsuche – extremes Data Mining | alle | ⚠ |
 | 89 | Retail-Sentiment contrarian | Gegen Mehrheit der Retail-Positionen (IG/Myfxbook) | Majors / D1 | ⚠ Historie knapp |
-| 90 | Gold-Saisonalität | Monats-/Jahreszeiteffekte bei Gold | XAUUSD / D1 | |
+| 90 | Gold-Saisonalität | Monats-/Jahreszeiteffekte bei Gold | XAUUSD / D1 | ✗ Tag 42 (T279): Sharpe −0,10 (Sep./Nov. long) |
 
 ## E – Datenlücken, FTMO-Regeln, Kontrollen
 
@@ -219,4 +219,5 @@ Folgen für die Auswahl:
 | 39 | 24.10.2026 | 61–64, 69–73, 76 | 10 Trendindikatoren | ✗ | vor Kosten +0,003–0,021 R |
 | 40 | 24.10.2026 | 65–68, 74, 75 | Oszillatoren, Renko, Divergenzen | ✗ | Umkehr vor Kosten ≤ 0 |
 | 41 | 24.10.2026 | 77, 79, 80 (78 ⊘) | Harmonische Muster, Wyckoff-Spring, Scalping | ✗ | Abschnitt C ohne Treffer |
-| 42 | | | | | |
+| 42 | 24.10.2026 | 81, 82, 85, 90 | HMM, GARCH, k-NN, Gold-Saison | ✗ | keine Vorhersagekraft nach Kosten |
+| 43 | | | | | |

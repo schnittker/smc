@@ -9,12 +9,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 Dazu kommt Gold long im September und November. Alle Modelle werden jährlich nur mit vergangenen Daten geschätzt.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle vier Modelle sind gescheitert** (Sharpe −0,55 / −0,50 / −2,02 / −0,10). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/st_in_sample.md](research/results/st_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`; venv mit scipy und scikit-learn), `../06-fx-carry` (`carry`), `../28-30-kanal-ausbruch` (`brk`).
 
