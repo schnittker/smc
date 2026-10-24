@@ -74,3 +74,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T88 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-SPX, IS | nicht bestanden: +13,9 bp/Ereignis, t 1,68 |
 | T89 | 24.10.2026 | Pre-Holiday (26) | 26-pre-holiday | H-NDX, IS | nicht bestanden: +10,6 bp/Ereignis, t 0,88 |
 | T90, T91 | – | Pre-Holiday (26) | 26-pre-holiday | Hold-out, FTMO | entfallen |
+| T92 | | Halloween (27) | 27-halloween | S-SPX, IS | |
+| T93 | | Halloween (27) | 27-halloween | S-NDX, IS | |
+| T94 | | Halloween (27) | 27-halloween | Hold-out (nur falls T92/T93 besteht) | |
+| T95 | | Halloween (27) | 27-halloween | FTMO-Bootstrap (nur falls T94 besteht) | |
