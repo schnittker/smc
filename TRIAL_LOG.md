@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 28 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 30 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -34,7 +34,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T35 | 24.10.2026 | Turn-of-the-Month (10) | 10-turn-of-the-month | T-KLASSIK, IS | nicht bestanden: +22,0 bp/Ereignis, t 1,17 |
 | T36 | 24.10.2026 | Turn-of-the-Month (10) | 10-turn-of-the-month | T-FRÜH, IS | nicht bestanden: +36,4 bp/Ereignis, t 1,68 |
 | T37, T38 | – | Turn-of-the-Month (10) | 10-turn-of-the-month | Hold-out, FTMO | entfallen |
-| T39 | | Intraday-Momentum (11) | 11-intraday-momentum | I-ONFH, IS | |
-| T40 | | Intraday-Momentum (11) | 11-intraday-momentum | I-ROD, IS | |
-| T41 | | Intraday-Momentum (11) | 11-intraday-momentum | Hold-out (nur falls T39/T40 besteht) | |
-| T42 | | Intraday-Momentum (11) | 11-intraday-momentum | FTMO-Bootstrap (nur falls T41 besteht) | |
+| T39 | 24.10.2026 | Intraday-Momentum (11) | 11-intraday-momentum | I-ONFH, IS | nicht bestanden: +0,44 bp/Tag, t 0,52 |
+| T40 | 24.10.2026 | Intraday-Momentum (11) | 11-intraday-momentum | I-ROD, IS | nicht bestanden: +1,00 bp/Tag, t 1,31 |
+| T41, T42 | – | Intraday-Momentum (11) | 11-intraday-momentum | Hold-out, FTMO | entfallen |
