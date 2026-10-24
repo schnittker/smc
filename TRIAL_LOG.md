@@ -59,3 +59,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T68 | 24.10.2026 | Zins-Momentum (20) | 20-zins-momentum | Z-12, IS | nicht bestanden: Sharpe −0,22, t −0,68 |
 | T69 | 24.10.2026 | Zins-Momentum (20) | 20-zins-momentum | Z-3, IS | nicht bestanden: Sharpe −0,29, t −0,96 |
 | T70, T71 | – | Zins-Momentum (20) | 20-zins-momentum | Hold-out, FTMO | entfallen |
+| T72 | | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | P-AUDNZD, IS | |
+| T73 | | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | P-EURCHF, IS | |
+| T74 | | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | Hold-out (nur falls T72/T73 besteht) | |
+| T75 | | Pairs Mean Reversion (21) | 21-pairs-mean-reversion | FTMO-Bootstrap (nur falls T74 besteht) | |
