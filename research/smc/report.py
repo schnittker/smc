@@ -49,3 +49,36 @@ def holm(pvals: list[float]) -> list[float]:
         running = max(running, min(1.0, (m - rank) * p[i]))
         adj[i] = running
     return adj.tolist()
+
+
+def cluster_t(x: np.ndarray, clusters: np.ndarray) -> float:
+    """t-value of mean(x) with a cluster-robust (CR1) standard error."""
+    n = len(x)
+    _, inv = np.unique(clusters, return_inverse=True)
+    g = np.bincount(inv, x - x.mean())
+    G = len(g)
+    if G < 2:
+        return np.nan
+    var = G / (G - 1) * float((g ** 2).sum()) / n ** 2
+    return float(x.mean() / math.sqrt(var)) if var > 0 else np.nan
+
+
+def cluster_bootstrap_ci(x: np.ndarray, clusters: np.ndarray, n_boot: int = 10_000, seed: int = 0,
+                         level: float = 0.95) -> tuple[float, float]:
+    """Percentile CI of mean(x), resampling whole clusters (Poisson weights)."""
+    _, inv = np.unique(clusters, return_inverse=True)
+    s, cnt = np.bincount(inv, x), np.bincount(inv).astype(float)
+    rng = np.random.default_rng(seed)
+    means = []
+    for _ in range(0, n_boot, 500):
+        w = rng.poisson(1.0, (500, len(s))).astype(float)
+        means.append((w @ s) / np.maximum(w @ cnt, 1))
+    m = np.concatenate(means)[:n_boot]
+    a = (1 - level) / 2 * 100
+    lo, hi = np.percentile(m, [a, 100 - a])
+    return float(lo), float(hi)
+
+
+def profit_factor(x: np.ndarray) -> float:
+    loss = -x[x < 0].sum()
+    return float(x[x > 0].sum() / loss) if loss > 0 else np.inf

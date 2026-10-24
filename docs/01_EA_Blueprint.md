@@ -337,6 +337,8 @@ Eine Codebasis mit Presets (→ K3 §4a, §4b, §4h, §8):
 
 Angelehnt an MrOwl1011 (H1-OB → M5-CISD mit Trend-Gate), die beste gefundene Evidenz (→ K4 §4), und an das klassische SMC-Modell (→ K3 §4g). **Im FTMO-Modus ist C das Primärmodell:** weitere Stops, weniger Margin- und Kostendruck (→ FTMO-Plan §5).
 
+> **Ergebnis P3 (24.10.2026):** Die vorregistrierte Fassung von Modell C ist gescheitert. Sie nutzte den H1-Trendwechsel in H4-Richtung, den Stop am H1-Protected-Level und das Ziel am Pool ≥ 2 R. Ergebnis: Markteinstieg +0,015 R, Limit-Einstieg −0,016 R netto pro Trade, t < 1. Der Struktur-Stop liegt im Median bei 9 × ATR(H1). Bei 3 Tagen Haltedauer reicht das Signal (≈ +0,13 ATR(H1)) dafür nicht. **Modell C ist deshalb in dieser Form nicht freigegeben** (→ `05_Ergebnisse_P3_ModellC.md`).
+
 1. **Gates:** Bias = LONG, Fenster London KZ ∪ NY AM KZ [D].
 2. **POI:**
    - ACTIVE bullischer H1-Order-Block (6.4)

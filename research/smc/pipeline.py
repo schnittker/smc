@@ -98,10 +98,11 @@ def build_pools(symbol: str, tfd: dict[str, TFData]) -> np.ndarray:
     return pools[np.argsort(pools["t_avail"], kind="stable")]
 
 
-def build_symbol(symbol: str) -> SymbolFeatures:
+def build_symbol(symbol: str, bars: dict[str, np.ndarray] | None = None) -> SymbolFeatures:
+    """Full feature build from the bar files (or from given bars per timeframe, e.g. in tests)."""
     feats = SymbolFeatures(symbol)
     for tf in TFS:
-        feats.tf[tf] = build_tf(symbol, tf)
+        feats.tf[tf] = build_tf(symbol, tf, None if bars is None else bars[tf])
     m5 = feats.tf["M5"]
     b = m5.bars
     feats.sth = fractal_pivots(b["h"], b["l"], 1)

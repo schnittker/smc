@@ -10,9 +10,10 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 - XAUUSD
 
 **Status (24.10.2026):**
-- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, 31 Tests.
-- **Gate P2 (Ereignisstudie) ist ausgewertet:** Kein Baustein ist allein nach Kosten profitabel. Das ICT-Kernmodell (Sweep → MSS) zeigt keinen Effekt. Einziger Kandidat ist Trend-Fortsetzung (Modell C). Details stehen in `docs/03_Ergebnisse_P2_Ereignisstudie.md`.
-- **Nächster Schritt:** P3, ein vorregistrierter Test von Modell C.
+- **Research-Pipeline in Python steht:** Daten 2014–2026 von HistData, kausale SMC-Engine, 42 Tests.
+- **Gate P2 (Ereignisstudie):** Kein SMC-Baustein ist allein nach Kosten profitabel. Das ICT-Kernmodell (Sweep → MSS) zeigt keinen Effekt. Details: `docs/03_Ergebnisse_P2_Ereignisstudie.md`.
+- **P3 (vorregistrierter Test von Modell C) ist gescheitert:** Markteinstieg +0,015 R, Limit-Einstieg −0,016 R netto pro Trade. Der Hold-out 2024–2026 bleibt unberührt. Diagnose und Optionen: `docs/05_Ergebnisse_P3_ModellC.md`.
+- **Nächster Schritt:** Entscheidung über Option A (Trendfolge mit Struktur-Exit, letzter SMC-Test) oder einen Wechsel der Strategieklasse. Keine bezahlte Challenge, bevor ein Modell In-Sample und Hold-out besteht.
 - **MQL5-Code:** noch keiner.
 
 | Dokument | Inhalt |
@@ -21,8 +22,10 @@ Ziel: ein autonom handelnder MT5-Expert-Advisor nach dem Smart Money Concept (SM
 | [docs/01_EA_Blueprint.md](docs/01_EA_Blueprint.md) | EA-Spezifikation v0.1: Architektur, Zeitmodell, Engines, Modelle, Risiko, Filter, Instrument-Konfiguration, Validierungsplan, Roadmap |
 | [docs/02_FTMO_Challenge_Plan.md](docs/02_FTMO_Challenge_Plan.md) | FTMO-Modus: Regelwerk, Monte-Carlo-Bestehenschancen, Risikoleiter, FtmoGuard, Margin und Kosten, Ablauf bis zum Kauf |
 | [docs/03_Ergebnisse_P2_Ereignisstudie.md](docs/03_Ergebnisse_P2_Ereignisstudie.md) | Ergebnisse der Ereignisstudie (Gate P2) und Vorschlag für P3 |
+| [docs/04_P3_Vorregistrierung_ModellC.md](docs/04_P3_Vorregistrierung_ModellC.md) | Vorregistrierung P3: Regeln, Varianten und Akzeptanzkriterien von Modell C |
+| [docs/05_Ergebnisse_P3_ModellC.md](docs/05_Ergebnisse_P3_ModellC.md) | Ergebnis P3 (gescheitert), Diagnose, Optionen für den nächsten Schritt |
 | [docs/research/](docs/research/) | 8 ausführliche Research-Kapitel mit Pseudocode und Quellen |
-| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie |
+| [research/smc/](research/smc/) | Python-Referenz-Engine: Zeitmodell, Daten, Struktur, Zonen, Liquidität, MSS, Ereignisstudie, Modell C |
 | [research/ftmo_mc.py](research/ftmo_mc.py) | Monte-Carlo-Simulation der Challenge; Ergebnisse in `research/results/ftmo_mc_results.md` |
 
 Einrichtung und Abläufe:
@@ -32,6 +35,7 @@ python3 -m venv research/.venv && research/.venv/bin/pip install -r research/req
 research/.venv/bin/python -I research/scripts/download_histdata.py      # M1-Daten laden (≈ 45 min, fortsetzbar)
 research/.venv/bin/python -I research/scripts/build_data.py             # Bars M5..D1 in FTMO-Serverzeit (≈ 2 min)
 research/.venv/bin/python -I research/scripts/run_event_study.py        # Ereignisstudie P2 (≈ 15 min)
+research/.venv/bin/python -I research/scripts/run_p3.py                  # Modell C In-Sample, P3 (≈ 1 min, nach der Ereignisstudie)
 research/.venv/bin/python -I research/ftmo_mc.py                        # FTMO-Monte-Carlo (≈ 4 min)
 cd research && .venv/bin/python -I -m pytest -q tests/                  # Tests
 ```
