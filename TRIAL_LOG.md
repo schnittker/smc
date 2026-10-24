@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 79 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 82 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -110,7 +110,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T147–T152 | – | Tagesmuster (43, 44) | 43-44-tagesmuster | Hold-out, FTMO | entfallen |
 | T153 | 24.10.2026 | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | J-MTF, IS | nicht bestanden: −14,7 bp/Tag, t −6,53 (vor Kosten −5,0) |
 | T154, T155 | – | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | Hold-out, FTMO | entfallen |
-| T156 | | Währungsstärke-Ranking (46) | 46-47-waehrungsstaerke | Y-ASIA, IS | |
-| T157 | | Währungsstärke-Ranking (46) | 46-47-waehrungsstaerke | Y-LDN, IS | |
-| T158 | | USD-Basket Mean Reversion (47) | 46-47-waehrungsstaerke | Y-USDB, IS | |
-| T159–T164 | | Währungsstärke (46, 47) | 46-47-waehrungsstaerke | Hold-out, FTMO (nur bei Bestehen) | |
+| T156 | 24.10.2026 | Währungsstärke-Ranking (46) | 46-47-waehrungsstaerke | Y-ASIA, IS | nicht bestanden: −0,56 bp/Tag, t −1,20 |
+| T157 | 24.10.2026 | Währungsstärke-Ranking (46) | 46-47-waehrungsstaerke | Y-LDN, IS | nicht bestanden: +0,07 bp/Tag, t 0,18 |
+| T158 | 24.10.2026 | USD-Basket Mean Reversion (47) | 46-47-waehrungsstaerke | Y-USDB, IS | nicht bestanden: −1,05 bp/Tag, t −1,17 |
+| T159–T164 | – | Währungsstärke (46, 47) | 46-47-waehrungsstaerke | Hold-out, FTMO | entfallen |

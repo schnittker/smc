@@ -42,5 +42,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [41-42-gap-fade/](41-42-gap-fade/) | Gap-Fill Indizes, Wochenend-Gap FX (41, 42) | gescheitert (42: Feed-Artefakt) |
 | [43-44-tagesmuster/](43-44-tagesmuster/) | Große Tagesbewegung, Wochentags-Effekt (43, 44) | gescheitert |
 | [45-mtf-pullback/](45-mtf-pullback/) | Multi-Timeframe-Pullback (45) | gescheitert |
+| [46-47-waehrungsstaerke/](46-47-waehrungsstaerke/) | Währungsstärke-Ranking, USD-Basket-MR (46, 47) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
