@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 94 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 97 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -130,7 +130,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T191 | 24.10.2026 | Chartformationen (55) | 54-55-60-price-action | PA-DT, IS | nicht bestanden: −0,55 bp/Tag, t −1,73 |
 | T192 | 24.10.2026 | Supply/Demand-Zonen (60) | 54-55-60-price-action | PA-SD, IS | nicht bestanden: +0,15 bp/Tag, t 0,40 |
 | T193–T200 | – | Price Action (54, 55, 60) | 54-55-60-price-action | Hold-out, FTMO | entfallen |
-| T201 | | Verfallstage (56) | 56-57-verfall-santa | K-OPEX, IS | |
-| T202 | | Verfallstage (56) | 56-57-verfall-santa | K-POST, IS | |
-| T203 | | Santa Rally (57) | 56-57-verfall-santa | K-SANTA, IS | |
-| T204–T209 | | Verfall, Santa (56, 57) | 56-57-verfall-santa | Hold-out, FTMO (nur bei Bestehen) | |
+| T201 | 24.10.2026 | Verfallstage (56) | 56-57-verfall-santa | K-OPEX, IS | nicht bestanden: −6,7 bp/Ereignis, t −0,28 |
+| T202 | 24.10.2026 | Verfallstage (56) | 56-57-verfall-santa | K-POST, IS | nicht bestanden: −30,3 bp/Ereignis, t −1,61 |
+| T203 | 24.10.2026 | Santa Rally (57) | 56-57-verfall-santa | K-SANTA, IS | nicht bestanden: +0,1 bp/Ereignis, t 0,00 (9 Ereignisse) |
+| T204–T209 | – | Verfall, Santa (56, 57) | 56-57-verfall-santa | Hold-out, FTMO | entfallen |

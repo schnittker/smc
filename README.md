@@ -47,5 +47,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [50-51-sr-trendlinien/](50-51-sr-trendlinien/) | S/R-Zonen, Trendlinien (50, 51) | gescheitert |
 | [52-53-fib-chandelier/](52-53-fib-chandelier/) | Fibonacci-Pullback, Chandelier-Trend (52, 53) | gescheitert |
 | [54-55-60-price-action/](54-55-60-price-action/) | Candlesticks, Doppeltop/-boden, Supply/Demand (54, 55, 60) | gescheitert |
+| [56-57-verfall-santa/](56-57-verfall-santa/) | Verfallstage, Santa Rally (56, 57) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
