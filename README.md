@@ -12,5 +12,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [05-monatsend-rebalancing/](05-monatsend-rebalancing/) | Monatsend-Rebalancing am London-Fix (5) | gescheitert |
 | [06-fx-carry/](06-fx-carry/) | FX Carry G8 (6) | gescheitert |
 | [07-fx-momentum/](07-fx-momentum/) | FX Querschnitts-Momentum G8 (7) | gescheitert |
+| [09-pre-fomc-drift/](09-pre-fomc-drift/) | Pre-FOMC-Drift (9) | knapp gescheitert (t 2,4), Ensemble-Kandidat |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

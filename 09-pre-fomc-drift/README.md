@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Long US500 bzw. US100 von 14:00 New York am Vortag bis 13:55 am Tag eines planmäßigen FOMC-Zinsentscheids (Lucca & Moench 2015).
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): knapp gescheitert, Ensemble-Kandidat.** P-SPX +19,2 bp je Termin (t 2,38), P-NDX +28,3 bp (t 2,26); 3 von 4 Kriterien erfüllt, t ≥ 3 verfehlt. Effekt stark 2020–2023, schwach 2015–2019. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Effekt, Evidenz (inkl. Verschwinden nach 2015), Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis, Kontrollvergleich, Einordnung |
+| [research/results/p_in_sample.md](research/results/p_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 | [research/fomc_dates.csv](research/fomc_dates.csv) | Planmäßige FOMC-Entscheidungstage 2013–2027 (Federal Reserve) |
 
 **Abhängigkeit:** `../smart-money-concept` (Paket `smc`: Daten, Zeit-, Kosten- und Swap-Modell); venv aus dem SMC-Projekt. Die Fed-Kalenderseiten liegen unter `data/raw/` (nicht im Repo) und werden so geladen:
