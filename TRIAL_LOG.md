@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 78 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 79 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -108,5 +108,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T145 | 24.10.2026 | Große Tagesbewegung (43) | 43-44-tagesmuster | E-CONT, IS | nicht bestanden: −0,06 bp/Tag, t −0,11 |
 | T146 | 24.10.2026 | Wochentags-Effekt (44) | 43-44-tagesmuster | E-WD, IS | nicht bestanden: +0,52 bp/Tag, t 0,50 |
 | T147–T152 | – | Tagesmuster (43, 44) | 43-44-tagesmuster | Hold-out, FTMO | entfallen |
-| T153 | | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | J-MTF, IS | |
-| T154, T155 | | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | Hold-out, FTMO (nur bei Bestehen) | |
+| T153 | 24.10.2026 | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | J-MTF, IS | nicht bestanden: −14,7 bp/Tag, t −6,53 (vor Kosten −5,0) |
+| T154, T155 | – | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | Hold-out, FTMO | entfallen |
