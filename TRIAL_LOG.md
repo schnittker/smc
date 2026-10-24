@@ -99,3 +99,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T129 | 24.10.2026 | Bollinger Mean Reversion (37) | 37-39-h1-mean-reversion | U-BB, IS | nicht bestanden: −11,1 bp/Tag, t −6,19 (vor Kosten +2,2) |
 | T130 | 24.10.2026 | z-Score/OU Mean Reversion (39) | 37-39-h1-mean-reversion | U-OU, IS | nicht bestanden: −1,8 bp/Tag, t −2,84 (vor Kosten −0,5) |
 | T131–T134 | – | H1-Mean-Reversion (37, 39) | 37-39-h1-mean-reversion | Hold-out, FTMO | entfallen |
+| T135 | | Hurst-Regime-Switch (40) | 40-hurst-regime | W-HURST, IS | |
+| T136, T137 | | Hurst-Regime-Switch (40) | 40-hurst-regime | Hold-out, FTMO (nur bei Bestehen) | |
