@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Die Tagesrendite von Brent bzw. Gold bestimmt die Position in USDCAD bzw. AUDUSD für den folgenden Tag.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** R-OEL Sharpe −0,41 (t −1,23), R-GOLD 0,21 (t 0,63). Gleichzeitige Korrelation 0,4, verzögert ≈ 0. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz (spricht dagegen), Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/r_in_sample.md](research/results/r_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt.
 

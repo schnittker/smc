@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 49 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 51 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -65,7 +65,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T76 | 24.10.2026 | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | G-60, IS | nicht bestanden: Sharpe −0,07, t −0,22 |
 | T77 | 24.10.2026 | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | G-250, IS | nicht bestanden: Sharpe 0,09, t 0,25 |
 | T78, T79 | – | Gold/Silber-Ratio (22) | 22-gold-silber-ratio | Hold-out, FTMO | entfallen |
-| T80 | | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-OEL, IS | |
-| T81 | | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-GOLD, IS | |
-| T82 | | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | Hold-out (nur falls T80/T81 besteht) | |
-| T83 | | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | FTMO-Bootstrap (nur falls T82 besteht) | |
+| T80 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-OEL, IS | nicht bestanden: Sharpe −0,41, t −1,23 |
+| T81 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-GOLD, IS | nicht bestanden: Sharpe 0,21, t 0,63 |
+| T82, T83 | – | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | Hold-out, FTMO | entfallen |
