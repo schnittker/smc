@@ -101,3 +101,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T131–T134 | – | H1-Mean-Reversion (37, 39) | 37-39-h1-mean-reversion | Hold-out, FTMO | entfallen |
 | T135 | 24.10.2026 | Hurst-Regime-Switch (40) | 40-hurst-regime | W-HURST, IS | nicht bestanden: −2,27 bp/Tag, t −4,70 |
 | T136, T137 | – | Hurst-Regime-Switch (40) | 40-hurst-regime | Hold-out, FTMO | entfallen |
+| T138 | | Gap-Fill Indizes (41) | 41-42-gap-fade | Q-IDX, IS | |
+| T139 | | Wochenend-Gap FX (42) | 41-42-gap-fade | Q-FXW, IS | |
+| T140–T143 | | Gap-Fade (41, 42) | 41-42-gap-fade | Hold-out, FTMO (nur bei Bestehen) | |
