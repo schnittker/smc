@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 130 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 131 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -174,5 +174,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T299 | 24.10.2026 | FX Value (8) | 08-fx-value | V-5Y, IS | nicht bestanden: Sharpe −0,06, t −0,18 |
 | T300 | 24.10.2026 | FX Value (8) | 08-fx-value | V-PPP, IS | nicht bestanden: Sharpe −0,07, t −0,29 |
 | T301, T302 | – | FX Value (8) | 08-fx-value | Hold-out, FTMO | entfallen |
-| T303 | | News-Straddle NFP (94) | 94-news-straddle | N-NFP, IS | |
-| T304, T305 | | News-Straddle NFP (94) | 94-news-straddle | Hold-out, FTMO (nur bei Bestehen) | |
+| T303 | 24.10.2026 | News-Straddle NFP (94) | 94-news-straddle | N-NFP, IS | nicht bestanden: −8,81 bp/Termin, t −1,22 |
+| T304, T305 | – | News-Straddle NFP (94) | 94-news-straddle | Hold-out, FTMO | entfallen |

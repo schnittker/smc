@@ -8,12 +8,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 - EURUSD, GBPUSD, USDJPY, XAUUSD
 - pessimistische News-Kosten: 5-facher Spread, 0,03 % Slippage
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Gescheitert** (−8,8 bp je Termin, t −1,22; auch mit normalen Kosten nur t 0,49). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Probleme, Termine, Quellen |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/n_in_sample.md](research/results/n_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../09-pre-fomc-drift` (`fomc`), `../33-35-tagesausbruch` (`dbo`); venv aus dem SMC-Projekt.
 

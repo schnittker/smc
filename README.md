@@ -56,5 +56,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [83-87-machine-learning/](83-87-machine-learning/) | Gradient Boosting, Meta-Labeling, MLP (83, 84, 86; 87 ⊘, 88 ⛔) | gescheitert |
 | [98-99-placebo/](98-99-placebo/) | Placebo-Kontrollen: Zufall, Mondphasen (98, 99) | Kontrolle ok |
 | [08-fx-value/](08-fx-value/) | FX Value / Kaufkraftparität (8, nachgeholt) | gescheitert |
+| [94-news-straddle/](94-news-straddle/) | News-Straddle NFP (94) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

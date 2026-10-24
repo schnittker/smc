@@ -155,7 +155,7 @@ Folgen für die Auswahl:
 | 91 | VWAP-Reversion | kein echtes Volumen in HistData | ⚠ |
 | 92 | Volume Profile | kein echtes Volumen | ⚠ |
 | 93 | Order Flow / Footprint / DOM | keine Orderbuchdaten | ⛔ |
-| 94 | News-Straddle | erlaubt, aber Slippage und Spread-Ausweitung im Backtest kaum abbildbar | ⚠ |
+| 94 | News-Straddle | erlaubt, aber Slippage und Spread-Ausweitung im Backtest kaum abbildbar | ✗ Tag 46 (T303): NFP-Straddle −8,8 bp/Termin (pessimistische Kosten), normale Kosten t 0,49 |
 | 95 | Grid Trading | Ruinrisiko vs. 5 %/10 %-Verlustgrenze | ⛔ |
 | 96 | Martingale | Ruinrisiko vs. Verlustgrenze | ⛔ |
 | 97 | Latenz- / Tick-Arbitrage | bei FTMO verboten | ⛔ |
@@ -223,4 +223,5 @@ Folgen für die Auswahl:
 | 43 | 24.10.2026 | 83, 84, 86 (87 ⊘, 88 ⛔) | Gradient Boosting, Meta-Labeling, MLP | ✗ | AUC 0,52 – zu wenig für die Kosten |
 | 44 | 24.10.2026 | 98, 99 | Placebo: Zufall, Mondphasen | Kontrolle ok | Pipeline unverzerrt |
 | 45 | 24.10.2026 | 8 (nachgeholt) | FX Value (PPP) | ✗ | Swaps fressen den Value-Kursbeitrag |
-| 46 | | | | | |
+| 46 | 24.10.2026 | 94 | News-Straddle NFP | ✗ | Kosten zur Veröffentlichung 3× Vorteil |
+| 47 | | | | | |
