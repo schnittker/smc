@@ -41,3 +41,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T44 | 24.10.2026 | Overnight-Drift (12) | 12-overnight-drift | N-EU, IS | nicht bestanden: −0,51 bp, t −1,54 |
 | T45 | 24.10.2026 | Overnight-Drift (12) | 12-overnight-drift | N-EU-DOWN, IS | nicht bestanden: −0,10 bp, t −0,18 |
 | T46, T47 | – | Overnight-Drift (12) | 12-overnight-drift | Hold-out, FTMO | entfallen |
+| T48 | | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | V-VOL, IS | |
+| T49 | | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | V-MM, IS | |
+| T50 | | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | Hold-out (nur falls T48/T49 besteht) | |
+| T51 | | Vol-gesteuertes Index-Long (14) | 14-vol-managed-index | FTMO-Bootstrap (nur falls T50 besteht) | |
