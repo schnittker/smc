@@ -112,22 +112,22 @@ Folgen für die Auswahl:
 
 | # | Strategie | Idee | Markt / TF | Status |
 |---|---|---|---|---|
-| 61 | MA-Crossover 50/200 | Golden/Death Cross | alle / D1 | |
-| 62 | EMA 9/21 | schneller Crossover | alle / H1 | |
-| 63 | Triple MA | 3 MAs in Reihenfolge als Trendfilter | alle / H4 | |
-| 64 | MACD | Signal-Crossover / Nulllinie | alle / H4 | |
+| 61 | MA-Crossover 50/200 | Golden/Death Cross | alle / D1 | ✗ Tag 39 (T219): −0,5 bp/Tag, t −1,39 |
+| 62 | EMA 9/21 | schneller Crossover | alle / H1 | ✗ Tag 39 (T220): −13,4 bp/Tag, t −3,49 |
+| 63 | Triple MA | 3 MAs in Reihenfolge als Trendfilter | alle / H4 | ✗ Tag 39 (T221): −2,3 bp/Tag, t −1,55 |
+| 64 | MACD | Signal-Crossover / Nulllinie | alle / H4 | ✗ Tag 39 (T222): −3,8 bp/Tag, t −1,89 |
 | 65 | RSI 14 Überkauft/Überverkauft | Fade bei 30/70 | alle / H1 | |
 | 66 | Stochastik | %K/%D-Kreuzung in Extremzonen | alle / H1 | |
 | 67 | Williams %R | Extremzonen-Fade | alle / H1 | |
 | 68 | CCI | ±100-Durchbruch | alle / H4 | |
-| 69 | ADX / DMI | DI-Kreuzung bei ADX > 25 | alle / H4 | |
-| 70 | Parabolic SAR | Stop-and-Reverse | alle / H4 | |
-| 71 | Supertrend | ATR-basierter Trendwechsel | alle / H4 | |
-| 72 | Ichimoku | Kumo-Ausbruch, Tenkan/Kijun | alle / H4–D1 | |
-| 73 | Heikin-Ashi | Farbwechsel als Trendsignal | alle / H4 | |
+| 69 | ADX / DMI | DI-Kreuzung bei ADX > 25 | alle / H4 | ✗ Tag 39 (T223): −1,8 bp/Tag, t −1,55 |
+| 70 | Parabolic SAR | Stop-and-Reverse | alle / H4 | ✗ Tag 39 (T224): −5,2 bp/Tag, t −2,78 |
+| 71 | Supertrend | ATR-basierter Trendwechsel | alle / H4 | ✗ Tag 39 (T225): −1,5 bp/Tag, t −1,04 |
+| 72 | Ichimoku | Kumo-Ausbruch, Tenkan/Kijun | alle / H4–D1 | ✗ Tag 39 (T226): −2,7 bp/Tag, t −2,01 |
+| 73 | Heikin-Ashi | Farbwechsel als Trendsignal | alle / H4 | ✗ Tag 39 (T227): −6,7 bp/Tag, t −3,23 |
 | 74 | Renko | Box-Wechsel als Signal (Backtest-Fallen beachten) | alle / M1-basiert | |
 | 75 | RSI/MACD-Divergenzen | Reversal bei Divergenz | alle / H4 | |
-| 76 | Kalman-Filter-Trend | Adaptive Trendschätzung statt MA | alle / H4 | |
+| 76 | Kalman-Filter-Trend | Adaptive Trendschätzung statt MA | alle / H4 | ✗ Tag 39 (T228): −3,1 bp/Tag, t −1,72 |
 | 77 | Harmonische Muster | Gartley, Bat, Butterfly | alle / H4 | ⚠ |
 | 78 | Elliott-Wellen | Wellenzählung | alle / D1 | ⚠ kaum formalisierbar |
 | 79 | Wyckoff | Akkumulation/Distribution | alle / H4 | ⚠ ohne Volumen |
@@ -216,4 +216,5 @@ Folgen für die Auswahl:
 | 36 | 24.10.2026 | 54, 55, 60 | Candlesticks an Levels, Doppeltop/-boden, Supply/Demand | ✗ | Muster ohne Vorhersagekraft |
 | 37 | 24.10.2026 | 56, 57 | Verfallstage, Santa Rally | ✗ | Kalendereffekte verschwunden |
 | 38 | 24.10.2026 | 58, 59 | US500 → AUDJPY, US-Renditen → USDJPY | ✗ | kein verzögerter Zusammenhang |
-| 39 | | | | | |
+| 39 | 24.10.2026 | 61–64, 69–73, 76 | 10 Trendindikatoren | ✗ | vor Kosten +0,003–0,021 R |
+| 40 | | | | | |

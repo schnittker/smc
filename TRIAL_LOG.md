@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 100 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 110 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -138,14 +138,14 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T211 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y1, IS | nicht bestanden: −0,99 bp/Tag, t −0,85 |
 | T212 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y20, IS | nicht bestanden: −0,13 bp/Tag, t −0,09 |
 | T213–T218 | – | Lead-Lag (58, 59) | 58-59-lead-lag | Hold-out, FTMO | entfallen |
-| T219 | | SMA 50/200 (61) | 61-76-trendindikatoren | TI-MA200, IS | |
-| T220 | | EMA 9/21 (62) | 61-76-trendindikatoren | TI-EMA921, IS | |
-| T221 | | Triple MA (63) | 61-76-trendindikatoren | TI-TRIPLE, IS | |
-| T222 | | MACD (64) | 61-76-trendindikatoren | TI-MACD, IS | |
-| T223 | | ADX/DMI (69) | 61-76-trendindikatoren | TI-ADX, IS | |
-| T224 | | Parabolic SAR (70) | 61-76-trendindikatoren | TI-PSAR, IS | |
-| T225 | | Supertrend (71) | 61-76-trendindikatoren | TI-SUPER, IS | |
-| T226 | | Ichimoku (72) | 61-76-trendindikatoren | TI-ICHI, IS | |
-| T227 | | Heikin-Ashi (73) | 61-76-trendindikatoren | TI-HA, IS | |
-| T228 | | Kalman-Trend (76) | 61-76-trendindikatoren | TI-KALMAN, IS | |
-| T229–T248 | | Trendindikatoren | 61-76-trendindikatoren | Hold-out, FTMO (nur bei Bestehen) | |
+| T219 | 24.10.2026 | SMA 50/200 (61) | 61-76-trendindikatoren | TI-MA200, IS | nicht bestanden: −0,52 bp/Tag, t −1,39 |
+| T220 | 24.10.2026 | EMA 9/21 (62) | 61-76-trendindikatoren | TI-EMA921, IS | nicht bestanden: −13,37 bp/Tag, t −3,49 |
+| T221 | 24.10.2026 | Triple MA (63) | 61-76-trendindikatoren | TI-TRIPLE, IS | nicht bestanden: −2,26 bp/Tag, t −1,55 |
+| T222 | 24.10.2026 | MACD (64) | 61-76-trendindikatoren | TI-MACD, IS | nicht bestanden: −3,84 bp/Tag, t −1,89 |
+| T223 | 24.10.2026 | ADX/DMI (69) | 61-76-trendindikatoren | TI-ADX, IS | nicht bestanden: −1,75 bp/Tag, t −1,55 |
+| T224 | 24.10.2026 | Parabolic SAR (70) | 61-76-trendindikatoren | TI-PSAR, IS | nicht bestanden: −5,18 bp/Tag, t −2,78 |
+| T225 | 24.10.2026 | Supertrend (71) | 61-76-trendindikatoren | TI-SUPER, IS | nicht bestanden: −1,51 bp/Tag, t −1,04 |
+| T226 | 24.10.2026 | Ichimoku (72) | 61-76-trendindikatoren | TI-ICHI, IS | nicht bestanden: −2,68 bp/Tag, t −2,01 |
+| T227 | 24.10.2026 | Heikin-Ashi (73) | 61-76-trendindikatoren | TI-HA, IS | nicht bestanden: −6,72 bp/Tag, t −3,23 |
+| T228 | 24.10.2026 | Kalman-Trend (76) | 61-76-trendindikatoren | TI-KALMAN, IS | nicht bestanden: −3,12 bp/Tag, t −1,72 |
+| T229–T248 | – | Trendindikatoren | 61-76-trendindikatoren | Hold-out, FTMO | entfallen |

@@ -49,5 +49,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [54-55-60-price-action/](54-55-60-price-action/) | Candlesticks, Doppeltop/-boden, Supply/Demand (54, 55, 60) | gescheitert |
 | [56-57-verfall-santa/](56-57-verfall-santa/) | Verfallstage, Santa Rally (56, 57) | gescheitert |
 | [58-59-lead-lag/](58-59-lead-lag/) | US500 → AUDJPY, US-Renditen → USDJPY (58, 59) | gescheitert |
+| [61-76-trendindikatoren/](61-76-trendindikatoren/) | 10 Trendindikatoren (61–64, 69–73, 76) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
