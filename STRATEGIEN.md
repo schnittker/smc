@@ -47,7 +47,7 @@ Folgen für die Auswahl:
 | # | Strategie | Idee | Markt / TF | Daten | Status |
 |---|---|---|---|---|---|
 | 5 | Monatsend-Rebalancing-Flows | Fonds sichern Währungsrisiko zum Monatsende ab: USD-Richtung aus Aktienperformance des Monats ableiten (Melvin & Prins 2015) | USD-Majors / H1 | vorhanden | ✗ Tag 2 (T19/T20): Effekt seit 2015 weg |
-| 6 | FX Carry | Long hochverzinste, Short niedrigverzinste Währungen (Lustig & Verdelhan) – FTMO-Swap-Aufschläge prüfen | G10-FX / D1–W1 | FRED vorhanden ⚠ live per WebRequest | |
+| 6 | FX Carry | Long hochverzinste, Short niedrigverzinste Währungen (Lustig & Verdelhan) – FTMO-Swap-Aufschläge prüfen | G10-FX / D1–W1 | FRED vorhanden ⚠ live per WebRequest | ✗ Tag 3 (T23/T24): Sharpe −0,16 / −0,02 |
 | 7 | FX Querschnitts-Momentum | Monatlich Long die 3 stärksten, Short die 3 schwächsten Währungen (Menkhoff et al. 2012) | G10-FX / D1 | vorhanden | |
 | 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | |
 | 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | |
@@ -179,4 +179,5 @@ Folgen für die Auswahl:
 |---|---|---|---|---|---|
 | 1 | 24.10.2026 | 1–4 | SMC + Fix-Reversal + Trendfolge FX/Gold + Trendfolge Indizes/Rohstoffe | ✗ | P7: Sharpe −0,37 netto |
 | 2 | 24.10.2026 | 5 | Monatsend-Rebalancing am London-Fix | ✗ | M-1H −4,4 bp/Ereignis, t −1,0; Paper-Effekt auf 1/10 geschrumpft |
-| 3 | | 6 | | | |
+| 3 | 24.10.2026 | 6 | FX Carry G8 | ✗ | K-3 Sharpe −0,16, K-1 −0,02; Swaps +1 % p. a., Kurs −1,4 bis −2,6 % p. a. |
+| 4 | | 7 | | | |

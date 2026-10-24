@@ -10,5 +10,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 |---|---|---|
 | [smart-money-concept/](smart-money-concept/) | SMC (1), Fix-Reversal (2), Trendfolge FX/Gold (3), Trendfolge Indizes/Rohstoffe (4); enthält die gemeinsame Pipeline (Daten, Zeitmodell, Kosten, Statistik) | gescheitert |
 | [05-monatsend-rebalancing/](05-monatsend-rebalancing/) | Monatsend-Rebalancing am London-Fix (5) | gescheitert |
+| [06-fx-carry/](06-fx-carry/) | FX Carry G8 (6) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

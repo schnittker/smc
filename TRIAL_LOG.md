@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 20 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 22 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -22,7 +22,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T19 | 24.10.2026 | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | M-1H, IS | nicht bestanden: −4,41 bp/Ereignis, t −1,01 |
 | T20 | 24.10.2026 | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | M-DAY, IS | nicht bestanden: −7,10 bp/Ereignis, t −1,04 |
 | T21, T22 | – | Monatsend-Rebalancing (5) | 05-monatsend-rebalancing | Hold-out, FTMO | entfallen |
-| T23 | | FX Carry (6) | 06-fx-carry | K-3, IS | |
-| T24 | | FX Carry (6) | 06-fx-carry | K-1, IS | |
-| T25 | | FX Carry (6) | 06-fx-carry | Hold-out (nur falls T23/T24 besteht) | |
-| T26 | | FX Carry (6) | 06-fx-carry | FTMO-Bootstrap (nur falls T25 besteht) | |
+| T23 | 24.10.2026 | FX Carry (6) | 06-fx-carry | K-3, IS | nicht bestanden: Sharpe −0,16, t −0,51 |
+| T24 | 24.10.2026 | FX Carry (6) | 06-fx-carry | K-1, IS | nicht bestanden: Sharpe −0,02, t −0,06 |
+| T25, T26 | – | FX Carry (6) | 06-fx-carry | Hold-out, FTMO | entfallen |
