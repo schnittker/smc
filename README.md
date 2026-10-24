@@ -35,5 +35,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [29-dual-momentum/](29-dual-momentum/) | Dual Momentum (29) | gescheitert |
 | [31-london-breakout/](31-london-breakout/) | London Breakout (31) | gescheitert |
 | [32-asien-range-fade/](32-asien-range-fade/) | Asien-Range-Fade (32) | gescheitert |
+| [33-35-tagesausbruch/](33-35-tagesausbruch/) | NR7, Inside Bar, Volatility Breakout (33–35) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

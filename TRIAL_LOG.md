@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 65 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 68 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T110 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-EURCHF, IS | nicht bestanden: −14,1 bp/Nacht (vor Kosten +9,1) |
 | T111 | 24.10.2026 | Asien-Range-Fade (32) | 32-asien-range-fade | A-AUDCAD, IS | nicht bestanden: −11,8 bp/Nacht (vor Kosten +4,0) |
 | T112, T113 | – | Asien-Range-Fade (32) | 32-asien-range-fade | Hold-out, FTMO | entfallen |
-| T114 | | NR7 (33) | 33-35-tagesausbruch | T-NR7, IS | |
-| T115 | | Inside Bar (34) | 33-35-tagesausbruch | T-INSIDE, IS | |
-| T116 | | Volatility Breakout (35) | 33-35-tagesausbruch | T-LW, IS | |
-| T117–T122 | | Tages-Ausbruch (33–35) | 33-35-tagesausbruch | Hold-out, FTMO (nur bei Bestehen) | |
+| T114 | 24.10.2026 | NR7 (33) | 33-35-tagesausbruch | T-NR7, IS | nicht bestanden: −0,54 bp/Tag, t −0,50 (vor Kosten +1,8) |
+| T115 | 24.10.2026 | Inside Bar (34) | 33-35-tagesausbruch | T-INSIDE, IS | nicht bestanden: +0,13 bp/Tag, t 0,15, 3 von 9 Jahren |
+| T116 | 24.10.2026 | Volatility Breakout (35) | 33-35-tagesausbruch | T-LW, IS | nicht bestanden: −4,23 bp/Tag, t −2,07 (vor Kosten +4,5) |
+| T117–T122 | – | Tages-Ausbruch (33–35) | 33-35-tagesausbruch | Hold-out, FTMO | entfallen |
