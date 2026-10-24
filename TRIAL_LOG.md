@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 22 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 24 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -25,7 +25,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T23 | 24.10.2026 | FX Carry (6) | 06-fx-carry | K-3, IS | nicht bestanden: Sharpe −0,16, t −0,51 |
 | T24 | 24.10.2026 | FX Carry (6) | 06-fx-carry | K-1, IS | nicht bestanden: Sharpe −0,02, t −0,06 |
 | T25, T26 | – | FX Carry (6) | 06-fx-carry | Hold-out, FTMO | entfallen |
-| T27 | | FX Momentum (7) | 07-fx-momentum | X-1, IS | |
-| T28 | | FX Momentum (7) | 07-fx-momentum | X-12, IS | |
-| T29 | | FX Momentum (7) | 07-fx-momentum | Hold-out (nur falls T27/T28 besteht) | |
-| T30 | | FX Momentum (7) | 07-fx-momentum | FTMO-Bootstrap (nur falls T29 besteht) | |
+| T27 | 24.10.2026 | FX Momentum (7) | 07-fx-momentum | X-1, IS | nicht bestanden: Sharpe −0,28, t −0,87 |
+| T28 | 24.10.2026 | FX Momentum (7) | 07-fx-momentum | X-12, IS | nicht bestanden: Sharpe −0,81, t −2,49 |
+| T29, T30 | – | FX Momentum (7) | 07-fx-momentum | Hold-out, FTMO | entfallen |

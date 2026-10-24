@@ -163,7 +163,7 @@ def in_sample():
             s = stats(sub, range(a, b))
             lines.append(f"- {lbl}: Sharpe {s['sharpe']:+.2f}, Kurs {s['pnl10']:+.2%} p. a., Swaps {s['swap10']:+.2%} p. a. "
                          "(bei 10 % Vol. des Teilzeitraums)")
-        lines += ["", "**Rangfolge der Zinsen (Long- und Short-Seite)**\n"] + ranking_table(log, IS_FROM, IS_TO)
+        lines += ["", "**Rangfolge nach Formationsrendite (Long- und Short-Seite)**\n"] + ranking_table(log, IS_FROM, IS_TO)
     k3 = window(run_model_k(px, rates, "K-3")[0], IS_FROM, IS_TO)
     kd, ki = np.unique(k3["day"], return_inverse=True)
     k_net = np.bincount(ki, k3["net"])
