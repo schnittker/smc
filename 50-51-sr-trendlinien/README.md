@@ -7,12 +7,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 - **Trendlinien** verlaufen durch die letzten zwei Swing-Hochs bzw. -Tiefs; gehandelt wird der Ausbruch.
 - Stop 1 ATR hinter der Zone bzw. hinter dem Swing, Ziel 2R, Zeitstopp 30 Kerzen, 17 Instrumente.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle drei Varianten sind gescheitert** (netto −8,5 / −7,0 / −3,5 bp je Tag; vor Kosten ≈ 0). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/sr_in_sample.md](research/results/sr_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`); venv aus dem SMC-Projekt. Das Paket `chart` (Swings, Trade-Engine) wird von späteren Chart-Strategien wiederverwendet.
 

@@ -44,5 +44,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [45-mtf-pullback/](45-mtf-pullback/) | Multi-Timeframe-Pullback (45) | gescheitert |
 | [46-47-waehrungsstaerke/](46-47-waehrungsstaerke/) | Währungsstärke-Ranking, USD-Basket-MR (46, 47) | gescheitert |
 | [48-49-intraday-level/](48-49-intraday-level/) | Market Profile 80 %, Pivot Points (48, 49) | gescheitert |
+| [50-51-sr-trendlinien/](50-51-sr-trendlinien/) | S/R-Zonen, Trendlinien (50, 51) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
