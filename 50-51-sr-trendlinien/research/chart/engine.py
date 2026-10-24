@@ -22,9 +22,11 @@ ROW_DTYPE = np.dtype([
 
 def run_trades(symbol: str, bars: np.ndarray, bar_sec: int, cost: Costs, rates: RateTable, cfd,
                sig: np.ndarray, stop_lvl: np.ndarray, min_dist: np.ndarray, day_from: int, r_mult: float,
-               max_bars: int, risk: float = 0.0025, lever_cap: float = 10.0) -> np.ndarray:
+               max_bars: int, risk: float = 0.0025, lever_cap: float = 10.0,
+               target_lvl: np.ndarray | None = None) -> np.ndarray:
     """sig[i] = +1 / -1 / 0 at the close of bar i; stop_lvl[i] its stop level; min_dist[i] the minimum stop distance
-    from the entry. Bars must already be cut at the end of the period."""
+    from the entry. Bars must already be cut at the end of the period. With target_lvl the target is that level
+    instead of r_mult R (no trade if it is not beyond the entry)."""
     o, h, l, c, t, ts = bars["o"], bars["h"], bars["l"], bars["c"], bars["t"], bars["ts"]
     n, rows, i = len(bars), [], 0
     while i < n - 1:
@@ -41,12 +43,15 @@ def run_trades(symbol: str, bars: np.ndarray, bar_sec: int, cost: Costs, rates: 
             entry = p + sp + slip
             stop = min(stop_lvl[i], entry - min_dist[i])
             r = entry - stop
-            target = entry + r_mult * r
+            target = entry + r_mult * r if target_lvl is None else target_lvl[i]
         else:
             entry = p - slip
             stop = max(stop_lvl[i], entry + min_dist[i])
             r = stop - entry
-            target = entry - r_mult * r
+            target = entry - r_mult * r if target_lvl is None else target_lvl[i]
+        if (target - entry) * d <= 0:
+            i += 1
+            continue
         exit_type, px = END, None
         for j in range(k, n):
             if d == 1:
