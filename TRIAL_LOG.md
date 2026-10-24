@@ -156,3 +156,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T253 | 24.10.2026 | Renko (74) | 65-75-oszillatoren | OS-RENKO, IS | nicht bestanden: −4,71 bp/Tag, t −1,94 |
 | T254 | 24.10.2026 | RSI-Divergenzen (75) | 65-75-oszillatoren | OS-DIV, IS | nicht bestanden: −1,59 bp/Tag, t −2,59 |
 | T255–T266 | – | Oszillatoren, Renko | 65-75-oszillatoren | Hold-out, FTMO | entfallen |
+| T267 | | Harmonische Muster (77) | 77-80-muster-scalping | HP-HARM, IS | |
+| T268 | | Wyckoff ohne Volumen (79) | 77-80-muster-scalping | HP-SPRING, IS | |
+| T269 | | Scalping M5 (80) | 77-80-muster-scalping | HP-SCALP, IS | |
+| T270–T275 | | Muster, Scalping (77, 79, 80) | 77-80-muster-scalping | Hold-out, FTMO (nur bei Bestehen) | |
