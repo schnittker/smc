@@ -1,0 +1,10 @@
+# Ergebnisdaten (reproduzierbar); Kursdaten liegen in ../smart-money-concept/data
+/data/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
