@@ -134,3 +134,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T202 | 24.10.2026 | Verfallstage (56) | 56-57-verfall-santa | K-POST, IS | nicht bestanden: −30,3 bp/Ereignis, t −1,61 |
 | T203 | 24.10.2026 | Santa Rally (57) | 56-57-verfall-santa | K-SANTA, IS | nicht bestanden: +0,1 bp/Ereignis, t 0,00 (9 Ereignisse) |
 | T204–T209 | – | Verfall, Santa (56, 57) | 56-57-verfall-santa | Hold-out, FTMO | entfallen |
+| T210 | | US500 → AUDJPY (58) | 58-59-lead-lag | LL-AJ, IS | |
+| T211 | | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y1, IS | |
+| T212 | | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y20, IS | |
+| T213–T218 | | Lead-Lag (58, 59) | 58-59-lead-lag | Hold-out, FTMO (nur bei Bestehen) | |
