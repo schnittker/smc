@@ -32,5 +32,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [26-pre-holiday/](26-pre-holiday/) | Pre-Holiday US-Indizes (26) | gescheitert |
 | [27-halloween/](27-halloween/) | Halloween US-Indizes (27) | gescheitert |
 | [28-30-kanal-ausbruch/](28-30-kanal-ausbruch/) | 52-Wochen-Hoch (28) und Turtle (30) | gescheitert |
+| [29-dual-momentum/](29-dual-momentum/) | Dual Momentum (29) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

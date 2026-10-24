@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 59 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 61 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -80,7 +80,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T96 | 24.10.2026 | 52-Wochen-Hoch (28) | 28-30-kanal-ausbruch | B-52W, IS | nicht bestanden: Sharpe −0,54, t −1,75 |
 | T97 | 24.10.2026 | Donchian/Turtle (30) | 28-30-kanal-ausbruch | B-TURTLE, IS | nicht bestanden: Sharpe −0,54, t −2,01 |
 | T98–T101 | – | Kanal-Ausbruch (28, 30) | 28-30-kanal-ausbruch | Hold-out, FTMO | entfallen |
-| T102 | | Dual Momentum (29) | 29-dual-momentum | D-TOP1, IS | |
-| T103 | | Dual Momentum (29) | 29-dual-momentum | D-TOP2, IS | |
-| T104 | | Dual Momentum (29) | 29-dual-momentum | Hold-out (nur falls T102/T103 besteht) | |
-| T105 | | Dual Momentum (29) | 29-dual-momentum | FTMO-Bootstrap (nur falls T104 besteht) | |
+| T102 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP1, IS | nicht bestanden: Sharpe 0,17, t 0,48 |
+| T103 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP2, IS | nicht bestanden: Sharpe 0,14, t 0,38 |
+| T104, T105 | – | Dual Momentum (29) | 29-dual-momentum | Hold-out, FTMO | entfallen |
