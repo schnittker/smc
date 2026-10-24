@@ -167,7 +167,7 @@ def in_sample():
         best = max(passed, key=lambda v: verdict[v][0]["t"])
         lines.append(f"**Ergebnis:** bestanden: {', '.join(passed)}; gewählt für den Hold-out: **{best}**.")
     else:
-        lines.append("**Ergebnis: Keine Variante erfüllt alle In-Sample-Kriterien. die Strategien Nr. 28 und Nr. 30 sind gescheitert; "
+        lines.append("**Ergebnis: Keine Variante erfüllt alle In-Sample-Kriterien. Die Strategien Nr. 28 und Nr. 30 sind gescheitert; "
                      "der Hold-out bleibt unberührt.**")
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     (RESULTS_DIR / "b_in_sample.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Ausbruch über das Hoch/Tief der letzten 252 Tage (B-52W, Nr. 28) bzw. 55 Tage (B-TURTLE, Nr. 30) über 34 Instrumente; Ausstieg beim Gegenausbruch eines kürzeren Kanals.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** B-52W und B-TURTLE je Sharpe −0,54 (t −1,75 / −2,01), 1 von 9 Jahren positiv; Verluste vor allem in FX. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz, eigene Vorbefunde, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/b_in_sample.md](research/results/b_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt.
 

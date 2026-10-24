@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 57 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 59 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -77,6 +77,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T92 | 24.10.2026 | Halloween (27) | 27-halloween | S-SPX, IS | nicht bestanden: Sharpe 0,37, t 1,08 |
 | T93 | 24.10.2026 | Halloween (27) | 27-halloween | S-NDX, IS | nicht bestanden: Sharpe 0,47, t 1,39 |
 | T94, T95 | – | Halloween (27) | 27-halloween | Hold-out, FTMO | entfallen |
-| T96 | | 52-Wochen-Hoch (28) | 28-30-kanal-ausbruch | B-52W, IS | |
-| T97 | | Donchian/Turtle (30) | 28-30-kanal-ausbruch | B-TURTLE, IS | |
-| T98–T101 | | Kanal-Ausbruch (28, 30) | 28-30-kanal-ausbruch | Hold-out, FTMO (nur bei Bestehen) | |
+| T96 | 24.10.2026 | 52-Wochen-Hoch (28) | 28-30-kanal-ausbruch | B-52W, IS | nicht bestanden: Sharpe −0,54, t −1,75 |
+| T97 | 24.10.2026 | Donchian/Turtle (30) | 28-30-kanal-ausbruch | B-TURTLE, IS | nicht bestanden: Sharpe −0,54, t −2,01 |
+| T98–T101 | – | Kanal-Ausbruch (28, 30) | 28-30-kanal-ausbruch | Hold-out, FTMO | entfallen |

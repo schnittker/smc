@@ -69,9 +69,9 @@ Folgen für die Auswahl:
 | 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | ⚠ zurückgestellt: Konsensprognosen-Historie fehlt (FRED nur Ist-Werte); testbar nach Export aus dem MT5-Kalender (CalendarValueHistory) |
 | 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | ✗ Tag 19 (T88/T89): +14 / +11 bp je Ereignis, t 1,7 / 0,9 |
 | 27 | Halloween / Sell in May | Nur November–April long | Indizes / D1 | vorhanden (wenige Datenpunkte) | ✗ Tag 20 (T92/T93): Sharpe 0,37 / 0,47 (unter Halten) |
-| 28 | 52-Wochen-Hoch | Nähe zum 52-Wochen-Hoch → Fortsetzung (George & Hwang) – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
+| 28 | 52-Wochen-Hoch | Nähe zum 52-Wochen-Hoch → Fortsetzung (George & Hwang) – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | ✗ Tag 21 (T96): Sharpe −0,54 |
 | 29 | Dual Momentum | Relativ + absolut: bestes Asset aus Indizes/Gold, sonst Cash (Antonacci) | Indizes, Gold / MN | vorhanden | |
-| 30 | Donchian / Turtle | Ausbruch über 20/55-Tage-Hoch – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
+| 30 | Donchian / Turtle | Ausbruch über 20/55-Tage-Hoch – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | ✗ Tag 21 (T97): Sharpe −0,54 |
 
 ## B – Praktiker-Setups: Sessions, Ausbrüche, Mean Reversion
 
@@ -197,4 +197,5 @@ Folgen für die Auswahl:
 | 18 | 24.10.2026 | 24 | USD an FOMC-Tagen | ✗ knapp | F-USD +108 bp/Termin (t 2,10), F-CARRY +55 bp (t 2,11, 9/9 Jahre) – Ensemble-Kandidat |
 | 19 | 24.10.2026 | 26 | Pre-Holiday US-Indizes | ✗ | H-SPX +13,9 bp (t 1,68), H-NDX +10,6 bp |
 | 20 | 24.10.2026 | 27 | Halloween US-Indizes | ✗ | S-SPX Sharpe 0,37, S-NDX 0,47 |
-| 21 | | | | | |
+| 21 | 24.10.2026 | 28, 30 | Kanal-Ausbruch (52 Wochen, Turtle) | ✗ | beide Sharpe −0,54; FX −35 bis −39 % |
+| 22 | | | | | |
