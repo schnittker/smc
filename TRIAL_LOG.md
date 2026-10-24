@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 61 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 63 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -83,7 +83,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T102 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP1, IS | nicht bestanden: Sharpe 0,17, t 0,48 |
 | T103 | 24.10.2026 | Dual Momentum (29) | 29-dual-momentum | D-TOP2, IS | nicht bestanden: Sharpe 0,14, t 0,38 |
 | T104, T105 | – | Dual Momentum (29) | 29-dual-momentum | Hold-out, FTMO | entfallen |
-| T106 | | London Breakout (31) | 31-london-breakout | L-GBP, IS | |
-| T107 | | London Breakout (31) | 31-london-breakout | L-EUR, IS | |
-| T108 | | London Breakout (31) | 31-london-breakout | Hold-out (nur falls T106/T107 besteht) | |
-| T109 | | London Breakout (31) | 31-london-breakout | FTMO-Bootstrap (nur falls T108 besteht) | |
+| T106 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-GBP, IS | nicht bestanden: +0,75 bp/Tag, t 0,47 |
+| T107 | 24.10.2026 | London Breakout (31) | 31-london-breakout | L-EUR, IS | nicht bestanden: −1,46 bp/Tag, t −1,01 |
+| T108, T109 | – | London Breakout (31) | 31-london-breakout | Hold-out, FTMO | entfallen |
