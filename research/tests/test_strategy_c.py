@@ -1,16 +1,11 @@
-from calendar import timegm
-
 import numpy as np
 import pytest
 
 from smc.costs import cost_in_price
-from smc.data.bars import resample
-from smc.data.histdata import M1_DTYPE
 from smc.engine.liquidity import POOL_DTYPE, SWING_EXT, SWING_INT
 from smc.engine.zones import FVG, ZONE_DTYPE
-from smc.pipeline import TFS, build_symbol
 from smc.strategy_c import (CANCEL_STOP, CANCEL_TARGET, CANCEL_TREND, ENTRY_MARKET, EXIT_SL, EXIT_TIME,
-                            EXIT_TP, EXPIRED, LMT, MKT, NO_DATA, TARGET_CAP, TARGET_MIN, TRADED, Inputs, Market,
+                            EXIT_TP, EXPIRED, LMT, MKT, NO_DATA, TARGET_CAP, TARGET_MIN, TRADED, Market,
                             Targets, pending_order, pick_zone, run_model_c, run_position)
 
 # binary-exact numbers so that trigger boundaries can be tested without rounding noise
@@ -140,35 +135,12 @@ def test_pick_zone_youngest_untouched_inside_the_leg():
     assert pick_zone(zones, m15, 3, 9, 1) is None
 
 
-# ---- whole model on synthetic data -----------------------------------------------------------
-def synthetic_m1(weeks=104, seed=1):
-    """Random walk plus a slow (4-week) and a fast (~2-day) swing, so that H1 counter swings
-    inside H4 trends occur often enough. Five 24-hour days per week."""
-    rng = np.random.default_rng(seed)
-    t0 = timegm((2021, 1, 3, 22, 0, 0))          # Sunday 17:00 New York
-    t = np.concatenate([t0 + w * 7 * 86400 + 60 * np.arange(5 * 1440) for w in range(weeks)])
-    x = np.arange(len(t))
-    c = (1.10 + np.cumsum(rng.normal(0, 5e-5, len(t))) + 0.02 * np.sin(2 * np.pi * x / 28_800)
-         + 0.006 * np.sin(2 * np.pi * x / 3_000))
-    o = np.r_[c[0], c[:-1]]
-    wick = np.abs(rng.normal(0, 2.5e-5, (2, len(t))))
-    m1 = np.empty(len(t), M1_DTYPE)
-    m1["t"], m1["o"], m1["c"] = t, o, c
-    m1["h"], m1["l"] = np.maximum(o, c) + wick[0], np.minimum(o, c) - wick[1]
-    return m1
-
-
-def model_rows(m1):
-    feats = build_symbol("EURUSD", bars={tf: resample(m1, tf) for tf in TFS})
-    inp = Inputs.from_features(feats)
-    return {v: run_model_c(inp, v, 0, 2**62) for v in (MKT, LMT)}
-
-
+# ---- whole model on synthetic data (fixture `synthetic_inputs` in conftest.py) ------------------
 @pytest.fixture(scope="module")
-def synthetic():
-    m1 = synthetic_m1()
-    cut = timegm((2022, 2, 26, 12, 0, 0))         # Saturday: no bar is cut in half
-    return model_rows(m1), model_rows(m1[m1["t"] < cut]), cut
+def synthetic(synthetic_inputs):
+    full, part, cut = synthetic_inputs
+    rows = [{v: run_model_c(inp, v, 0, 2**62) for v in (MKT, LMT)} for inp in (full, part)]
+    return rows[0], rows[1], cut
 
 
 def test_model_c_trades_are_consistent(synthetic):
