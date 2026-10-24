@@ -77,3 +77,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T92 | 24.10.2026 | Halloween (27) | 27-halloween | S-SPX, IS | nicht bestanden: Sharpe 0,37, t 1,08 |
 | T93 | 24.10.2026 | Halloween (27) | 27-halloween | S-NDX, IS | nicht bestanden: Sharpe 0,47, t 1,39 |
 | T94, T95 | – | Halloween (27) | 27-halloween | Hold-out, FTMO | entfallen |
+| T96 | | 52-Wochen-Hoch (28) | 28-30-kanal-ausbruch | B-52W, IS | |
+| T97 | | Donchian/Turtle (30) | 28-30-kanal-ausbruch | B-TURTLE, IS | |
+| T98–T101 | | Kanal-Ausbruch (28, 30) | 28-30-kanal-ausbruch | Hold-out, FTMO (nur bei Bestehen) | |
