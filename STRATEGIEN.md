@@ -159,8 +159,8 @@ Folgen für die Auswahl:
 | 95 | Grid Trading | Ruinrisiko vs. 5 %/10 %-Verlustgrenze | ⛔ |
 | 96 | Martingale | Ruinrisiko vs. Verlustgrenze | ⛔ |
 | 97 | Latenz- / Tick-Arbitrage | bei FTMO verboten | ⛔ |
-| 98 | Zufalls-Einstiege (Placebo) | Kalibriert die Pipeline: wie oft „besteht“ reiner Zufall? Am besten früh nebenbei laufen lassen | Kontrolle |
-| 99 | Mondphasen (Placebo) | Zweite Kontrolle ohne ökonomische Begründung | Kontrolle |
+| 98 | Zufalls-Einstiege (Placebo) | Kalibriert die Pipeline: wie oft „besteht“ reiner Zufall? Am besten früh nebenbei laufen lassen | ✓ Kontrolle ok, Tag 44 (T297): vor Kosten +0,017 R [−0,019; +0,053], netto −Kosten |
+| 99 | Mondphasen (Placebo) | Zweite Kontrolle ohne ökonomische Begründung | ✓ Kontrolle ok, Tag 44 (T298): Sharpe −0,50, vor Kosten ≈ 0 |
 | 100 | Ensemble der besten Kandidaten | Mehrere schwache, unkorrelierte Edges kombinieren – erst am Ende, mit Trial-Korrektur | |
 
 ---
@@ -221,4 +221,5 @@ Folgen für die Auswahl:
 | 41 | 24.10.2026 | 77, 79, 80 (78 ⊘) | Harmonische Muster, Wyckoff-Spring, Scalping | ✗ | Abschnitt C ohne Treffer |
 | 42 | 24.10.2026 | 81, 82, 85, 90 | HMM, GARCH, k-NN, Gold-Saison | ✗ | keine Vorhersagekraft nach Kosten |
 | 43 | 24.10.2026 | 83, 84, 86 (87 ⊘, 88 ⛔) | Gradient Boosting, Meta-Labeling, MLP | ✗ | AUC 0,52 – zu wenig für die Kosten |
-| 44 | | | | | |
+| 44 | 24.10.2026 | 98, 99 | Placebo: Zufall, Mondphasen | Kontrolle ok | Pipeline unverzerrt |
+| 45 | | | | | |
