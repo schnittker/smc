@@ -78,7 +78,7 @@ def variant_lines(name: str, m: dict, checks: list) -> list[str]:
            f"| Handelstage | {m['n']:,} |",
            f"| Netto je Tag | {m['E']:+.2f} bp (σ {m['sd']:.1f} bp) |",
            f"| vor Kosten je Tag | {m['gross']:+.2f} bp |",
-           f"| Kosten je Tag (davon Swap) | {m['cost']:.2f} bp ({m['swap']:+.2f} bp) |",
+           f"| Kosten je Tag (davon Swap) | {m['cost']:.2f} bp ({-m['swap']:.2f} bp) |",
            f"| Sharpe Ratio p. a. (netto) | {m['sharpe']:.2f} |",
            f"| t-Wert iid / Woche / Monat | {m['t_iid']:.2f} / {m['t_week']:.2f} / {m['t_month']:.2f} |",
            f"| Trefferquote | {m['hit']:.0%} |",
