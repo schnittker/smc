@@ -86,7 +86,7 @@ Folgen für die Auswahl:
 | 37 | Bollinger Mean Reversion | Rückkehr zur Mitte nach Bandberührung in Seitwärtsphasen | FX-Crosses / H1 | vorhanden | ✗ Tag 27 (T129): −11,1 bp/Tag, t −6,19; Kosten 6× Vorteil |
 | 38 | Keltner-Channel-Ausbruch | ATR-Kanal-Ausbruch mit Trendfilter | alle / H4 | vorhanden | ✗ Tag 26 (T124): −0,76 bp/Tag, t −0,51 |
 | 39 | z-Score Mean Reversion (OU) | Abstand zum gleitenden Mittel in Std.-Abw., Halbwertszeit schätzen | FX-Crosses / H1 | vorhanden | ✗ Tag 27 (T130): −1,8 bp/Tag, t −2,84; vor Kosten negativ |
-| 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | |
+| 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | ✗ Tag 28 (T135): −2,3 bp/Tag, t −4,70; Filter verschlechtert |
 | 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | |
 | 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | |
 | 43 | Große Tagesbewegung | Nach Tag > 2 ATR: Reversal oder Fortsetzung | alle / D1 | vorhanden | |
@@ -204,4 +204,5 @@ Folgen für die Auswahl:
 | 25 | 24.10.2026 | 33–35 | NR7, Inside Bar, Volatility Breakout | ✗ | vor Kosten +0,01–0,04 R, Kosten größer |
 | 26 | 24.10.2026 | 36, 38 | Bollinger Squeeze, Keltner-Ausbruch | ✗ | vor Kosten +0,03 R, Kosten 0,045 R |
 | 27 | 24.10.2026 | 37, 39 | Bollinger-MR, z-Score/OU-MR | ✗ | Umkehr auf H1 nach Kosten negativ |
-| 28 | | | | | |
+| 28 | 24.10.2026 | 40 | Hurst-Regime-Switch | ✗ | H ≈ 0,5, kein Regime-Signal |
+| 29 | | | | | |
