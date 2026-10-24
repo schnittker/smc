@@ -138,3 +138,14 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T211 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y1, IS | nicht bestanden: −0,99 bp/Tag, t −0,85 |
 | T212 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y20, IS | nicht bestanden: −0,13 bp/Tag, t −0,09 |
 | T213–T218 | – | Lead-Lag (58, 59) | 58-59-lead-lag | Hold-out, FTMO | entfallen |
+| T219 | | SMA 50/200 (61) | 61-76-trendindikatoren | TI-MA200, IS | |
+| T220 | | EMA 9/21 (62) | 61-76-trendindikatoren | TI-EMA921, IS | |
+| T221 | | Triple MA (63) | 61-76-trendindikatoren | TI-TRIPLE, IS | |
+| T222 | | MACD (64) | 61-76-trendindikatoren | TI-MACD, IS | |
+| T223 | | ADX/DMI (69) | 61-76-trendindikatoren | TI-ADX, IS | |
+| T224 | | Parabolic SAR (70) | 61-76-trendindikatoren | TI-PSAR, IS | |
+| T225 | | Supertrend (71) | 61-76-trendindikatoren | TI-SUPER, IS | |
+| T226 | | Ichimoku (72) | 61-76-trendindikatoren | TI-ICHI, IS | |
+| T227 | | Heikin-Ashi (73) | 61-76-trendindikatoren | TI-HA, IS | |
+| T228 | | Kalman-Trend (76) | 61-76-trendindikatoren | TI-KALMAN, IS | |
+| T229–T248 | | Trendindikatoren | 61-76-trendindikatoren | Hold-out, FTMO (nur bei Bestehen) | |
