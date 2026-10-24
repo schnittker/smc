@@ -1,7 +1,8 @@
 """Model T 'daily breakout' (strategies no. 33-35), as pre-registered in docs/01_Vorregistrierung.md.
 
-D1 bars are the FTMO server days (17:00-17:00 New York) built from the M5 bid bars; a server day counts as a D1 bar
-when it holds at least MIN_BARS M5 bars. On server day i, from the bars up to i-1:
+D1 bars are the FTMO server days Monday-Friday (17:00-17:00 New York) built from the M5 bid bars; a server day counts
+as a D1 bar when it holds at least MIN_BARS M5 bars. (HistData has a one-hour Friday 17:00-18:00 New York stub in
+summer that falls on server Saturday; it is not a D1 bar - fixed after the first run.) On server day i, from the bars up to i-1:
   T-NR7     range(i-1) is the smallest of the last 7 ranges          -> levels high(i-1) / low(i-1)
   T-INSIDE  high(i-1) < high(i-2) and low(i-1) > low(i-2)            -> levels high(i-1) / low(i-1)
   T-LW      every day                                                -> open(i) +- 0.5 x range(i-1)
@@ -67,7 +68,7 @@ def server_days(m5: np.ndarray) -> dict:
     sday = m5["ts"] // DAY
     starts = np.flatnonzero(np.r_[True, sday[1:] != sday[:-1]])
     ends = np.r_[starts[1:], len(m5)]
-    keep = (ends - starts) >= MIN_BARS
+    keep = ((ends - starts) >= MIN_BARS) & ((sday[starts] + 3) % 7 < 5)     # 1970-01-01 was a Thursday
     a, b = starts[keep], ends[keep]
     return {"day": sday[a], "a": a, "b": b, "o": m5["o"][a], "h": np.maximum.reduceat(m5["h"], starts)[keep],
             "l": np.minimum.reduceat(m5["l"], starts)[keep], "c": m5["c"][b - 1]}

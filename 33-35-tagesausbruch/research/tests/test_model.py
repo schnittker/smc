@@ -11,7 +11,7 @@ FXC = Costs("fx", "EURUSD")
 SP, SL = effective_spread("EURUSD"), slippage_price("EURUSD")
 
 
-def _bars(days: list[list[tuple]], day0: int = 19000) -> np.ndarray:
+def _bars(days: list[list[tuple]], day0: int = 19002) -> np.ndarray:
     """days[k] = list of (o, h, l, c) M5 bars starting at server midnight of day0 + k."""
     rows = []
     for k, bars in enumerate(days):
@@ -28,7 +28,7 @@ def _flat_day(lo: float, hi: float, n: int = 288):
 def test_server_days_ohlc_and_min_bars():
     m5 = _bars([_flat_day(1.10, 1.12), [(1.0, 1.0, 1.0, 1.0)] * 5, _flat_day(1.11, 1.13)])
     d1 = server_days(m5)
-    assert list(d1["day"]) == [19000, 19002]                 # 5-bar stub dropped
+    assert list(d1["day"]) == [19002, 19004]                 # 5-bar stub dropped
     assert d1["h"][1] == 1.13 and d1["l"][1] == 1.11 and d1["o"][1] == 1.11
 
 
@@ -95,3 +95,10 @@ def test_holiday_window():
     assert holiday((date(2019, 12, 24) - date(1970, 1, 1)).days)
     assert holiday((date(2020, 1, 1) - date(1970, 1, 1)).days)
     assert not holiday((date(2020, 1, 2) - date(1970, 1, 1)).days)
+
+
+def test_saturday_stub_is_not_a_d1_bar():
+    day0 = (date(2019, 3, 8) - date(1970, 1, 1)).days                          # a Friday
+    m5 = _bars([_flat_day(1.10, 1.12), [(1.1, 1.1, 1.1, 1.1)] * 12, _flat_day(1.10, 1.11), _flat_day(1.10, 1.11)],
+               day0)
+    assert list(server_days(m5)["day"]) == [day0, day0 + 3]                      # Saturday stub and Sunday dropped
