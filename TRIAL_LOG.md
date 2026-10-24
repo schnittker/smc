@@ -96,3 +96,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T123 | 24.10.2026 | Bollinger Squeeze (36) | 36-38-h4-kanalausbruch | K-BBSQ, IS | nicht bestanden: −0,25 bp/Tag, t −0,39 |
 | T124 | 24.10.2026 | Keltner-Ausbruch (38) | 36-38-h4-kanalausbruch | K-KELT, IS | nicht bestanden: −0,76 bp/Tag, t −0,51 |
 | T125–T128 | – | H4-Kanal-Ausbruch (36, 38) | 36-38-h4-kanalausbruch | Hold-out, FTMO | entfallen |
+| T129 | | Bollinger Mean Reversion (37) | 37-39-h1-mean-reversion | U-BB, IS | |
+| T130 | | z-Score/OU Mean Reversion (39) | 37-39-h1-mean-reversion | U-OU, IS | |
+| T131–T134 | | H1-Mean-Reversion (37, 39) | 37-39-h1-mean-reversion | Hold-out, FTMO (nur bei Bestehen) | |
