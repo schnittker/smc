@@ -50,12 +50,12 @@ Folgen für die Auswahl:
 | 6 | FX Carry | Long hochverzinste, Short niedrigverzinste Währungen (Lustig & Verdelhan) – FTMO-Swap-Aufschläge prüfen | G10-FX / D1–W1 | FRED vorhanden ⚠ live per WebRequest | ✗ Tag 3 (T23/T24): Sharpe −0,16 / −0,02 |
 | 7 | FX Querschnitts-Momentum | Monatlich Long die 3 stärksten, Short die 3 schwächsten Währungen (Menkhoff et al. 2012) | G10-FX / D1 | vorhanden | ✗ Tag 4 (T27/T28): Sharpe −0,28 / −0,81 |
 | 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs. Achtung: nicht mehr unabhängig von der 12-Monats-Umkehr aus Nr. 7 | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | ✗ Tag 45 (T299/T300): Sharpe −0,06 / −0,07; Kurs +, Swaps − |
-| 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | ✗ knapp, Tag 5 (T31/T32): +19 / +28 bp je Termin, t 2,4 / 2,3 – Ensemble-Kandidat |
-| 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | ✗ Tag 6 (T35/T36): +22 / +36 bp je Ereignis, t 1,2 / 1,7 |
+| 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | ✗ knapp, Tag 5 (T31/T32): +19 / +28 bp je Termin, t 2,4 / 2,3 – Ensemble-Kandidat; Hold-out durch Nr. 100 verbraucht |
+| 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | ✗ Tag 6 (T35/T36): +22 / +36 bp je Ereignis, t 1,2 / 1,7; Hold-out durch Nr. 100 verbraucht |
 | 11 | Intraday-Momentum | Rendite der ersten 30 min sagt die letzte 30 min voraus (Gao et al. 2018) | US500, US100 / M5 | vorhanden | ✗ Tag 7 (T39/T40): +0,4 / +1,0 bp/Tag, t 0,5 / 1,3; Effekt vor Kosten ≈ 2 bp |
 | 12 | Overnight- vs. Intraday-Rendite | Indexrendite entsteht überwiegend über Nacht – nur Overnight halten | Indizes / H1 | vorhanden | ✗ Tag 8 (T43–T45): vor Kosten +0,6 bis +2,1 bp/Nacht ≈ Kosten |
 | 13 | Tageszeit-Effekt FX | Währungen werten während der eigenen Handelszeit ab (Breedon & Ranaldo 2013) | Majors / H1 | vorhanden | ⊘ abgedeckt durch Nr. 2 (Fix-Fenster W1–W4 = Heim-/Auslandsstunden), kein eigener Trial |
-| 14 | Volatilitätsgesteuertes Index-Long | Long Index, Größe ∝ 1/Volatilität (Moreira & Muir 2017) | US500, US100 / D1 | vorhanden | ✗ Tag 9 (T48/T49): Sharpe 0,56 / 0,32 (Halten 0,51) |
+| 14 | Volatilitätsgesteuertes Index-Long | Long Index, Größe ∝ 1/Volatilität (Moreira & Muir 2017) | US500, US100 / D1 | vorhanden | ✗ Tag 9 (T48/T49): Sharpe 0,56 / 0,32 (Halten 0,51); Hold-out durch Nr. 100 verbraucht |
 | 15 | Kurzfrist-Reversal / RSI(2) | Kaufen nach kurzen Rücksetzern im Aufwärtstrend (Connors) | US500, US100 / D1 | vorhanden | ✗ Tag 10 (T52/T53): Sharpe 0,31 / 0,28 (Halten 0,51) |
 | 16 | Opening Range Breakout | Ausbruch aus der ersten 5–30-min-Range nach Kassaeröffnung (Zarattini & Aziz 2023) | US100, US500 / M5 | vorhanden | ✗ Tag 11 (T56/T57): −1,6 / −0,4 bp/Tag; 85 % Stops |
 | 17 | Lead-Lag US → Asien | US-Schlussrendite sagt Eröffnung JP225/AUS200/HK50 voraus | Asien-Indizes / H1 | vorhanden | ⊘ strukturell nicht handelbar: FTMO-Asien-Indizes sind Futures-CFDs mit ≈ 19 h Handel, die US-Bewegung ist eingepreist; kein eigener Trial |
@@ -65,7 +65,7 @@ Folgen für die Auswahl:
 | 21 | Pairs Trading / Kointegration | Spread AUDUSD–NZDUSD (bzw. AUDNZD) handeln bei z-Score-Extremen | AUD/NZD, EUR/CHF / H4 | vorhanden | ✗ Tag 15 (T72/T73): Sharpe 0,13 / −0,20 (SNB-Schock) |
 | 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | ✗ Tag 16 (T76/T77): Sharpe −0,07 / 0,09 |
 | 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | ✗ Tag 17 (T80/T81): Sharpe −0,41 / 0,21; nur gleichzeitiger Zusammenhang |
-| 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | ✗ knapp, Tag 18 (T84/T85): FOMC-Tage +108 / +55 bp, t 2,1; Ensemble-Kandidat |
+| 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | ✗ knapp, Tag 18 (T84/T85): FOMC-Tage +108 / +55 bp, t 2,1; Ensemble-Kandidat; Hold-out durch Nr. 100 verbraucht |
 | 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | ⚠ zurückgestellt: Konsensprognosen-Historie fehlt (FRED nur Ist-Werte); testbar nach Export aus dem MT5-Kalender (CalendarValueHistory) |
 | 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | ✗ Tag 19 (T88/T89): +14 / +11 bp je Ereignis, t 1,7 / 0,9 |
 | 27 | Halloween / Sell in May | Nur November–April long | Indizes / D1 | vorhanden (wenige Datenpunkte) | ✗ Tag 20 (T92/T93): Sharpe 0,37 / 0,47 (unter Halten) |
@@ -161,7 +161,7 @@ Folgen für die Auswahl:
 | 97 | Latenz- / Tick-Arbitrage | bei FTMO verboten | ⛔ |
 | 98 | Zufalls-Einstiege (Placebo) | Kalibriert die Pipeline: wie oft „besteht“ reiner Zufall? Am besten früh nebenbei laufen lassen | ✓ Kontrolle ok, Tag 44 (T297): vor Kosten +0,017 R [−0,019; +0,053], netto −Kosten |
 | 99 | Mondphasen (Placebo) | Zweite Kontrolle ohne ökonomische Begründung | ✓ Kontrolle ok, Tag 44 (T298): Sharpe −0,50, vor Kosten ≈ 0 |
-| 100 | Ensemble der besten Kandidaten | Mehrere schwache, unkorrelierte Edges kombinieren – erst am Ende, mit Trial-Korrektur | |
+| 100 | Ensemble der besten Kandidaten | Mehrere schwache, unkorrelierte Edges kombinieren – erst am Ende, mit Trial-Korrektur | ✗ Tag 47 (T306/T307): IS Sharpe 1,13 (verzerrt), **Hold-out Sharpe 0,17** – gescheitert; nur V-VOL hält |
 
 ---
 
@@ -224,4 +224,5 @@ Folgen für die Auswahl:
 | 44 | 24.10.2026 | 98, 99 | Placebo: Zufall, Mondphasen | Kontrolle ok | Pipeline unverzerrt |
 | 45 | 24.10.2026 | 8 (nachgeholt) | FX Value (PPP) | ✗ | Swaps fressen den Value-Kursbeitrag |
 | 46 | 24.10.2026 | 94 | News-Straddle NFP | ✗ | Kosten zur Veröffentlichung 3× Vorteil |
-| 47 | | | | | |
+| 47 | 24.10.2026 | 100 | Swing-Portfolio (Nr. 9, 10, 14, 24) | ✗ | Hold-out Sharpe 0,17 (IS 1,13); Anomalie-Bausteine ≈ 0, nur Vola-gesteuertes US500-Long hält |
+| 48 | | | | | |

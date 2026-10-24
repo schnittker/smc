@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 131 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 133 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139). Hold-out einmal angefasst (T307, Swing-Portfolio Nr. 100, gescheitert; verbraucht damit den Hold-out von Nr. 9, 10, 14, 24).
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -176,3 +176,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T301, T302 | – | FX Value (8) | 08-fx-value | Hold-out, FTMO | entfallen |
 | T303 | 24.10.2026 | News-Straddle NFP (94) | 94-news-straddle | N-NFP, IS | nicht bestanden: −8,81 bp/Termin, t −1,22 |
 | T304, T305 | – | News-Straddle NFP (94) | 94-news-straddle | Hold-out, FTMO | entfallen |
+| T306 | 24.10.2026 | Swing-Portfolio (100) | 100-swing-portfolio | P-SPX + T-FRÜH + V-VOL + F-CARRY, inverse Vola, IS (beschreibend) | Sharpe 1,13, t 3,37 (Auswahl-verzerrt); FTMO-Bootstrap IS: keine Stufe ≥ 70 % bei ≤ 12 Monaten |
+| T307 | 24.10.2026 | Swing-Portfolio (100) | 100-swing-portfolio | Hold-out 01.01.2024–16.10.2026 | **nicht bestanden:** +1,40 bp/Tag (Sharpe 0,17) < IS-Untergrenze +4,59; nur V-VOL hält (Sharpe 0,59) |
+| T308 | – | Swing-Portfolio (100) | 100-swing-portfolio | FTMO-Bootstrap | entfallen |
