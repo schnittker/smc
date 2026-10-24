@@ -50,3 +50,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T56 | 24.10.2026 | Opening Range Breakout (16) | 16-opening-range-breakout | O-NDX, IS | nicht bestanden: −1,60 bp/Tag, t −0,54 |
 | T57 | 24.10.2026 | Opening Range Breakout (16) | 16-opening-range-breakout | O-SPX, IS | nicht bestanden: −0,41 bp/Tag, t −0,16 |
 | T58, T59 | – | Opening Range Breakout (16) | 16-opening-range-breakout | Hold-out, FTMO | entfallen |
+| T60 | | COT-Extreme (18) | 18-cot-positionierung | C-KONTRA, IS | |
+| T61 | | COT-Extreme (18) | 18-cot-positionierung | C-FOLGE, IS | |
+| T62 | | COT-Extreme (18) | 18-cot-positionierung | Hold-out (nur falls T60/T61 besteht) | |
+| T63 | | COT-Extreme (18) | 18-cot-positionierung | FTMO-Bootstrap (nur falls T62 besteht) | |
