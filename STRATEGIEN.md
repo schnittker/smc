@@ -94,8 +94,8 @@ Folgen für die Auswahl:
 | 45 | Multi-Timeframe-Pullback | Trend auf D1/H4, Einstieg auf H1-Rücksetzer | alle / H1 | vorhanden | ✗ Tag 31 (T153): −14,7 bp/Tag, t −6,53; vor Kosten negativ |
 | 46 | Währungsstärke-Ranking intraday | Stärkste vs. schwächste Währung der Session handeln | 28 Paare / H1 | vorhanden | ✗ Tag 32 (T156/T157): −0,56 / +0,07 bp/Tag, t −1,2 / 0,2 |
 | 47 | USD-Basket Mean Reversion | Einzelpaar weicht vom USD-Index (synthetisch) ab → Rückkehr | USD-Majors / H1 | vorhanden | ✗ Tag 32 (T158): −1,05 bp/Tag, t −1,17 |
-| 48 | Market Profile / TPO | Rückkehr in die Value Area (80-%-Regel), zeitbasiert, ohne Volumen | Indizes / M30 | vorhanden | |
-| 49 | Pivot Points (Classic/Camarilla) | Abpraller an S1/R1, Ausbruch über S3/R3 | Indizes, Majors / M15 | vorhanden | |
+| 48 | Market Profile / TPO | Rückkehr in die Value Area (80-%-Regel), zeitbasiert, ohne Volumen | Indizes / M30 | vorhanden | ✗ Tag 33 (T165): −0,8 bp/Tag, t −2,10; Durchquerung nur 45 % |
+| 49 | Pivot Points (Classic/Camarilla) | Abpraller an S1/R1, Ausbruch über S3/R3 | Indizes, Majors / M15 | vorhanden | ✗ Tag 33 (T166/T167): −12,6 / −4,3 bp/Tag; vor Kosten ≤ 0 |
 | 50 | Horizontale S/R-Zonen | Algorithmisch ermittelte Swing-Level, Abpraller oder Ausbruch | alle / H1–H4 | vorhanden | |
 | 51 | Trendlinien-Ausbruch | Algorithmische Trendlinien aus Swing-Punkten | alle / H4 | vorhanden | |
 | 52 | Fibonacci-Pullback | Einstieg am 50–61,8-%-Retracement im Trend | alle / H4 | vorhanden | |
@@ -210,4 +210,5 @@ Folgen für die Auswahl:
 | 30 | 24.10.2026 | 43, 44 | Große Tagesbewegung, Wochentags-Effekt | ✗ | Folgetage nach 2-ATR-Tagen = Rauschen |
 | 31 | 24.10.2026 | 45 | Multi-Timeframe-Pullback | ✗ | Ziel 2R nur 22 % |
 | 32 | 24.10.2026 | 46, 47 | Währungsstärke-Ranking, USD-Basket-MR | ✗ | vor Kosten +0,02–0,05 R |
-| 33 | | | | | |
+| 33 | 24.10.2026 | 48, 49 | Market Profile 80 %, Pivot Points | ✗ | Level ohne Wirkung |
+| 34 | | | | | |
