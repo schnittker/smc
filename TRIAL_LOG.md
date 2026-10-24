@@ -108,3 +108,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T145 | 24.10.2026 | Große Tagesbewegung (43) | 43-44-tagesmuster | E-CONT, IS | nicht bestanden: −0,06 bp/Tag, t −0,11 |
 | T146 | 24.10.2026 | Wochentags-Effekt (44) | 43-44-tagesmuster | E-WD, IS | nicht bestanden: +0,52 bp/Tag, t 0,50 |
 | T147–T152 | – | Tagesmuster (43, 44) | 43-44-tagesmuster | Hold-out, FTMO | entfallen |
+| T153 | | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | J-MTF, IS | |
+| T154, T155 | | Multi-Timeframe-Pullback (45) | 45-mtf-pullback | Hold-out, FTMO (nur bei Bestehen) | |
