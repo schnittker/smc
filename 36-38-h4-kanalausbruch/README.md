@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** H4-Schluss außerhalb der Bollinger-Bänder nach einem Bandbreiten-Tief bzw. außerhalb EMA20 ± 2 ATR in Richtung EMA200. Ausstieg an der Mittellinie, Stop 2 ATR, 17 Instrumente.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Beide Varianten sind gescheitert** (netto −0,25 / −0,76 bp je Tag, t −0,39 / −0,51). Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/k_in_sample.md](research/results/k_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`, Universum und Kosten); venv aus dem SMC-Projekt.
 
