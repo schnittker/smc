@@ -122,3 +122,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T175 | 24.10.2026 | S/R-Zonen (50) | 50-51-sr-trendlinien | SR-BREAK, IS | nicht bestanden: −6,97 bp/Tag, t −3,74 |
 | T176 | 24.10.2026 | Trendlinien-Ausbruch (51) | 50-51-sr-trendlinien | SR-TLINE, IS | nicht bestanden: −3,48 bp/Tag, t −2,81 |
 | T177–T182 | – | S/R und Trendlinien (50, 51) | 50-51-sr-trendlinien | Hold-out, FTMO | entfallen |
+| T183 | | Fibonacci-Pullback (52) | 52-53-fib-chandelier | FC-FIB, IS | |
+| T184 | | Chandelier-Trend (53) | 52-53-fib-chandelier | FC-CHAND, IS | |
+| T185–T188 | | Fibonacci, Chandelier (52, 53) | 52-53-fib-chandelier | Hold-out, FTMO (nur bei Bestehen) | |
