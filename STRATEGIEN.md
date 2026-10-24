@@ -104,8 +104,8 @@ Folgen für die Auswahl:
 | 55 | Chartformationen | SKS, Doppeltop/-boden, Dreiecke algorithmisch | alle / H4–D1 | vorhanden ⚠ (Erkennung subjektiv) | ✗ Tag 36 (T191): Doppeltop/-boden −0,55 bp/Tag, t −1,73; SKS/Dreiecke nicht formalisiert |
 | 56 | Verfallstage (OPEX / Triple Witching) | Index-Verhalten rund um Optionsverfall | US500, US100 / H1 | Termine berechenbar | ✗ Tag 37 (T201/T202): −6,7 / −30,3 bp je Ereignis |
 | 57 | Jahresende / Santa Rally | Long Indizes letzte Dezemberwoche | Indizes / D1 | vorhanden (wenige Datenpunkte) | ✗ Tag 37 (T203): +0,1 bp je Ereignis (9 Ereignisse) |
-| 58 | Aktien → AUDJPY | AUDJPY folgt US500 mit Verzögerung (Risk-Proxy) | AUDJPY / H1 | vorhanden | |
-| 59 | US-Renditen → USDJPY | USDJPY folgt 10-jähriger US-Rendite | USDJPY / D1 | FRED vorhanden ⚠ live per WebRequest | |
+| 58 | Aktien → AUDJPY | AUDJPY folgt US500 mit Verzögerung (Risk-Proxy) | AUDJPY / H1 | vorhanden | ✗ Tag 38 (T210): −1,45 bp/Tag, t −4,33; kein Nachlauf |
+| 59 | US-Renditen → USDJPY | USDJPY folgt 10-jähriger US-Rendite | USDJPY / D1 | FRED vorhanden ⚠ live per WebRequest | ✗ Tag 38 (T211/T212): −0,99 / −0,13 bp/Tag; nur gleichzeitig korreliert |
 | 60 | Supply/Demand-Zonen (Seiden) | Basis-Zonen vor starkem Impuls – nah an SMC, Prior gering | alle / H4 | vorhanden | ✗ Tag 36 (T192): +0,15 bp/Tag, t 0,40 (473 Trades) |
 
 ## C – Klassische Indikatoren (geringer Prior, meist an Kosten gescheitert)
@@ -215,4 +215,5 @@ Folgen für die Auswahl:
 | 35 | 24.10.2026 | 52, 53 | Fibonacci-Pullback, Chandelier-Trend | ✗ | Fib-Zone ohne Wirkung; Trend neutral |
 | 36 | 24.10.2026 | 54, 55, 60 | Candlesticks an Levels, Doppeltop/-boden, Supply/Demand | ✗ | Muster ohne Vorhersagekraft |
 | 37 | 24.10.2026 | 56, 57 | Verfallstage, Santa Rally | ✗ | Kalendereffekte verschwunden |
-| 38 | | | | | |
+| 38 | 24.10.2026 | 58, 59 | US500 → AUDJPY, US-Renditen → USDJPY | ✗ | kein verzögerter Zusammenhang |
+| 39 | | | | | |

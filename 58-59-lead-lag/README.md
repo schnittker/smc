@@ -6,12 +6,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 - **Nr. 58:** Nach einer US500-H1-Bewegung über 1,5σ wird AUDJPY für 3 Stunden in dieselbe Richtung gehandelt.
 - **Nr. 59:** USDJPY wird in Richtung der Vortagesänderung bzw. des 20-Tage-Trends der 10-jährigen US-Rendite (FRED DGS10) gehandelt.
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026):** In-Sample getestet. **Alle drei Varianten sind gescheitert** (netto −1,45 / −0,99 / −0,13 bp je Tag); nur gleichzeitige, keine verzögerten Zusammenhänge. Der Hold-out bleibt unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Quellen, Daten, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis und Einordnung |
+| [research/results/ll_in_sample.md](research/results/ll_in_sample.md) | vollständige Tabellen |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`), `../50-51-sr-trendlinien` (`chart`), `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt. Daten: `research/scripts/download_dgs10.sh`.
 

@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 97 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
+**Stand:** 100 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139), Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -134,7 +134,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T202 | 24.10.2026 | Verfallstage (56) | 56-57-verfall-santa | K-POST, IS | nicht bestanden: −30,3 bp/Ereignis, t −1,61 |
 | T203 | 24.10.2026 | Santa Rally (57) | 56-57-verfall-santa | K-SANTA, IS | nicht bestanden: +0,1 bp/Ereignis, t 0,00 (9 Ereignisse) |
 | T204–T209 | – | Verfall, Santa (56, 57) | 56-57-verfall-santa | Hold-out, FTMO | entfallen |
-| T210 | | US500 → AUDJPY (58) | 58-59-lead-lag | LL-AJ, IS | |
-| T211 | | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y1, IS | |
-| T212 | | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y20, IS | |
-| T213–T218 | | Lead-Lag (58, 59) | 58-59-lead-lag | Hold-out, FTMO (nur bei Bestehen) | |
+| T210 | 24.10.2026 | US500 → AUDJPY (58) | 58-59-lead-lag | LL-AJ, IS | nicht bestanden: −1,45 bp/Tag, t −4,33 |
+| T211 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y1, IS | nicht bestanden: −0,99 bp/Tag, t −0,85 |
+| T212 | 24.10.2026 | US-Renditen → USDJPY (59) | 58-59-lead-lag | LL-Y20, IS | nicht bestanden: −0,13 bp/Tag, t −0,09 |
+| T213–T218 | – | Lead-Lag (58, 59) | 58-59-lead-lag | Hold-out, FTMO | entfallen |
