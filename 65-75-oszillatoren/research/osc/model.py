@@ -107,9 +107,9 @@ def flag_signals(variant: str, bars) -> tuple[np.ndarray, np.ndarray, np.ndarray
 
 
 def run_flags(symbol: str, bars: np.ndarray, bar_sec: int, cost: Costs, rates: RateTable, cfd, sig, exit_l, exit_s,
-              max_bars: int, day_from: int) -> np.ndarray:
-    """Entry at the next open, fixed stop 2 ATR14 (intrabar, wins), exit at the next open after a bar whose exit flag
-    (for the direction) is set or after max_bars held."""
+              max_bars: int, day_from: int, stop_atr: float = STOP_ATR, allow=None) -> np.ndarray:
+    """Entry at the next open, fixed stop stop_atr x ATR14 (intrabar, wins), exit at the next open after a bar whose
+    exit flag (for the direction) is set or after max_bars held. allow[k]: entry allowed in bar k (default: all)."""
     o, h, l, c, t, ts = bars["o"], bars["h"], bars["l"], bars["c"], bars["t"], bars["ts"]
     n = len(bars)
     a14 = atr(h, l, c, 14)
@@ -118,13 +118,14 @@ def run_flags(symbol: str, bars: np.ndarray, bar_sec: int, cost: Costs, rates: R
         d = int(sig[i])
         k = i + 1
         day_k = int(ts[k] // DAY)
-        if d == 0 or not np.isfinite(a14[i]) or day_k < day_from or holiday(day_k):
+        if d == 0 or not np.isfinite(a14[i]) or day_k < day_from or holiday(day_k) or \
+                (allow is not None and not allow[k]):
             i += 1
             continue
         p = o[k]
         sp, slip = cost.spread(p), cost.slip(p)
         entry = p + sp + slip if d == 1 else p - slip
-        dist = STOP_ATR * a14[i]
+        dist = stop_atr * a14[i]
         stop = entry - dist if d == 1 else entry + dist
         flags = exit_l if d == 1 else exit_s
         exit_type, px = END, None

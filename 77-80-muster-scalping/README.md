@@ -16,7 +16,7 @@ Elliott-Wellen (Nr. 78) werden mangels eindeutiger Formalisierung nicht getestet
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Formalisierbarkeit, Quellen |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
 
-**Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`), `../50-51-sr-trendlinien` (`chart`), `../61-76-trendindikatoren` (`tind`), `../65-75-oszillatoren` (`osc`), `../05-monatsend-rebalancing` (`mer`); venv aus dem SMC-Projekt.
+**Abhängigkeiten:** `../smart-money-concept` (`smc`), `../33-35-tagesausbruch` (`dbo`), `../36-38-h4-kanalausbruch` (`hkb`), `../50-51-sr-trendlinien` (`chart`), `../61-76-trendindikatoren` (`tind`), `../65-75-oszillatoren` (`osc`); venv aus dem SMC-Projekt.
 
 ```sh
 ../smart-money-concept/research/.venv/bin/python -I research/scripts/run_hp.py                    # In-Sample (T267–T269)
