@@ -104,3 +104,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T138 | 24.10.2026 | Gap-Fill Indizes (41) | 41-42-gap-fade | Q-IDX, IS | nicht bestanden: −3,15 bp/Tag, t −3,61 |
 | T139 | 24.10.2026 | Wochenend-Gap FX (42) | 41-42-gap-fade | Q-FXW, IS | formal bestanden (+11,9 bp/Montag, t 5,08); verworfen: Ertrag nur aus der ersten Wochenkerze des HistData-Feeds (Sommer), Winter −5,1 bp |
 | T140–T143 | – | Gap-Fade (41, 42) | 41-42-gap-fade | Hold-out, FTMO | entfallen (Hold-out auf derselben Quelle nicht aussagekräftig) |
+| T144 | | Große Tagesbewegung (43) | 43-44-tagesmuster | E-REV, IS | |
+| T145 | | Große Tagesbewegung (43) | 43-44-tagesmuster | E-CONT, IS | |
+| T146 | | Wochentags-Effekt (44) | 43-44-tagesmuster | E-WD, IS | |
+| T147–T152 | | Tagesmuster (43, 44) | 43-44-tagesmuster | Hold-out, FTMO (nur bei Bestehen) | |
