@@ -169,3 +169,5 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T289 | 24.10.2026 | Meta-Labeling (84) | 83-87-machine-learning | ML-META, IS | nicht bestanden: −0,24 bp/Tag, t −0,99 |
 | T290 | 24.10.2026 | Sequenzmodell (86) | 83-87-machine-learning | ML-MLP, IS | nicht bestanden: −39,7 bp/Tag, t −13,4 (AUC ≈ 0,505) |
 | T291–T296 | – | Machine Learning (83, 84, 86) | 83-87-machine-learning | Hold-out, FTMO | entfallen |
+| T297 | | Zufalls-Einstiege (98, Kontrolle) | 98-99-placebo | PL-RANDOM, IS | |
+| T298 | | Mondphasen (99, Kontrolle) | 98-99-placebo | PL-MOON, IS | |
