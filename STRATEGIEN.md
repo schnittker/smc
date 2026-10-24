@@ -83,9 +83,9 @@ Folgen für die Auswahl:
 | 34 | Inside Bar Breakout | Ausbruch aus Inside Bar in Trendrichtung | alle / D1, H4 | vorhanden | ✗ Tag 25 (T115): +0,1 bp/Tag, t 0,15 (beide Richtungen, D1) |
 | 35 | Volatility Breakout (L. Williams) | Einstieg bei Open ± k · Vortagesrange | Indizes, Gold / D1 | vorhanden | ✗ Tag 25 (T116): −4,2 bp/Tag, t −2,07; vor Kosten + |
 | 36 | Bollinger Squeeze | Ausbruch nach Bandbreiten-Tief | alle / H4 | vorhanden | ✗ Tag 26 (T123): −0,25 bp/Tag, t −0,39 |
-| 37 | Bollinger Mean Reversion | Rückkehr zur Mitte nach Bandberührung in Seitwärtsphasen | FX-Crosses / H1 | vorhanden | |
+| 37 | Bollinger Mean Reversion | Rückkehr zur Mitte nach Bandberührung in Seitwärtsphasen | FX-Crosses / H1 | vorhanden | ✗ Tag 27 (T129): −11,1 bp/Tag, t −6,19; Kosten 6× Vorteil |
 | 38 | Keltner-Channel-Ausbruch | ATR-Kanal-Ausbruch mit Trendfilter | alle / H4 | vorhanden | ✗ Tag 26 (T124): −0,76 bp/Tag, t −0,51 |
-| 39 | z-Score Mean Reversion (OU) | Abstand zum gleitenden Mittel in Std.-Abw., Halbwertszeit schätzen | FX-Crosses / H1 | vorhanden | |
+| 39 | z-Score Mean Reversion (OU) | Abstand zum gleitenden Mittel in Std.-Abw., Halbwertszeit schätzen | FX-Crosses / H1 | vorhanden | ✗ Tag 27 (T130): −1,8 bp/Tag, t −2,84; vor Kosten negativ |
 | 40 | Hurst-Regime-Switch | Hurst > 0,5 → Trendmodell, < 0,5 → Mean Reversion | alle / H4 | vorhanden | |
 | 41 | Gap-Fill Indizes | Eröffnungslücke zum Vortagesschluss faden | Indizes / M5 | vorhanden | |
 | 42 | Wochenend-Gap FX | Montags-Gap faden | Majors / H1 | vorhanden | |
@@ -203,4 +203,5 @@ Folgen für die Auswahl:
 | 24 | 24.10.2026 | 32 | Asien-Range-Fade | ✗ | Kosten 2–7× der Vorteil |
 | 25 | 24.10.2026 | 33–35 | NR7, Inside Bar, Volatility Breakout | ✗ | vor Kosten +0,01–0,04 R, Kosten größer |
 | 26 | 24.10.2026 | 36, 38 | Bollinger Squeeze, Keltner-Ausbruch | ✗ | vor Kosten +0,03 R, Kosten 0,045 R |
-| 27 | | | | | |
+| 27 | 24.10.2026 | 37, 39 | Bollinger-MR, z-Score/OU-MR | ✗ | Umkehr auf H1 nach Kosten negativ |
+| 28 | | | | | |
