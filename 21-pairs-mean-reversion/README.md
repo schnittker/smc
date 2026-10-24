@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Bei einer Abweichung von 2 Standardabweichungen vom 60-Tage-Mittel gegen den Cross handeln, bis er zum Mittel zurückkehrt (Pairs-Trading-Logik auf verwandten Währungen).
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** P-AUDNZD Sharpe 0,13 (t 0,40), P-EURCHF −0,20 (SNB-Schock Januar 2015: −33 %). Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz, Gegenargumente, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/p_in_sample.md](research/results/p_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../06-fx-carry` (`carry`); venv aus dem SMC-Projekt.
 
