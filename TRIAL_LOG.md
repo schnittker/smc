@@ -56,3 +56,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T64 | 24.10.2026 | VIX-Regime (19) | 19-vix-regime | X-HAVEN, IS | nicht bestanden: Sharpe −0,14, t −0,65 |
 | T65 | 24.10.2026 | VIX-Regime (19) | 19-vix-regime | X-FEAR, IS | nicht bestanden: Sharpe 0,04, t 0,13 |
 | T66, T67 | – | VIX-Regime (19) | 19-vix-regime | Hold-out, FTMO | entfallen |
+| T68 | | Zins-Momentum (20) | 20-zins-momentum | Z-12, IS | |
+| T69 | | Zins-Momentum (20) | 20-zins-momentum | Z-3, IS | |
+| T70 | | Zins-Momentum (20) | 20-zins-momentum | Hold-out (nur falls T68/T69 besteht) | |
+| T71 | | Zins-Momentum (20) | 20-zins-momentum | FTMO-Bootstrap (nur falls T70 besteht) | |
