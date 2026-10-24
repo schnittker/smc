@@ -160,3 +160,8 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T268 | 24.10.2026 | Wyckoff ohne Volumen (79) | 77-80-muster-scalping | HP-SPRING, IS | nicht bestanden: −1,27 bp/Tag, t −0,99 |
 | T269 | 24.10.2026 | Scalping M5 (80) | 77-80-muster-scalping | HP-SCALP, IS | nicht bestanden: −164,7 bp/Tag, t −28,3 |
 | T270–T275 | – | Muster, Scalping (77, 79, 80) | 77-80-muster-scalping | Hold-out, FTMO | entfallen |
+| T276 | | Hidden-Markov-Regime (81) | 81-90-statistik | ST-HMM, IS | |
+| T277 | | GARCH-Vol-Prognose (82) | 81-90-statistik | ST-GARCH, IS | |
+| T278 | | k-NN-Analogien (85) | 81-90-statistik | ST-KNN, IS | |
+| T279 | | Gold-Saisonalität (90) | 81-90-statistik | ST-GOLD, IS | |
+| T280–T287 | | Statistische Modelle (81, 82, 85, 90) | 81-90-statistik | Hold-out, FTMO (nur bei Bestehen) | |
