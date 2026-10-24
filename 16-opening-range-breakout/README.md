@@ -4,12 +4,14 @@ Teil der Testreihe `../STRATEGIEN.md`. Ziel ist ein autonomer MT5-EA für die FT
 
 **Idee:** Richtung der ersten 5-Minuten-Kerze ab 09:30 New York handeln, Stop am Gegenende der Kerze, Ziel 10 R, Schluss um 16:00; Risiko 1 % je Trade (Zarattini & Aziz 2023).
 
-**Status (24.10.2026):** Vorregistrierung festgelegt, Test läuft.
+**Status (24.10.2026): gescheitert.** O-NDX −1,6 bp/Tag (t −0,54), O-SPX −0,4 bp/Tag (t −0,16). Opening Range im CFD nur ≈ 10 bp, 85 % Stops, Kosten 0,14–0,24 R je Trade. Hold-out unberührt.
 
 | Dokument | Inhalt |
 |---|---|
 | [docs/00_Recherche.md](docs/00_Recherche.md) | Idee, Evidenz, Gegenargumente, Erwartung |
 | [docs/01_Vorregistrierung.md](docs/01_Vorregistrierung.md) | Regeln, Varianten, Akzeptanzkriterien, Trial-Log |
+| [docs/02_Ergebnisse_In-Sample.md](docs/02_Ergebnisse_In-Sample.md) | Ergebnis (gescheitert), Einordnung |
+| [research/results/o_in_sample.md](research/results/o_in_sample.md) | Vollständige Tabellen des In-Sample-Laufs |
 
 **Abhängigkeiten:** `../smart-money-concept` (`smc`), `../09-pre-fomc-drift` (`fomc`), `../10-turn-of-the-month` (`tom`), `../11-intraday-momentum` (`imom`); venv aus dem SMC-Projekt.
 

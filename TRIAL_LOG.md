@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 37 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 39 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -47,7 +47,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T52 | 24.10.2026 | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-RSI2, IS | nicht bestanden: Sharpe 0,31, t 0,78 |
 | T53 | 24.10.2026 | Kurzfrist-Reversal (15) | 15-short-term-reversal | R-7S, IS | nicht bestanden: Sharpe 0,28, t 0,83 |
 | T54, T55 | – | Kurzfrist-Reversal (15) | 15-short-term-reversal | Hold-out, FTMO | entfallen |
-| T56 | | Opening Range Breakout (16) | 16-opening-range-breakout | O-NDX, IS | |
-| T57 | | Opening Range Breakout (16) | 16-opening-range-breakout | O-SPX, IS | |
-| T58 | | Opening Range Breakout (16) | 16-opening-range-breakout | Hold-out (nur falls T56/T57 besteht) | |
-| T59 | | Opening Range Breakout (16) | 16-opening-range-breakout | FTMO-Bootstrap (nur falls T58 besteht) | |
+| T56 | 24.10.2026 | Opening Range Breakout (16) | 16-opening-range-breakout | O-NDX, IS | nicht bestanden: −1,60 bp/Tag, t −0,54 |
+| T57 | 24.10.2026 | Opening Range Breakout (16) | 16-opening-range-breakout | O-SPX, IS | nicht bestanden: −0,41 bp/Tag, t −0,16 |
+| T58, T59 | – | Opening Range Breakout (16) | 16-opening-range-breakout | Hold-out, FTMO | entfallen |

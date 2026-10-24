@@ -19,5 +19,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | — | Tageszeit-Effekt FX (13) | durch Nr. 2 abgedeckt, kein eigener Test |
 | [14-vol-managed-index/](14-vol-managed-index/) | Vol-gesteuertes US500-Long (14) | gescheitert |
 | [15-short-term-reversal/](15-short-term-reversal/) | Kurzfrist-Reversal US500, Connors (15) | gescheitert |
+| [16-opening-range-breakout/](16-opening-range-breakout/) | Opening Range Breakout 5 min (16) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
