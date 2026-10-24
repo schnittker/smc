@@ -29,7 +29,7 @@ Folgen für die Auswahl:
 - **Kein echtes Volumen**, kein Orderbuch, kein Tickvolumen
 - Frei nachladbar: CFTC-COT-Daten, FRED (VIX, Renditen, CPI), FOMC-/EZB-Termine, Wirtschaftskalender (mit Aufwand)
 
-**Status:** ✗ gescheitert · ✓ bestanden · ⏳ in Arbeit · ⚠ nur eingeschränkt testbar · ⛔ nicht empfohlen / FTMO-Regeln
+**Status:** ✗ gescheitert · ✓ bestanden · ⏳ in Arbeit · ⚠ nur eingeschränkt testbar · ⛔ nicht empfohlen / FTMO-Regeln · ⊘ durch einen früheren Test abgedeckt
 
 ---
 
@@ -54,7 +54,7 @@ Folgen für die Auswahl:
 | 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | ✗ Tag 6 (T35/T36): +22 / +36 bp je Ereignis, t 1,2 / 1,7 |
 | 11 | Intraday-Momentum | Rendite der ersten 30 min sagt die letzte 30 min voraus (Gao et al. 2018) | US500, US100 / M5 | vorhanden | ✗ Tag 7 (T39/T40): +0,4 / +1,0 bp/Tag, t 0,5 / 1,3; Effekt vor Kosten ≈ 2 bp |
 | 12 | Overnight- vs. Intraday-Rendite | Indexrendite entsteht überwiegend über Nacht – nur Overnight halten | Indizes / H1 | vorhanden | ✗ Tag 8 (T43–T45): vor Kosten +0,6 bis +2,1 bp/Nacht ≈ Kosten |
-| 13 | Tageszeit-Effekt FX | Währungen werten während der eigenen Handelszeit ab (Breedon & Ranaldo 2013) | Majors / H1 | vorhanden | |
+| 13 | Tageszeit-Effekt FX | Währungen werten während der eigenen Handelszeit ab (Breedon & Ranaldo 2013) | Majors / H1 | vorhanden | ⊘ abgedeckt durch Nr. 2 (Fix-Fenster W1–W4 = Heim-/Auslandsstunden), kein eigener Trial |
 | 14 | Volatilitätsgesteuertes Index-Long | Long Index, Größe ∝ 1/Volatilität (Moreira & Muir 2017) | US500, US100 / D1 | vorhanden | |
 | 15 | Kurzfrist-Reversal / RSI(2) | Kaufen nach kurzen Rücksetzern im Aufwärtstrend (Connors) | US500, US100 / D1 | vorhanden | |
 | 16 | Opening Range Breakout | Ausbruch aus der ersten 5–30-min-Range nach Kassaeröffnung (Zarattini & Aziz 2023) | US100, US500 / M5 | vorhanden | |
