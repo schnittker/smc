@@ -114,3 +114,7 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T157 | 24.10.2026 | Währungsstärke-Ranking (46) | 46-47-waehrungsstaerke | Y-LDN, IS | nicht bestanden: +0,07 bp/Tag, t 0,18 |
 | T158 | 24.10.2026 | USD-Basket Mean Reversion (47) | 46-47-waehrungsstaerke | Y-USDB, IS | nicht bestanden: −1,05 bp/Tag, t −1,17 |
 | T159–T164 | – | Währungsstärke (46, 47) | 46-47-waehrungsstaerke | Hold-out, FTMO | entfallen |
+| T165 | | Market Profile 80 % (48) | 48-49-intraday-level | LV-VA80, IS | |
+| T166 | | Pivot Points (49) | 48-49-intraday-level | LV-PFADE, IS | |
+| T167 | | Pivot Points (49) | 48-49-intraday-level | LV-PBRK, IS | |
+| T168–T173 | | Intraday-Level (48, 49) | 48-49-intraday-level | Hold-out, FTMO (nur bei Bestehen) | |
