@@ -49,7 +49,7 @@ Folgen für die Auswahl:
 | 5 | Monatsend-Rebalancing-Flows | Fonds sichern Währungsrisiko zum Monatsende ab: USD-Richtung aus Aktienperformance des Monats ableiten (Melvin & Prins 2015) | USD-Majors / H1 | vorhanden | ✗ Tag 2 (T19/T20): Effekt seit 2015 weg |
 | 6 | FX Carry | Long hochverzinste, Short niedrigverzinste Währungen (Lustig & Verdelhan) – FTMO-Swap-Aufschläge prüfen | G10-FX / D1–W1 | FRED vorhanden ⚠ live per WebRequest | ✗ Tag 3 (T23/T24): Sharpe −0,16 / −0,02 |
 | 7 | FX Querschnitts-Momentum | Monatlich Long die 3 stärksten, Short die 3 schwächsten Währungen (Menkhoff et al. 2012) | G10-FX / D1 | vorhanden | ✗ Tag 4 (T27/T28): Sharpe −0,28 / −0,81 |
-| 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs. Achtung: nicht mehr unabhängig von der 12-Monats-Umkehr aus Nr. 7 | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | |
+| 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs. Achtung: nicht mehr unabhängig von der 12-Monats-Umkehr aus Nr. 7 | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | ✗ Tag 45 (T299/T300): Sharpe −0,06 / −0,07; Kurs +, Swaps − |
 | 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | ✗ knapp, Tag 5 (T31/T32): +19 / +28 bp je Termin, t 2,4 / 2,3 – Ensemble-Kandidat |
 | 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | ✗ Tag 6 (T35/T36): +22 / +36 bp je Ereignis, t 1,2 / 1,7 |
 | 11 | Intraday-Momentum | Rendite der ersten 30 min sagt die letzte 30 min voraus (Gao et al. 2018) | US500, US100 / M5 | vorhanden | ✗ Tag 7 (T39/T40): +0,4 / +1,0 bp/Tag, t 0,5 / 1,3; Effekt vor Kosten ≈ 2 bp |
@@ -222,4 +222,5 @@ Folgen für die Auswahl:
 | 42 | 24.10.2026 | 81, 82, 85, 90 | HMM, GARCH, k-NN, Gold-Saison | ✗ | keine Vorhersagekraft nach Kosten |
 | 43 | 24.10.2026 | 83, 84, 86 (87 ⊘, 88 ⛔) | Gradient Boosting, Meta-Labeling, MLP | ✗ | AUC 0,52 – zu wenig für die Kosten |
 | 44 | 24.10.2026 | 98, 99 | Placebo: Zufall, Mondphasen | Kontrolle ok | Pipeline unverzerrt |
-| 45 | | | | | |
+| 45 | 24.10.2026 | 8 (nachgeholt) | FX Value (PPP) | ✗ | Swaps fressen den Value-Kursbeitrag |
+| 46 | | | | | |

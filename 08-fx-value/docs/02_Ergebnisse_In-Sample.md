@@ -25,7 +25,7 @@ Grundlagen:
 ## 2. Einordnung
 
 - **Value hat vor Kosten einen kleinen positiven Kursbeitrag:** +1,8 bis +2,2 % p. a. bei 10 % Volatilität, also Sharpe ≈ 0,2. Die Swaps fressen ihn vollständig auf.
-- Der Grund: Value ist meist **negativer Carry**. Billige Währungen wie USD-Short, AUD und JPY long waren 2015–2023 häufig niedrig verzinst, teure hoch. Long AUD 83 Monate, Short USD 86 Monate.
+- **Der Grund ist der Swap:** Das Portfolio war meist Short USD (86 von 104 Monaten) und Long AUD/JPY. 2015–2023 lag der USD-Zins oft über dem der Long-Währungen; dazu kommt der Swap-Aufschlag. Die Korrelation mit Carry K-3 ist uneinheitlich (V-5Y +0,15, V-PPP −0,19).
 - **Fazit für die G8-Faktoren:** Carry (Nr. 6), Momentum (Nr. 7), Zins-Momentum (Nr. 20) und Value (Nr. 8) sind bei FTMO-Kosten und -Swaps alle gescheitert. Keiner hat 2015–2023 einen Netto-Edge.
 
 ## 3. Trial-Log (Fortsetzung)
