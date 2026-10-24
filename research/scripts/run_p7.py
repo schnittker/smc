@@ -31,9 +31,11 @@ from smc.swaps import RateTable  # noqa: E402
 IS_FROM, IS_TO = timegm((2015, 1, 1, 0, 0, 0)) // timez.DAY, timegm((2024, 1, 1, 0, 0, 0)) // timez.DAY
 HO_FROM = IS_TO
 IS_YEARS, HO_YEARS = range(2015, 2024), range(2024, 2027)
-# ETXEUR (Euro Stoxx 50) is left out: HistData offers no file for 2020 (empty download token), found
-# before the first run and recorded in docs/12, section 7.
-SYMBOLS = tuple(s for s in SYMBOLS_H if s != "ETXEUR")
+# Left out for data reasons found before the first run (docs/12, section 7): ETXEUR (no data after early
+# 2019), GRXEUR (Euro Stoxx levels from June 2020 to November 2023), WTIUSD (no data 2024 to May 2026 and
+# an artificial +30 % contract switch on 19.04.2020).
+EXCLUDED = ("ETXEUR", "GRXEUR", "WTIUSD")
+SYMBOLS = tuple(s for s in SYMBOLS_H if s not in EXCLUDED)
 OUT_DIR = DATA_DIR / "p7"
 RESULTS = PROJECT_ROOT / "research" / "results"
 
@@ -140,7 +142,7 @@ def in_sample():
                "**Modell H In-Sample: nicht bestanden. P7 ist gescheitert; der Hold-out bleibt unberührt.**")
     intro = (f"Lauf vom {date.today():%d.%m.%Y}. Regeln laut `docs/12_P7_Vorregistrierung_ModellH.md`, Code "
              "`research/smc/strategy_h.py` und `strategy_g.run_trend`. Handelstage 01.01.2015–31.12.2023 "
-             f"(Warm-up 2014), {len(SYMBOLS)} Instrumente (ohne ETXEUR, Datenlücke 2020). "
+             f"(Warm-up 2014), {len(SYMBOLS)} Instrumente (ohne ETXEUR, GRXEUR, WTIUSD wegen Datenfehlern). "
              "Netto = nach Handelskosten, Swaps und 0,7-%-Gebühr. Renditen und Drawdown sind auf eine "
              "Portfolio-Volatilität von 10 % p. a. skaliert (Kalibrierung auf diesen Zeitraum, nur zur Einordnung).")
     lines = report("P7 – Modell H (Trendfolge Indizes und Rohstoffe), In-Sample 2015–2023 (Trial T16)", intro, m,

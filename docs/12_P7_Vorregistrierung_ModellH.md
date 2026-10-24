@@ -108,3 +108,16 @@ Besteht Modell H nicht, ist **P7 gescheitert**, und der Hold-out bleibt unberüh
   - Festgestellt beim Download, vor jeder Auswertung.
   - Damit bleiben 12 Instrumente. Kriterium 3 lautet entsprechend ≥ 60 %, also ≥ 8 von 12.
   - Der Index ist eng mit DAX und CAC 40 verbunden, die enthalten bleiben.
+- **GRXEUR (DAX) wird ausgeschlossen.**
+  - Grund: Die HistData-Datei enthält von Juni 2020 bis November 2023 Kurse auf Euro-Stoxx-Niveau (2.907–4.414 statt 10.000–16.000 Punkte).
+  - Dadurch entstehen Tagessprünge von −133 % bzw. +131 % (log.) am 14.06.2020 und 03.12.2023. Die Reihe ist für drei Jahre des In-Sample-Zeitraums falsch.
+- **WTIUSD (USOIL) wird ausgeschlossen.**
+  - Für 2024 bis Mai 2026 liefert HistData keine Daten (leerer Download-Token).
+  - Die Reihe springt am 19.04.2020 künstlich um +30 %: Nach den negativen Ölpreisen wechselt sie auf einen anderen Kontrakt.
+  - Öl bleibt über Brent im Portfolio.
+- **BCOUSD (Brent) bleibt.** Die Reihe ist offenbar eine Folge von Futures-Monatskontrakten ohne Glättung beim Wechsel.
+  - Hinweis darauf: Die Kurslücken am ersten Handelstag eines Monats sind im Mittel 40 statt 19 bp groß.
+  - Diese Roll-Sprünge laufen in Contango-Phasen gegen Short- und in Backwardation-Phasen gegen Long-Positionen. Sie gehen also meist gegen die Trendposition. Die Annahme bleibt damit eher vorsichtig.
+- **Alle übrigen Reihen sind plausibel:** Kursniveaus je Jahr stimmen, die größten Tagesbewegungen sind reale Ereignisse (März 2020, Brexit, April 2025), und zu den Ausführungszeiten gibt es an 94–99 % der Tage Kurse.
+- **Damit bleiben 10 Instrumente:** US500, US100, FRA40, UK100, JP225, HK50, AUS200, UKOIL, XAGUSD, XAUUSD. Kriterium 3: ≥ 6 von 10.
+- Die Prüfungen standen alle vor dem ersten Lauf. Strategie-Ergebnisse wurden dafür nicht berechnet. Prüfskripte und Befunde: `research/results/data_quality_cfd.md` und dieser Abschnitt.
