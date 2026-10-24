@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 51 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 53 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -68,7 +68,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T80 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-OEL, IS | nicht bestanden: Sharpe −0,41, t −1,23 |
 | T81 | 24.10.2026 | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | R-GOLD, IS | nicht bestanden: Sharpe 0,21, t 0,63 |
 | T82, T83 | – | Rohstoff-Lead-Lag (23) | 23-rohstoff-waehrungen | Hold-out, FTMO | entfallen |
-| T84 | | USD an FOMC-Tagen (24) | 24-fomc-fx | F-USD, IS | |
-| T85 | | USD an FOMC-Tagen (24) | 24-fomc-fx | F-CARRY, IS | |
-| T86 | | USD an FOMC-Tagen (24) | 24-fomc-fx | Hold-out (nur falls T84/T85 besteht) | |
-| T87 | | USD an FOMC-Tagen (24) | 24-fomc-fx | FTMO-Bootstrap (nur falls T86 besteht) | |
+| T84 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-USD, IS | nicht bestanden: +107,7 bp/Termin, t 2,10 |
+| T85 | 24.10.2026 | USD an FOMC-Tagen (24) | 24-fomc-fx | F-CARRY, IS | nicht bestanden: +54,6 bp/Termin, t 2,11 |
+| T86, T87 | – | USD an FOMC-Tagen (24) | 24-fomc-fx | Hold-out, FTMO | entfallen |

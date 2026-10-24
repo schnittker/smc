@@ -27,5 +27,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [21-pairs-mean-reversion/](21-pairs-mean-reversion/) | z-Score Mean Reversion AUDNZD / EURCHF (21) | gescheitert |
 | [22-gold-silber-ratio/](22-gold-silber-ratio/) | Gold/Silber-Ratio (22) | gescheitert |
 | [23-rohstoff-waehrungen/](23-rohstoff-waehrungen/) | Rohstoff-Lead-Lag (23) | gescheitert |
+| [24-fomc-fx/](24-fomc-fx/) | USD an FOMC-Tagen (24) | knapp gescheitert (t 2,1), Ensemble-Kandidat |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
