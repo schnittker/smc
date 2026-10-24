@@ -28,5 +28,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [22-gold-silber-ratio/](22-gold-silber-ratio/) | Gold/Silber-Ratio (22) | gescheitert |
 | [23-rohstoff-waehrungen/](23-rohstoff-waehrungen/) | Rohstoff-Lead-Lag (23) | gescheitert |
 | [24-fomc-fx/](24-fomc-fx/) | USD an FOMC-Tagen (24) | knapp gescheitert (t 2,1), Ensemble-Kandidat |
+| — | Makro-News-Drift (25) | zurückgestellt: Konsensprognosen fehlen (MT5-Kalenderexport nötig) |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

@@ -66,7 +66,7 @@ Folgen für die Auswahl:
 | 22 | Gold/Silber-Ratio | Mean Reversion des Verhältnisses | XAUUSD, XAGUSD / D1 | vorhanden | ✗ Tag 16 (T76/T77): Sharpe −0,07 / 0,09 |
 | 23 | Rohstoff-Währungen Lead-Lag | Öl → CAD, Gold → AUD, Dairy/Risk → NZD | USDCAD, AUDUSD / H1–D1 | vorhanden (WTI lückenhaft) | ✗ Tag 17 (T80/T81): Sharpe −0,41 / 0,21; nur gleichzeitiger Zusammenhang |
 | 24 | Zentralbank-Tage FX | Drift vor/nach EZB-, BoJ-, BoE-Entscheidungen | Majors / H1 | MT5-Kalender | ✗ knapp, Tag 18 (T84/T85): FOMC-Tage +108 / +55 bp, t 2,1; Ensemble-Kandidat |
-| 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | |
+| 25 | Makro-News-Drift | Drift nach NFP/CPI-Überraschung | USD-Majors, Gold / M5 | MT5-Kalender (inkl. Prognose) | ⚠ zurückgestellt: Konsensprognosen-Historie fehlt (FRED nur Ist-Werte); testbar nach Export aus dem MT5-Kalender (CalendarValueHistory) |
 | 26 | Pre-Holiday-Effekt | Long Indizes am Handelstag vor Feiertagen | Indizes / D1 | vorhanden | |
 | 27 | Halloween / Sell in May | Nur November–April long | Indizes / D1 | vorhanden (wenige Datenpunkte) | |
 | 28 | 52-Wochen-Hoch | Nähe zum 52-Wochen-Hoch → Fortsetzung (George & Hwang) – ähnlich #3/#4, Prior gering | alle / D1 | vorhanden | |
