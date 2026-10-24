@@ -16,5 +16,7 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [10-turn-of-the-month/](10-turn-of-the-month/) | Turn-of-the-Month US500 (10) | gescheitert |
 | [11-intraday-momentum/](11-intraday-momentum/) | Intraday-Momentum US500 (11) | gescheitert |
 | [12-overnight-drift/](12-overnight-drift/) | Overnight-Drift US500 (12) | gescheitert |
+| — | Tageszeit-Effekt FX (13) | durch Nr. 2 abgedeckt, kein eigener Test |
+| [14-vol-managed-index/](14-vol-managed-index/) | Vol-gesteuertes US500-Long (14) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
