@@ -51,7 +51,7 @@ Folgen für die Auswahl:
 | 7 | FX Querschnitts-Momentum | Monatlich Long die 3 stärksten, Short die 3 schwächsten Währungen (Menkhoff et al. 2012) | G10-FX / D1 | vorhanden | ✗ Tag 4 (T27/T28): Sharpe −0,28 / −0,81 |
 | 8 | FX Value (Kaufkraftparität) | Long unterbewertete, Short überbewertete Währungen nach realem Wechselkurs. Achtung: nicht mehr unabhängig von der 12-Monats-Umkehr aus Nr. 7 | G10-FX / W1–MN | CPI von FRED ⚠ live per WebRequest | |
 | 9 | Pre-FOMC-Drift | Long US500 in den 24 h vor FOMC-Entscheidungen (Lucca & Moench 2015) | US500 / H1 | MT5-Kalender | ✗ knapp, Tag 5 (T31/T32): +19 / +28 bp je Termin, t 2,4 / 2,3 – Ensemble-Kandidat |
-| 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | |
+| 10 | Turn-of-the-Month | Long Indizes vom letzten bis zum 3. Handelstag des Monats | Indizes / D1 | vorhanden | ✗ Tag 6 (T35/T36): +22 / +36 bp je Ereignis, t 1,2 / 1,7 |
 | 11 | Intraday-Momentum | Rendite der ersten 30 min sagt die letzte 30 min voraus (Gao et al. 2018) | US500, US100 / M5 | vorhanden | |
 | 12 | Overnight- vs. Intraday-Rendite | Indexrendite entsteht überwiegend über Nacht – nur Overnight halten | Indizes / H1 | vorhanden | |
 | 13 | Tageszeit-Effekt FX | Währungen werten während der eigenen Handelszeit ab (Breedon & Ranaldo 2013) | Majors / H1 | vorhanden | |
@@ -182,4 +182,5 @@ Folgen für die Auswahl:
 | 3 | 24.10.2026 | 6 | FX Carry G8 | ✗ | K-3 Sharpe −0,16, K-1 −0,02; Swaps +1 % p. a., Kurs −1,4 bis −2,6 % p. a. |
 | 4 | 24.10.2026 | 7 | FX Querschnitts-Momentum G8 | ✗ | X-1 Sharpe −0,28, X-12 −0,81 (t −2,5: eher Umkehr) |
 | 5 | 24.10.2026 | 9 | Pre-FOMC-Drift | ✗ knapp | P-SPX +19 bp/Termin (t 2,38), P-NDX +28 bp (t 2,26); 3 von 4 Kriterien – Ensemble-Kandidat |
-| 6 | | | | | |
+| 6 | 24.10.2026 | 10 | Turn-of-the-Month US500 | ✗ | T-KLASSIK +22 bp (t 1,17), T-FRÜH +36 bp (t 1,68) |
+| 7 | | | | | |

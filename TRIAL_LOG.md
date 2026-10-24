@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 26 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
+**Stand:** 28 Versuche abgeschlossen, 0 bestanden, Hold-out nie angefasst.
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -31,7 +31,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T31 | 24.10.2026 | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-SPX, IS | nicht bestanden: +19,2 bp/Termin, t 2,38 |
 | T32 | 24.10.2026 | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | P-NDX, IS | nicht bestanden: +28,3 bp/Termin, t 2,26 |
 | T33, T34 | – | Pre-FOMC-Drift (9) | 09-pre-fomc-drift | Hold-out, FTMO | entfallen |
-| T35 | | Turn-of-the-Month (10) | 10-turn-of-the-month | T-KLASSIK, IS | |
-| T36 | | Turn-of-the-Month (10) | 10-turn-of-the-month | T-FRÜH, IS | |
-| T37 | | Turn-of-the-Month (10) | 10-turn-of-the-month | Hold-out (nur falls T35/T36 besteht) | |
-| T38 | | Turn-of-the-Month (10) | 10-turn-of-the-month | FTMO-Bootstrap (nur falls T37 besteht) | |
+| T35 | 24.10.2026 | Turn-of-the-Month (10) | 10-turn-of-the-month | T-KLASSIK, IS | nicht bestanden: +22,0 bp/Ereignis, t 1,17 |
+| T36 | 24.10.2026 | Turn-of-the-Month (10) | 10-turn-of-the-month | T-FRÜH, IS | nicht bestanden: +36,4 bp/Ereignis, t 1,68 |
+| T37, T38 | – | Turn-of-the-Month (10) | 10-turn-of-the-month | Hold-out, FTMO | entfallen |
