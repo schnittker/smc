@@ -66,5 +66,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [94-news-straddle/](94-news-straddle/) | News-Straddle NFP (94) | gescheitert |
 | [100-swing-portfolio/](100-swing-portfolio/) | Swing-Portfolio: Ensemble aus Nr. 9, 10, 14, 24 (100) | gescheitert im Hold-out |
 | [101-krypto-swing/](101-krypto-swing/) | Krypto-Swing-Trendfolge BTC/ETH/LTC/XRP/ADA (101) | gescheitert, knapp (Sharpe 1,18, t 2,57) |
+| [102-cta-portfolio/](102-cta-portfolio/) | Multi-Asset-Trend CTA über 24 Märkte, Standard + Walk-Forward (102) | gescheitert |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.
