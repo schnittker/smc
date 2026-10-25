@@ -136,7 +136,7 @@ def run_phase(r, w, act, starts, lens, months, scale, target, m0=None, p0=None):
     return status, used, m_i, p_i
 
 
-def bootstrap(r, w, act, days, scale, n_paths=10_000, seed=0) -> dict:
+def bootstrap(r, w, act, days, scale, n_paths=10_000, seed=0, days_per_month=DAYS_PER_MONTH) -> dict:
     """Both phases with independently drawn calendar months (with replacement), at most 60 months each."""
     starts, lens = month_blocks(days)
     rng = np.random.default_rng(seed)
@@ -145,12 +145,12 @@ def bootstrap(r, w, act, days, scale, n_paths=10_000, seed=0) -> dict:
     s1, u1, _, _ = run_phase(r, w, act, starts, lens, m1, scale, TARGETS[0])
     s2, u2, _, _ = run_phase(r, w, act, starts, lens, m2, scale * PHASE2_FACTOR, TARGETS[1])
     both = (s1 == 1) & (s2 == 1)
-    dur = (u1 + u2)[both] / DAYS_PER_MONTH
+    dur = (u1 + u2)[both] / days_per_month
     return {"p1": float((s1 == 1).mean()), "p2": float((s2 == 1).mean()), "both": float(both.mean()),
             "median_months": float(np.median(dur)) if both.any() else np.nan}
 
 
-def historical(r, w, act, days, scale) -> dict:
+def historical(r, w, act, days, scale, days_per_month=DAYS_PER_MONTH) -> dict:
     """Start on the first day of every calendar month on the real path; phase 2 starts the day after phase 1."""
     starts, lens = month_blocks(days)
     nm = len(starts)
@@ -162,4 +162,4 @@ def historical(r, w, act, days, scale) -> dict:
     both = s2 == 1
     resolved = (s2 == 1) | (s2 == 2)
     return {"starts": nm, "resolved": int(resolved.sum()), "passed": int(both.sum()),
-            "median_months": float(np.median((u1 + u2)[both] / DAYS_PER_MONTH)) if both.any() else np.nan}
+            "median_months": float(np.median((u1 + u2)[both] / days_per_month)) if both.any() else np.nan}
