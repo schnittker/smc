@@ -2,7 +2,7 @@
 
 Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nachträgliche Änderungen an Regeln oder Parametern sind neue Versuche. Der Hold-out 2024–2026 wird je Strategie höchstens einmal angefasst.
 
-**Stand:** 133 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139). Hold-out einmal angefasst (T307, Swing-Portfolio Nr. 100, gescheitert; verbraucht damit den Hold-out von Nr. 9, 10, 14, 24).
+**Stand:** 135 Versuche abgeschlossen, 0 bestanden (1 formal bestanden, als Feed-Artefakt verworfen: T139). Hold-out einmal angefasst (T307, Swing-Portfolio Nr. 100, gescheitert; verbraucht damit den Hold-out von Nr. 9, 10, 14, 24).
 
 | # | Datum | Strategie (Nr.) | Projekt | Test | Ergebnis |
 |---|---|---|---|---|---|
@@ -179,3 +179,6 @@ Jeder vorregistrierte Test zählt als ein Versuch, auch wenn er scheitert. Nacht
 | T306 | 24.10.2026 | Swing-Portfolio (100) | 100-swing-portfolio | P-SPX + T-FRÜH + V-VOL + F-CARRY, inverse Vola, IS (beschreibend) | Sharpe 1,13, t 3,37 (Auswahl-verzerrt); FTMO-Bootstrap IS: keine Stufe ≥ 70 % bei ≤ 12 Monaten |
 | T307 | 24.10.2026 | Swing-Portfolio (100) | 100-swing-portfolio | Hold-out 01.01.2024–16.10.2026 | **nicht bestanden:** +1,40 bp/Tag (Sharpe 0,17) < IS-Untergrenze +4,59; nur V-VOL hält (Sharpe 0,59) |
 | T308 | – | Swing-Portfolio (100) | 100-swing-portfolio | FTMO-Bootstrap | entfallen |
+| T309 | 25.10.2026 | Krypto-Swing-Trendfolge (101) | 101-krypto-swing | K-TSM, IS 2018–2023 | nicht bestanden: +7,31 bp/Tag, Sharpe 0,80, t 1,97 (3 von 4 Kriterien) |
+| T310 | 25.10.2026 | Krypto-Swing-Trendfolge (101) | 101-krypto-swing | K-LONG, IS 2018–2023 | nicht bestanden, knapp: +7,93 bp/Tag, Sharpe 1,18, t 2,57 (3 von 4 Kriterien) |
+| T311, T312 | – | Krypto-Swing-Trendfolge (101) | 101-krypto-swing | Hold-out, FTMO | entfallen |

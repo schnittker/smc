@@ -8,7 +8,7 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 
 **Zwischenfazit (24.10.2026, Tag 46):** 131 vorregistrierte Versuche, **0 bestanden**. Nr. 42 (Wochenend-Gap FX) bestand formal, wurde aber als HistData-Artefakt verworfen. Der Hold-out 2024–2026 wurde einmal angefasst (Nr. 100, gescheitert). Die Placebo-Kontrollen (Nr. 98/99) bestätigen eine unverzerrte Pipeline.
 - **Kern-Befund:** Fast alle Regeln haben vor Kosten +0,00 bis +0,03 R je Trade. Das liegt im Zufallsintervall von Nr. 98 (+0,017 R [−0,019; +0,053]). FTMO-Kosten und -Swaps betragen 0,03–0,2 R je Trade.
-- **Am nächsten an der Schwelle:** FOMC-Fenster (Nr. 9 Pre-FOMC US500 t 2,4; Nr. 24 USD an FOMC-Tagen t 2,1).
+- **Am nächsten an der Schwelle:** Krypto-Trendfolge nur long (Nr. 101, Sharpe 1,18, t 2,57). Davor: FOMC-Fenster (Nr. 9 Pre-FOMC US500 t 2,4; Nr. 24 USD an FOMC-Tagen t 2,1).
 - **Offen:**
   - ~~Nr. 100 (Ensemble)~~ getestet an Tag 47: Swing-Portfolio aus Nr. 9, 10, 14, 24 im Hold-out gescheitert (Sharpe 0,17 statt 1,13 IS); nur das volatilitätsgesteuerte US500-Long (Nr. 14) hielt.
   - Nr. 25, 89, 91, 92 brauchen Daten, die HistData/FRED nicht liefern: Konsensprognosen, Retail-Sentiment, echtes Volumen.
@@ -65,5 +65,6 @@ Jeden Tag wird eine Strategie aus [STRATEGIEN.md](STRATEGIEN.md) getestet, bis e
 | [08-fx-value/](08-fx-value/) | FX Value / Kaufkraftparität (8, nachgeholt) | gescheitert |
 | [94-news-straddle/](94-news-straddle/) | News-Straddle NFP (94) | gescheitert |
 | [100-swing-portfolio/](100-swing-portfolio/) | Swing-Portfolio: Ensemble aus Nr. 9, 10, 14, 24 (100) | gescheitert im Hold-out |
+| [101-krypto-swing/](101-krypto-swing/) | Krypto-Swing-Trendfolge BTC/ETH/LTC/XRP/ADA (101) | gescheitert, knapp (Sharpe 1,18, t 2,57) |
 
 Kursdaten (≈ 4 GB) liegen unter `smart-money-concept/data/` und sind nicht im Repo; Neuaufbau siehe `smart-money-concept/README.md`.

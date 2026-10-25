@@ -162,6 +162,7 @@ Folgen für die Auswahl:
 | 98 | Zufalls-Einstiege (Placebo) | Kalibriert die Pipeline: wie oft „besteht“ reiner Zufall? Am besten früh nebenbei laufen lassen | ✓ Kontrolle ok, Tag 44 (T297): vor Kosten +0,017 R [−0,019; +0,053], netto −Kosten |
 | 99 | Mondphasen (Placebo) | Zweite Kontrolle ohne ökonomische Begründung | ✓ Kontrolle ok, Tag 44 (T298): Sharpe −0,50, vor Kosten ≈ 0 |
 | 100 | Ensemble der besten Kandidaten | Mehrere schwache, unkorrelierte Edges kombinieren – erst am Ende, mit Trial-Korrektur | ✗ Tag 47 (T306/T307): IS Sharpe 1,13 (verzerrt), **Hold-out Sharpe 0,17** – gescheitert; nur V-VOL hält |
+| 101 | Krypto-Swing-Trendfolge (Nachtrag) | Tägliche Zeitreihen-Trendfolge BTC/ETH/LTC/XRP/ADA, Hebel 1:1 (FTMO Swing) | ✗ knapp, Tag 48 (T309/T310): K-LONG Sharpe 1,18, t 2,57; K-TSM 0,80 / 1,97 – stärkster Kandidat bisher |
 
 ---
 
@@ -225,4 +226,5 @@ Folgen für die Auswahl:
 | 45 | 24.10.2026 | 8 (nachgeholt) | FX Value (PPP) | ✗ | Swaps fressen den Value-Kursbeitrag |
 | 46 | 24.10.2026 | 94 | News-Straddle NFP | ✗ | Kosten zur Veröffentlichung 3× Vorteil |
 | 47 | 24.10.2026 | 100 | Swing-Portfolio (Nr. 9, 10, 14, 24) | ✗ | Hold-out Sharpe 0,17 (IS 1,13); Anomalie-Bausteine ≈ 0, nur Vola-gesteuertes US500-Long hält |
-| 48 | | | | | |
+| 48 | 25.10.2026 | 101 | Krypto-Swing-Trendfolge | ✗ knapp | K-LONG Sharpe 1,18, t 2,57 (Schwelle 3); Swaps 20 % p. a. angenommen |
+| 49 | | | | | |
