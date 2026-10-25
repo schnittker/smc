@@ -6,6 +6,8 @@ FTMO bootstrap T312 (docs/01_Vorregistrierung.md).
 Usage:
   ../../smart-money-concept/research/.venv/bin/python -I scripts/run_k.py                   # T309 + T310
   ../../smart-money-concept/research/.venv/bin/python -I scripts/run_k.py --holdout K-TSM   # T311 + T312, once
+  ../../smart-money-concept/research/.venv/bin/python -I scripts/run_k.py --ausnahme        # T317 + T318, once
+                                                    (docs/03_Nachtrag_Hold-out.md: K-LONG despite t < 3)
 """
 import argparse
 import sys
@@ -163,30 +165,43 @@ def ftmo(m_is: dict, m_ho: dict) -> tuple[list[str], bool]:
     return out + [""], ok_any
 
 
-def holdout(variant: str):
+def weekend_lines(m: dict) -> list[str]:
+    wkend = (m["days"] + 3) % 7 >= 5
+    tot, we = m["x"].sum(), m["x"][wkend].sum()
+    return [f"Wochenend-Anteil (Sa/So UTC) am Netto-Ergebnis: {we:+.2%} von {tot:+.2%} "
+            f"({we / tot:.0%} des Ergebnisses an {wkend.mean():.0%} der Tage)." if tot != 0 else "", ""]
+
+
+def holdout(variant: str, exception: bool = False):
     if MARKER.exists():
         sys.exit("Hold-out wurde bereits ausgewertet (data/ho/DONE) – kein zweiter Lauf.")
     px, b = books(variant, IS_TO)
     m_is = stats(window(b, px["day"], IS_FROM, IS_TO), px["coins"])
-    if not all(k for _, _, k in checks_is(m_is)):
+    gate = checks_is(m_is)[1:] if exception else checks_is(m_is)   # exception: all IS criteria except t >= 3
+    if not all(k for _, _, k in gate):
         sys.exit(f"{variant} hat die In-Sample-Kriterien nicht erfüllt – kein Hold-out.")
+    trial = ("T317", "T318") if exception else ("T311", "T312")
     MARKER.parent.mkdir(parents=True, exist_ok=True)
-    MARKER.write_text(f"T311 {variant} {date.today().isoformat()}\n")
+    MARKER.write_text(f"{trial[0]} {variant} {'Ausnahme ' if exception else ''}{date.today().isoformat()}\n")
     px, b = books(variant, None)
     m = stats(window(b, px["day"], IS_TO, 10 ** 9), px["coins"])
     lo, hi = cluster_bootstrap_ci(m_is["x"], month_of(m_is["days"]))
     checks = [("Mittleres Netto-Tagesergebnis > 0", f"{m['E'] * 1e4:+.2f} bp/Tag", m["E"] > 0),
               ("≥ untere 95-%-Grenze von IS (Cluster nach Monat)",
                f"{m['E'] * 1e4:+.2f} vs. IS {m_is['E'] * 1e4:+.2f} [{lo * 1e4:+.2f}; {hi * 1e4:+.2f}] bp/Tag", m["E"] >= lo)]
+    if exception:
+        checks.append(("Sharpe Ratio im Hold-out ≥ 0,5 (Nachtrag)", f"{m['sharpe']:.2f}", m["sharpe"] >= 0.5))
     ok = all(k for _, _, k in checks)
-    lines = [f"# Modell K, Hold-out 01.01.2024–24.10.2026 (Trial T311, {variant})\n",
-             f"Einmaliger Lauf vom {date.today():%d.%m.%Y}.\n"]
-    lines += report(variant, m, checks) + [buy_hold(px, IS_TO, 10 ** 9), ""]
+    lines = [f"# Modell K, Hold-out 01.01.2024–24.10.2026 (Trial {trial[0]}, {variant}"
+             f"{', Ausnahmeregel laut docs/03_Nachtrag_Hold-out.md' if exception else ''})\n",
+             f"Einmaliger Lauf vom {date.today():%d.%m.%Y}."
+             + (" **Regeländerung nach IS-Ergebnis** (t 2,57 < 3), mit strengeren Hold-out-Kriterien.\n" if exception else "\n")]
+    lines += report(variant, m, checks) + [buy_hold(px, IS_TO, 10 ** 9), ""] + weekend_lines(m)
     if ok:
         ft, passed = ftmo(m_is, m)
-        lines += ft + [f"**T312: {'bestanden – Strategie Nr. 101 erfüllt alle Kriterien' if passed else 'nicht bestanden'}.**"]
+        lines += ft + [f"**{trial[1]}: {'bestanden – Strategie Nr. 101 erfüllt alle Kriterien' if passed else 'nicht bestanden'}.**"]
     else:
-        lines.append("**Ergebnis: Hold-out nicht bestanden; kein FTMO-Bootstrap (T312 entfällt).**")
+        lines.append(f"**Ergebnis: Hold-out nicht bestanden; kein FTMO-Bootstrap ({trial[1]} entfällt).**")
     (RESULTS_DIR / "k_holdout.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
@@ -194,8 +209,14 @@ def holdout(variant: str):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--holdout", choices=list(VARIANTS))
+    ap.add_argument("--ausnahme", action="store_true", help="K-LONG hold-out under docs/03_Nachtrag_Hold-out.md")
     a = ap.parse_args()
-    holdout(a.holdout) if a.holdout else in_sample()
+    if a.ausnahme:
+        holdout("K-LONG", exception=True)
+    elif a.holdout:
+        holdout(a.holdout)
+    else:
+        in_sample()
 
 
 if __name__ == "__main__":
