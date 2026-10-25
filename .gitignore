@@ -1,2 +1,5 @@
 # macOS
 .DS_Store
+
+# FTMO-Kursexporte aus MT5 (≈ 1 GB), Neuaufbau mit tools/mt5/ExportFtmoData.mq5
+/ftmo-data/
