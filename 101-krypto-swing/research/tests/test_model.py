@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pytest
 
-from kry.data import panel, read_coin
+from kry.data import LAST_DAY, panel, read_coin
 from kry.model import (ANNUAL, COMMISSION, MIN_HISTORY, SWAP, keep, run, sigma, signal, target, trade_cost_rate)
 
 
@@ -13,11 +13,16 @@ def write(tmp_path, coin, start_day, closes, page=0):
     (tmp_path / f"{coin}USDT_{page}.json").write_text(json.dumps(rows))
 
 
+def test_last_day_is_24_october_2026():
+    assert np.datetime64(LAST_DAY, "D") == np.datetime64("2026-10-24")
+
+
 def test_read_coin_dedups_pages_and_cuts_incomplete_day(tmp_path):
-    write(tmp_path, "BTC", 20380, [1, 2, 3, 4, 5, 6, 7])              # up to 20386 (> LAST_DAY 20385)
-    write(tmp_path, "BTC", 20383, [4, 5], page=1)                      # overlap
+    d = LAST_DAY - 5
+    write(tmp_path, "BTC", d, [1, 2, 3, 4, 5, 6, 7])                   # up to LAST_DAY + 1
+    write(tmp_path, "BTC", d + 3, [4, 5], page=1)                      # overlap
     a = read_coin("BTC", tmp_path)
-    assert a[:, 0].tolist() == list(range(20380, 20386)) and a[-1, 4] == 6
+    assert a[:, 0].tolist() == list(range(d, LAST_DAY + 1)) and a[-1, 4] == 6
 
 
 def test_panel_aligns_late_listing_with_nan(tmp_path):

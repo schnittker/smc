@@ -87,3 +87,8 @@ def test_dense_carries_held_weight_over_missing_days():
     d = dense(books, {"x": {"cls": "FX"}}, 10, 15)
     assert d["w"][:, 0].tolist() == [0.1, 0.2, 0.2, 0.2, 0.3]
     assert d["net"][:, 0].tolist() == [1.0, 2.0, 0.0, 0.0, 3.0] and d["row"][:, 0].tolist() == [1, 1, 0, 0, 1]
+
+
+def test_ho_end_is_17_october_2026():
+    from cta.universe import HO_END
+    assert np.datetime64(HO_END, "D") == np.datetime64("2026-10-17")

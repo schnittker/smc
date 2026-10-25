@@ -9,7 +9,8 @@ import numpy as np
 from kry import RAW_DIR
 
 COINS = ("BTC", "ETH", "LTC", "XRP", "ADA")
-LAST_DAY = 20385                     # 2026-10-24, last complete day of the download on 25.10.2026
+LAST_DAY = int((np.datetime64("2026-10-24") - np.datetime64("1970-01-01")).astype(int))   # last complete day of the
+#                                                                download on 25.10.2026 (was hard-coded one year too early)
 
 
 def read_coin(coin: str, raw_dir: Path = RAW_DIR) -> np.ndarray:

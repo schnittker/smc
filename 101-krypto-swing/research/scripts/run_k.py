@@ -145,11 +145,11 @@ def in_sample():
     print("\n".join(lines))
 
 
-def ftmo(m_is: dict, m_ho: dict) -> tuple[list[str], bool]:
+def ftmo(m_is: dict, m_ho: dict, trial: str = "T312") -> tuple[list[str], bool]:
     days = np.r_[m_is["days"], m_ho["days"]]
     r, w, g = np.r_[m_is["x"], m_ho["x"]], np.r_[m_is["worst"], m_ho["worst"]], np.r_[m_is["w_gross"], m_ho["w_gross"]]
     act = g > 0
-    out = ["## FTMO-Block-Bootstrap auf IS + Hold-out (T312)\n",
+    out = [f"## FTMO-Block-Bootstrap auf IS + Hold-out ({trial})\n",
            "| Tagesschwankung | k | P(Phase 1) | P(Phase 2) | P(beide) | Median-Dauer (Monate) | historische Starts | erfüllt |",
            "|---|---|---|---|---|---|---|---|"]
     ok_any = False
@@ -192,13 +192,14 @@ def holdout(variant: str, exception: bool = False):
     if exception:
         checks.append(("Sharpe Ratio im Hold-out ≥ 0,5 (Nachtrag)", f"{m['sharpe']:.2f}", m["sharpe"] >= 0.5))
     ok = all(k for _, _, k in checks)
-    lines = [f"# Modell K, Hold-out 01.01.2024–24.10.2026 (Trial {trial[0]}, {variant}"
+    end = np.datetime64(int(m["days"][-1]), "D").astype(object)
+    lines = [f"# Modell K, Hold-out 01.01.2024–{end:%d.%m.%Y} (Trial {trial[0]}, {variant}"
              f"{', Ausnahmeregel laut docs/03_Nachtrag_Hold-out.md' if exception else ''})\n",
              f"Einmaliger Lauf vom {date.today():%d.%m.%Y}."
              + (" **Regeländerung nach IS-Ergebnis** (t 2,57 < 3), mit strengeren Hold-out-Kriterien.\n" if exception else "\n")]
     lines += report(variant, m, checks) + [buy_hold(px, IS_TO, 10 ** 9), ""] + weekend_lines(m)
     if ok:
-        ft, passed = ftmo(m_is, m)
+        ft, passed = ftmo(m_is, m, trial[1])
         lines += ft + [f"**{trial[1]}: {'bestanden – Strategie Nr. 101 erfüllt alle Kriterien' if passed else 'nicht bestanden'}.**"]
     else:
         lines.append(f"**Ergebnis: Hold-out nicht bestanden; kein FTMO-Bootstrap ({trial[1]} entfällt).**")

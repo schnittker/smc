@@ -13,7 +13,8 @@ FX = ("EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDJPY", "USDCAD", "USDCHF")
 INDICES = ("SPXUSD", "NSXUSD", "GRXEUR", "FRXEUR", "UKXGBP", "JPXJPY", "HKXHKD", "AUXAUD")
 COMMODITIES = ("XAUUSD", "XAGUSD", "WTIUSD", "BCOUSD")
 COINS = ("BTC", "ETH", "LTC", "XRP", "ADA")
-HO_END = 20378                                    # 2026-10-17: day after the last HistData day (2026-10-16)
+HO_END = int((np.datetime64("2026-10-17") - np.datetime64("1970-01-01")).astype(int))  # day after the last HistData
+#                                                                 day 2026-10-16 (was hard-coded one year too early)
 
 
 def cut(px: dict, day_to: int | None) -> dict:
